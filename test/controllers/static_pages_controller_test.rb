@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class StaticPgaesControllerTest < ActionController::TestCase
+class StaticPagesControllerTest < ActionController::TestCase
   test "should get home" do
     get :home
     assert_response :success
