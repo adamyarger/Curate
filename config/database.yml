@@ -1,0 +1,26 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: curate_2_development
+  pool: 5
+  username: adamyarger
+  password: 
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: curate_2_test
+  pool: 5
+  username: adamyarger
+  password: 
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  host: localhost
+  database: curate_2_production
+  pool: 5
+  username: adamyarger
+  password: 
