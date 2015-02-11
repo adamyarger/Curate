@@ -1,11 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  body: MyText
-  body_html: MyString
-  user_id: 
-
-two:
-  body: MyText
-  body_html: MyString
-  user_id: 
+orange:
+  body: "I just ate an orange!"
+  created_at: <%= 10.minutes.ago %>
+  user: adam 
