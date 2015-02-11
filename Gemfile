@@ -26,6 +26,7 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.3'
 # gem 'factory_girl'
 # gem "factory_girl_rails", "~> 4.0"
+gem 'will_paginate', '~> 3.0.7'
 
 
 group :development, :test do

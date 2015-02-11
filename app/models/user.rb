@@ -4,4 +4,10 @@ class User < ActiveRecord::Base
   has_many :posts, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
+
+  #  def feed
+  #   Micropost.where("user_id = ?", id)
+  # end
+
+  
 end
