@@ -2,14 +2,17 @@ require 'test_helper'
 
 class UserTest < ActiveSupport::TestCase
   
-	test "sign up" do
-		user = User.new({
+	def setup
+		@user = User.new({
 		:email => "hafizbadrie@hotmail.com",
 		:name => "hafizblubis",
 		:password => "devisetest",
 		:password_confirmation => "devisetest"
 		})
-		assert user.save, "User not signed up!"
+	end
+
+	test "sign up" do
+		assert @user.save, "User not signed up!"
 	end
 
 	test "user edit without password" do
@@ -46,5 +49,13 @@ class UserTest < ActiveSupport::TestCase
 		user.destroy
 		deleted_user = User.first
 		assert deleted_user.nil?, "User is not deleted"
+	end
+
+	test "associated posts should be destroyed when user is " do
+		@user.save
+		@user.posts.create!(body: "Lorem Ipsum")
+		assert_difference 'Post.count', -1 do
+			@user.destroy
+		end
 	end
 end

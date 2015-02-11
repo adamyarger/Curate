@@ -6,7 +6,7 @@ class PostTest < ActiveSupport::TestCase
   def setup
     @user = users(:adam)
     # This code is not idiomatically correct.
-    @post = Post.new(body: "Lorem ipsum", user_id: @user.id)
+    @post = @user.posts.build(body: "lorem ipsum")
   end
 
   test "should be valid" do
@@ -26,6 +26,10 @@ class PostTest < ActiveSupport::TestCase
   test "content should be at most 140 chars" do
   	@post.body = "a" * 141
   	assert_not @post.valid?
+  end
+
+  test "order should be most recent first" do
+  	assert_equal Post.first, posts(:most_recent)
   end
 
 
