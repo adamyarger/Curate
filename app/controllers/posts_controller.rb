@@ -4,10 +4,11 @@ class PostsController < ApplicationController
 	def create
 		@post = current_user.posts.build(post_params)
 		if @post.save
-			flash[:success] = "Hizzah! Post Created!"   					# should flash a success message
+			flash[:success] = "Hizzah! Post Created!"   					
 			redirect_to root_url
 		else
-			render 'static_pages/home'   #change to render home page if you want to not have a posts/new url
+			@feed_items = []
+			render 'static_pages/home'   
 		end
 	end
 
@@ -16,5 +17,10 @@ class PostsController < ApplicationController
 		def post_params
 			params.require(:post).permit(:body)
 		end
+
+		# def correct_user
+		# 	@post = current_user.posts.find_by(id: params[:id])
+		# 	redirect_to root_url if @post.nil?
+		# end
 
 end

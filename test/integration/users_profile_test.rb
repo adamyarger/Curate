@@ -1,7 +1,8 @@
 require 'test_helper'
 
-class UsersProfileTest < ActionDispatch::IntegrationTest
-  include ApplicationHelper
+class PostsInterfaceTest < ActionDispatch::IntegrationTest
+  include Warden::Test::Helpers
+  fixtures :all
 
   def setup
     @user = users(:adam)

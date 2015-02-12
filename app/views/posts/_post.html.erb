@@ -1,8 +1,19 @@
-<li id="post-<%= post.id %>">
-  
-  <span class="user"><%= link_to post.user.name, post.user %></span>
-  <span class="body"><%= post.body %></span>
-  <span class="timestamp">
-    Posted <%= time_ago_in_words(post.created_at) %> ago.
-  </span>
-</li>
+
+
+<div class="post_wrapper">
+	<div class="media_wrapper">
+		
+		<span class="name"><%= link_to post.user.name, post.user, class: "name" %></span>    			<!-- links to the users profile -->
+		<p class="media"><%= post.body %></p>
+		<div class="date_and_like">
+			
+            <span>
+              
+				  <i class="fa fa-thumbs-o-up"></i>
+				
+            </span>
+            <span class="timestamp"><%= time_ago_in_words(post.created_at) %> ago </span>
+            
+        </div>
+	</div>
+</div>
