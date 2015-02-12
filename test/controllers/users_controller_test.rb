@@ -22,6 +22,11 @@ class UsersControllerTest < ActionController::TestCase
   	assert_response :success, "User id not signed in!"
   end
 
+  test "should redirect index when not logged in" do
+    get :index
+    assert_redirected_to new_user_session_path
+  end
+
 
 
   
