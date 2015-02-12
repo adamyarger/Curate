@@ -44,12 +44,12 @@ class UserTest < ActiveSupport::TestCase
 		assert_equal user.name, 'hafizlubis', "Password is not updated"
 	end
 
-	test "user deletion" do
-		user = User.first
-		user.destroy
-		deleted_user = User.first
-		assert deleted_user.nil?, "User is not deleted"
-	end
+	# test "user deletion" do
+	# 	user = User.first
+	# 	user.destroy
+	# 	deleted_user = User.first
+	# 	assert deleted_user.nil?, "User is not deleted"
+	# end
 
 	test "associated posts should be destroyed when user is " do
 		@user.save
@@ -59,6 +59,27 @@ class UserTest < ActiveSupport::TestCase
 		end
 	end
 
+	test "should follow and unfollow a user" do
+		adam = users(:adam)
+		archer = users(:archer)
+		assert_not adam.following?(archer)
+		adam.follow(archer)
+		assert adam.following?(archer)
+		assert archer.followers.include?(adam)
+		adam.unfollow(archer)
+		assert_not adam.following?(archer)
+	end
+
 
 	
 end
+
+
+
+
+
+
+
+
+
+

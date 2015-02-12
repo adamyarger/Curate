@@ -9,7 +9,7 @@ adam:
   email: michael@example.com
   encrypted_password: <%= User.new.send(:password_digest, '123greetings') %>
 
-# archer:
-#   name: Sterling Archer
-#   email: duchess@example.gov
-#   password_digest: <%= User.new.send(:password_digest, '123greetings') %>
+archer:
+  name: Sterling Archer
+  email: duchess@example.gov
+  encrypted_password: <%= User.new.send(:password_digest, '123greetings') %>
