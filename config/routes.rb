@@ -7,8 +7,7 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  resources :users, only: [:show, :index] # change to resources :users if you want to set up admin
-  resources :users do
+  resources :users, :only => [:show, :index] do
     member do
       get :following, :followers
     end
