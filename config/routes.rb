@@ -16,6 +16,6 @@ Rails.application.routes.draw do
   resources  :posts, only: [:create]
   resources :relationships,       only: [:create, :destroy]
 
-  
-  
+  resources :messages
+
 end

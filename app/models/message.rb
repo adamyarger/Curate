@@ -1,2 +1,25 @@
 class Message < ActiveRecord::Base
+
+	attr_reader :user_tokens
+
+	belongs_to :sender, :class_name => 'User'
+	has_many :recipients
+	has_many :users, :through => :recipients
+
+
+	#this fixed the no id error
+	def user_tokens=(ids)
+	    self.user_ids = ids
+	end
+
+	auto_html_for :body do
+	    html_escape
+	    image
+	    youtube(:width => 400, :height => 250, :autoplay => false)
+	    vimeo(:width => 400, :height => 250, :autoplay => false)
+	    soundcloud
+	    link :target => "_blank", :rel => "nofollow"
+	    simple_format
+	end
+
 end

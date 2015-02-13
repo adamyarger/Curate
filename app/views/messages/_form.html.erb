@@ -1,0 +1,15 @@
+<%= form_for @message do |f| %>
+	  <div class="modal-body">
+
+	    <%= f.text_area :body, class: "form-control"%>
+	  
+	  </div>
+	  <!-- displays the current users frinds their following -->
+	  <%= f.select :user_tokens, @user.collect {|x| [x.name, x.id]}, {}, :multiple => true, class: "form-control" %>
+	  <br>
+
+	  <div class="modal-footer">
+	    <%= f.button :submit, class: "btn btn-primary" %>
+	  </div>
+
+<% end %>
