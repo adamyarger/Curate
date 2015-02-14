@@ -6,6 +6,11 @@ class Message < ActiveRecord::Base
 	has_many :recipients
 	has_many :users, :through => :recipients
 
+	default_scope -> {order(created_at: :desc)}
+
+	validates :body, presence: true, length: {maximum: 300}
+	validates :sender_id, presence: true
+
 
 	#this fixed the no id error
 	def user_tokens=(ids)
