@@ -1,15 +1,22 @@
 
 
-<%= form_for @message do |f| %>
-	<%= f.text_area :body, class: "form-control" %>
-	<p>
-	   <% @user.each do |user| %>
-	        <div>
-			<%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user) %>
-			<%= user.name %>
+
+
+<div class="col-xs-6">
+    <%= form_for @message do |f| %>
+		<%= f.text_area :body, class: "form-control" %>
+		<div class="well" style="max-height: 300px;overflow: auto;">
+		   <% @user.each do |user| %>
+		   <ul class="list-group checked-list-box">
+			    	<li class="list-group-item">
+						<%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user) %>
+						<p><%= user.name %></p>
+					</li>
+				
+			</ul>
+		   <% end %>
 		</div>
-	   <% end %>
-	</p>
-	<p><%= f.button :submit, class: "btn btn-primary" %></p>
-<% end %>
+		<p><%= f.button :submit, class: "btn btn-primary" %></p>
+    <% end %>
+</div>
 
