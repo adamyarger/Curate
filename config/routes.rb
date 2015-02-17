@@ -7,13 +7,13 @@ Rails.application.routes.draw do
   
   devise_for :users
 
-  resources :users, :only => [:show, :index] do
+  resources :users, :only => [:show, :index, :destroy] do
     member do
       get :following, :followers
     end
   end
 
-  resources  :posts, only: [:create]
+  resources  :posts, only: [:create, :destroy]
   resources :relationships,       only: [:create, :destroy]
 
   resources :messages

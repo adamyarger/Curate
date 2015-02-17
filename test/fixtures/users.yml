@@ -8,6 +8,7 @@ adam:
   name: Michael Example
   email: michael@example.com
   encrypted_password: <%= User.new.send(:password_digest, '123greetings') %>
+  admin: true
 
 archer:
   name: Sterling Archer

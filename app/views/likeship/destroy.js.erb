@@ -1,0 +1,5 @@
+if('<%= params[:likeable_type] %>' == 'Post'){
+  $('#like-post-<%= params[:likeable_id] %>').html("<%= j(likeable_likes_tag @likeable) %>")
+}else {
+  $('#like-message-<%= params[:likeable_id] %>').html("<%= j(likeable_likes_tag @likeable) %>")
+}
