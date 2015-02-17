@@ -24,11 +24,14 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.3'
+gem 'autoprefixer-rails'
 # gem 'factory_girl'
 # gem "factory_girl_rails", "~> 4.0"
 gem 'will_paginate', '~> 3.0.7'
+gem 'bootstrap-will_paginate', '~> 0.0.10'
 gem "auto_html"
 gem 'paperclip', '~> 4.2.1'
+
 
 
 group :development, :test do

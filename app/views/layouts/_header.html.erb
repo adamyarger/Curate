@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top head" role="navigation">
   <div class="container">
       <!-- this is the right side toggle button -->
       <div class="navbar-header">
@@ -10,7 +10,7 @@
         </button>
         <a class="navbar-brand" rel="home"><%= link_to "curate", root_path, id: "logo" %></a>
         <% if user_signed_in? %>
-            
+            <%= render 'posts/post_modal' %>
         <% end %>
       </div>
       <!-- end toggle button -->

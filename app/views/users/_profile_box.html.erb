@@ -1,0 +1,20 @@
+	<div class="stylish-panel">
+			<div class="null">
+				<span id="profile_name">
+					<p><%= @user.name %></p>
+				</span>
+
+				<!-- if the current user has facebook connected use that photo else use uploaded one -->
+				<li class="round-image-50"><%= image_tag(@user.avatar.url(:medium)) %></li>
+
+
+
+				<section class="stats">
+					<%= render 'shared/stats' %>
+			    </section>
+		    </div>
+	    
+	    <div class="follow_btn">
+		<%= render 'users/follow_form' if user_signed_in? %>
+		</div>
+	</div>

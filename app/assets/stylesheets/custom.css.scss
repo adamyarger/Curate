@@ -1,5 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "forms.scss";
 
 
 
@@ -10,11 +11,17 @@
   box-sizing:         border-box;
 }
 
-/* mixins, variables, etc. */
+/****************************************** mixins, variables, etc. ******************************************/
 
 $gray-medium-light: #eaeaea;
 
-/* universal */
+/* Red */
+$bgDefault      : #e74c3c;
+$bgHighlight    : #c0392b;
+$colDefault     : #ecf0f1;
+$colHover       : #ffbbbc; 
+
+/****************************************** universal ******************************************/
 
 
 html {
@@ -52,20 +59,6 @@ li{
   list-style: none;
 }
 
-
-
-.bg {
-  background: url(/assets/starry_forest.jpg) no-repeat center center;
-  position: fixed;
-  width: 100%;
-  height: 900px;
-  top:0;
-  left:0;
-  z-index: -1;
-  -webkit-filter: blur(5px); -moz-filter: blur(5px); -o-filter: blur(5px); -ms-filter: blur(5px); filter: blur(5px);
-
-}
-
 .jumbotron {
   height: 450px;
   color: white;
@@ -77,7 +70,7 @@ li{
 
 
 
-/* typography */
+/****************************************** typography ******************************************/
 
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
@@ -114,7 +107,7 @@ a.btn.btn-lg.btn-primary {
   border-color: transparent;
 }
 
-/* header */
+/********************************** header *****************************************/
 
 #logo {
   float: left;
@@ -145,7 +138,14 @@ a.btn.btn-lg.btn-primary {
     
 }
 
-/*Main Posts*/
+
+
+
+
+
+
+
+/************************************Main Posts*********************************/
 
 .post_wrapper {
   background-color: #fff;
@@ -191,6 +191,240 @@ div.date_and_like {
 
 a.name{
   font-weight: 500;
+}
+
+
+
+
+/****************************************** Users index ******************************************/
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray-lighter;
+  }
+}
+
+/* modal popup text area */
+
+#fixedPullModal .modal-content { 
+    overflow: auto;
+    padding-bottom: 15px;
+}
+
+button.pull-right.btn.btn-success{
+  color: #fff;
+  margin-top: 10px;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+}
+
+a.pull-left.btn.btn-default.btn-large{
+  margin-top: 8px;
+  border-color: #1E90FF;
+}
+
+#nav_button:hover{
+  color: #1E90FF;
+  background-color: transparent;
+
+}
+
+a#nav_button{
+  color: #1E90FF;
+  font-weight: 200;
+}
+
+div.modal-dialog{
+  margin-top: 15%;
+}
+
+/****************************************** flash ******************************************/
+.alert-error {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+    
+ }
+
+.alert-alert {
+    background-color: #f2dede;
+    border-color: #eed3d7;
+    color: #b94a48;
+    text-align: left;
+    
+ }
+
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+    
+ }
+
+.alert-notice {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #468847;
+    text-align: left;
+    
+ }
+
+/****************************************** Profile ******************************************/
+
+ #profile_name{
+  background: rgba(0, 0, 0, 0.25);
+ }
+
+
+ .unfollow{
+  color: #1E90FF;
+  background-color: transparent;
+  border-color: #1E90FF;
+  font-weight: 200;
+ }
+
+.stylish-panel {
+    padding: 20px 0;
+    text-align: center;
+}
+.stylish-panel > div > div{
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.stylish-panel {
+    margin-top: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    
+}
+
+.stylish-panel img {
+    border-radius: 3.5%;
+    padding: 4px;
+    border-color: #fff;
+    border: 1px solid #dddddd;
+    width:210px;
+}
+
+/****************************************** avatar ******************************************/
+
+.thumb_avatar img{
+  border-radius: 50%;
+  padding: 2px;
+  border-color: #fff;
+  border: 1px solid #dddddd;
+  width:30px;
+}
+
+#nav_avatar{
+  margin-top: 10px;
+}
+
+/****************************************** footer ******************************************/
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a {
+  color: #555;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  float: left;
+}
+
+footer ul {
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 15px;
+}
+
+/****************************************** message rcipient list ******************************************/
+
+.state-icon {
+    left: -5px;
+}
+.list-group-item-primary {
+    color: rgb(255, 255, 255);
+    background-color: rgb(66, 139, 202);
+}
+
+/* DEMO ONLY - REMOVES UNWANTED MARGIN */
+.well .list-group {
+    margin-bottom: 0px;
+}
+
+/****************************************** header avatar ******************************************/
+
+.round-image-50 img{
+  width: 35px;
+  margin-top: 8px;
+  border-radius: 4px;
+}
+
+/********************************************* Profile*************************************/
+
+ #profile_name{
+  background: rgba(0, 0, 0, 0.25);
+ }
+
+
+ .unfollow{
+  color: #1E90FF;
+  background-color: transparent;
+  border-color: #1E90FF;
+  font-weight: 200;
+ }
+
+.stylish-panel {
+    padding: 20px 0;
+    text-align: center;
+}
+.stylish-panel > div > div{
+    padding-left: 15%;
+    padding-right: 15%;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+
+.stylish-panel {
+    margin-top: 0px;
+    background-color: #fff;
+    box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 16px;
+    
+}
+
+.stylish-panel img {
+    border-radius: 3.5%;
+    padding: 4px;
+    border-color: #fff;
+    border: 1px solid #dddddd;
+    width:210px;
 }
 
 /* forms */
@@ -251,196 +485,6 @@ border-color: #fff;
   margin-top: 41px;
   text-align: center;
 }*/
-
-
-/* Users index */
-
-.users {
-  list-style: none;
-  margin: 0;
-  li {
-    overflow: auto;
-    padding: 10px 0;
-    border-bottom: 1px solid $gray-lighter;
-  }
-}
-
-/* modal popup text area */
-
-#fixedPullModal .modal-content { 
-    overflow: auto;
-    padding-bottom: 15px;
-}
-
-button.pull-right.btn.btn-success{
-  color: #fff;
-  margin-top: 10px;
-  background-color: #5cb85c;
-  border-color: #4cae4c;
-}
-
-a.pull-left.btn.btn-default.btn-large{
-  margin-top: 8px;
-  border-color: #1E90FF;
-}
-
-#nav_button:hover{
-  color: #1E90FF;
-  background-color: transparent;
-
-}
-
-a#nav_button{
-  color: #1E90FF;
-  font-weight: 200;
-}
-
-div.modal-dialog{
-  margin-top: 15%;
-}
-
-/*flash*/
-.alert-error {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
-    
- }
-
-.alert-alert {
-    background-color: #f2dede;
-    border-color: #eed3d7;
-    color: #b94a48;
-    text-align: left;
-    
- }
-
-.alert-success {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
-    
- }
-
-.alert-notice {
-    background-color: #dff0d8;
-    border-color: #d6e9c6;
-    color: #468847;
-    text-align: left;
-    
- }
-
-/*Profile*/
-
- #profile_name{
-  background: rgba(0, 0, 0, 0.25);
- }
-
-
- .unfollow{
-  color: #1E90FF;
-  background-color: transparent;
-  border-color: #1E90FF;
-  font-weight: 200;
- }
-
-.stylish-panel {
-    padding: 20px 0;
-    text-align: center;
-}
-.stylish-panel > div > div{
-    padding-left: 15%;
-    padding-right: 15%;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    transition: 0.2s;
-}
-
-.stylish-panel {
-    margin-top: 0px;
-    background-color: #fff;
-    box-shadow: 0px 0px .5px .5px rgba(0, 0, 0, 0.1);
-    margin-bottom: 16px;
-    
-}
-
-.stylish-panel img {
-    border-radius: 3.5%;
-    padding: 4px;
-    border-color: #fff;
-    border: 1px solid #dddddd;
-    width:210px;
-}
-
-/*avatar*/
-
-.thumb_avatar img{
-  border-radius: 50%;
-  padding: 2px;
-  border-color: #fff;
-  border: 1px solid #dddddd;
-  width:30px;
-}
-
-#nav_avatar{
-  margin-top: 10px;
-}
-
-/* footer */
-
-footer {
-  margin-top: 45px;
-  padding-top: 5px;
-  border-top: 1px solid #eaeaea;
-  color: #777;
-}
-
-footer a {
-  color: #555;
-}
-
-footer a:hover {
-  color: #222;
-}
-
-footer small {
-  float: left;
-}
-
-footer ul {
-  float: right;
-  list-style: none;
-}
-
-footer ul li {
-  float: left;
-  margin-left: 15px;
-}
-
-/*message rcipient list*/
-
-.state-icon {
-    left: -5px;
-}
-.list-group-item-primary {
-    color: rgb(255, 255, 255);
-    background-color: rgb(66, 139, 202);
-}
-
-/* DEMO ONLY - REMOVES UNWANTED MARGIN */
-.well .list-group {
-    margin-bottom: 0px;
-}
-
-/* header avatar*/
-
-.round-image-50 img{
-  width: 35px;
-  margin-top: 8px;
-  border-radius: 4px;
-}
 
 
 

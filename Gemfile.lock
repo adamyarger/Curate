@@ -49,6 +49,8 @@ GEM
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
+    bootstrap-will_paginate (0.0.10)
+      will_paginate
     builder (3.2.2)
     byebug (3.5.1)
       columnize (~> 0.8)
@@ -190,7 +192,9 @@ PLATFORMS
 
 DEPENDENCIES
   auto_html
+  autoprefixer-rails
   bootstrap-sass (~> 3.3.3)
+  bootstrap-will_paginate (~> 0.0.10)
   byebug
   coffee-rails (~> 4.1.0)
   devise
