@@ -2,7 +2,7 @@
 
 <div class="post_wrapper">
 	<div class="media_wrapper">
-		
+		<span class="round-image-50"><%= image_tag(post.user.avatar.url(:thumb)) %></span>
 		<span class="name"><%= link_to post.user.name, post.user, class: "name" %></span>
 		<span>
 			<% if current_user?(post.user) %>

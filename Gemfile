@@ -28,6 +28,7 @@ gem 'bootstrap-sass', '~> 3.3.3'
 # gem "factory_girl_rails", "~> 4.0"
 gem 'will_paginate', '~> 3.0.7'
 gem "auto_html"
+gem 'paperclip', '~> 4.2.1'
 
 
 group :development, :test do

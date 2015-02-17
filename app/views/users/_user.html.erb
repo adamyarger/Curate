@@ -1,6 +1,6 @@
 <li>
-  
-  <%= link_to user.name, user %>
+  <span class="round-image-50"><%= image_tag(user.avatar.url(:thumb)) %></span>
+  <span><%= link_to user.name, user %></span>
   <% if current_user.admin? && !current_user?(user) %>
     								| <%= link_to "delete", user, method: :delete,
                                   		data: { confirm: "You sure?" } %><% end %>
