@@ -101,6 +101,12 @@
     margin-bottom: 0px;
 }
 
+.list-group-item{
+	position: relative;
+	float: left;
+	margin-bottom: 0;
+}
+
 /****************************************** header avatar ******************************************/
 
 .round-image-50 img{
@@ -152,8 +158,14 @@
 }
 
 
+/********************************************* Home Page *************************************/
 
 
+.post_wrapper{
+	border-left: 1px solid #dddddd;
+	border-right: 1px solid #dddddd;
+	border-bottom: 1px solid #dddddd;
+}
 
 
 

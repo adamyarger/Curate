@@ -8,16 +8,20 @@
 		<div class="well" >
 		   <% @user.each do |user| %>
 		   
-			    	<li class="list-group-item">
-			    		<span class="round-image-50"><%= image_tag(user.avatar.url(:thumb)) %></span>
-						<span><%= user.name %></p></span>
-						<span class="follow_list_box"><%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user) %></span>
-					</li>
+			    	<ul class="list-group-box">
+				    	<div class="six columns">
+				    		<li class="round-image-50 list-group-item"><%= image_tag(user.avatar.url(:thumb)) %></li>
+							<li class="list-group-item"><%= user.name %></p></li>
+							<li class="follow_list_box list-group-item">
+								<%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user) %>
+							</li>
+						</div>
+					</ul>
 				
 			
 		   <% end %>
 		</div>
-		<p><%= f.button :submit, class: "btn btn-primary" %></p>
+		<p><%= f.button :submit, class: "button button-primary" %></p>
     <% end %>
 
 

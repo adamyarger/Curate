@@ -1,3 +1,19 @@
+
+.navbar-brand{
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  line-height: 3.5rem;
+  color: #222;
+}
+
+.navbar a{
+  text-decoration: none;
+}
+
+/******************** OG **************************/
+
 .container {
   max-width: 800px; }
 .header {
@@ -114,6 +130,7 @@
   /* Navbar */
   .navbar + .docs-section {
     border-top-width: 0; }
+
   .navbar,
   .navbar-spacer {
     display: block;
@@ -122,7 +139,8 @@
     background: #fff;
     z-index: 99;
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee; }
+    border-bottom: 1px solid #E9E9E9; }
+
   .navbar-spacer {
     display: none; }
   .navbar > .container {

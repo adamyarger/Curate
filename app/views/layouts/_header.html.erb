@@ -3,8 +3,9 @@
 
 <nav class="navbar">
       <div class="container">
-        <ul class="navbar-list">
-          <li class="navbar-item"><a class="navbar-brand" rel="home"><%= link_to "curate", root_path, id: "logo" %></a></li>
+        <li class="navbar-item navbar-brand"><h1><%= link_to "curate", root_path, id: "logo" %></h1></li>
+        <ul class="navbar-list u-pull-right">
+          
 
           <% if user_signed_in? %>
 
