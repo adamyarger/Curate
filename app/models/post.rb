@@ -10,7 +10,7 @@ class Post < ActiveRecord::Base
 	    image
 	    youtube(:width => 400, :height => 250, :autoplay => false)
 	    vimeo(:width => 400, :height => 250, :autoplay => false)
-	    soundcloud
+	    soundcloud(:show_artwork => true, :color => '1E90FF')
 	    link :target => "_blank", :rel => "nofollow"
 	    simple_format
 	end
