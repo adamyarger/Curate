@@ -4,6 +4,9 @@
 	border-radius: 4px;
 }
 
+#star{
+	margin-top: 15px;
+}
 
 .post_show{
 	border: 1px solid #dddddd;
@@ -12,8 +15,16 @@
 
 }
 
+.post_name{
+	line-height: 3em;
+}
+
+div.star_group.u-pull-right{
+	margin-top:  3px;
+}
+
 .post_media{
-	margin-top: 1px;
+	margin-top: -1px;
 }
 
 .user_avatar{
@@ -22,7 +33,7 @@
 
 
 .panel-footer {
-		padding: 20px 35px;
+		padding: 0px 25px;
 		p {
 			margin: 0;
 		}

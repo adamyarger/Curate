@@ -7,18 +7,18 @@
       </div>
       <div class="panel-footer">
         <div class="row">
-          
-          	<div class="round-image-50 name u-pull-left user_avatar">
+          <div class="name_avatar u-pull-left">
+          	<span class="round-image-50 name  user_avatar u-pull-left">
           		<%= image_tag(post.user.avatar.url(:thumb)) %>
-          	</div>
-            <p class="user_name">
-              <%= link_to post.user.name, post.user, class: "name u-pull-left" %>
-            </p>
+          	</span>
+            <span class="user_name">
+              <%= link_to post.user.name, post.user, class: "post_name u-pull-left" %>
+            </span>
+          </div>
           
-          
-            <div class="btn-group u-pull-right">
+            <div id="star" class="star_group u-pull-right">
 	              <!-- link to like post here -->
-	                <span class="glyphicon glyphicon-heart"></span>
+	                <i class="fa fa-star"></i>
 	                <!-- number of like goes here --> 2
 	            <% if current_user?(post.user) %>
 		      		<%= link_to "delete", post, method: :delete,
