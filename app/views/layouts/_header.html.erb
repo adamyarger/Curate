@@ -20,7 +20,10 @@
               </li>
              
               <li class="navbar-item">
-                <a class="navbar-link" href="#" data-popover="#moreNavPopover">More</a>
+                
+                <a class="navbar-link" href="#" data-popover="#moreNavPopover">
+                   <%= current_user.name.split(" ")[0] %>
+                </a>
                    <div id="moreNavPopover" class="popover">
                      <ul class="popover-list">
                        <li class="popover-item">

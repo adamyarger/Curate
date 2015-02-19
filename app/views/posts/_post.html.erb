@@ -1,25 +1,32 @@
 
 
-<div class="post_wrapper">
-	<div class="media_wrapper">
-		<span class="round-image-50"><%= image_tag(post.user.avatar.url(:thumb)) %></span>
-		<span class="name"><%= link_to post.user.name, post.user, class: "name" %></span>
-		<span>
-			<% if current_user?(post.user) %>
-	      	<%= link_to "delete", post, method: :delete,
-	                                       data: { confirm: "You sure?" } %>
-		    <% end %>
-	    </span> 
-		<p class="media"><%= post.body_html %></p>
-		<div class="date_and_like">
-			
-            <span>
-              
-				  <i class="fa fa-thumbs-o-up"></i>
-				
-            </span>
-            <span class="timestamp"><%= time_ago_in_words(post.created_at) %> ago </span>
-            
+<div class="post_show">
+    <div class="panel panel-default">
+      <div class="panel-heading post_media">
+        <%= post.body_html %>
+      </div>
+      <div class="panel-footer">
+        <div class="row">
+          
+          	<div class="round-image-50 name u-pull-left user_avatar">
+          		<%= image_tag(post.user.avatar.url(:thumb)) %>
+          	</div>
+            <p class="user_name">
+              <%= link_to post.user.name, post.user, class: "name u-pull-left" %>
+            </p>
+          
+          
+            <div class="btn-group u-pull-right">
+	              <!-- link to like post here -->
+	                <span class="glyphicon glyphicon-heart"></span>
+	                <!-- number of like goes here --> 2
+	            <% if current_user?(post.user) %>
+		      		<%= link_to "delete", post, method: :delete,
+		                                       data: { confirm: "You sure?" }, class: "delete" %>
+			    <% end %>
+            </div>
+          
         </div>
-	</div>
+      </div>
+    </div>
 </div>
