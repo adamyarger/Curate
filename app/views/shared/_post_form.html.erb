@@ -1,7 +1,7 @@
 <%= form_for(@post) do |f| %>
   <%= render 'shared/error_messages', object: f.object %>
-  <div class="field">
-    <%= f.text_area :body, placeholder: "Compose new post...", class: "form-control" %>
+  <div class="field u-max-full-width">
+    <%= f.text_area :body, placeholder: "Compose new post...", class: "u-max-full-width" %>
   </div>
   <%= f.submit "Post", class: "btn btn-primary" %>
 <% end %>

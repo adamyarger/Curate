@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
     auto_html_for :body do
 	    html_escape
 	    image
-	    youtube(:width => 400, :height => 250, :autoplay => false)
+	    youtube(:width => '100%', :height => 320, :autoplay => false)
 	    vimeo(:width => 400, :height => 250, :autoplay => false)
 	    soundcloud(:show_artwork => true, :color => '1E90FF')
 	    link :target => "_blank", :rel => "nofollow"
