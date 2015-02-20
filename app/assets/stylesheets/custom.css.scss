@@ -38,30 +38,7 @@
 
 
 
-/****************************************** footer ******************************************/
 
-
-
-/****************************************** message rcipient list ******************************************/
-
-.state-icon {
-    left: -5px;
-}
-.list-group-item-primary {
-    color: rgb(255, 255, 255);
-    background-color: rgb(66, 139, 202);
-}
-
-/* DEMO ONLY - REMOVES UNWANTED MARGIN */
-.well .list-group {
-    margin-bottom: 0px;
-}
-
-.list-group-item{
-	position: relative;
-	float: left;
-	margin-bottom: 0;
-}
 
 /****************************************** header avatar ******************************************/
 
@@ -98,9 +75,9 @@
 }
 
 .stylish-panel {
-    background-color: #fff;
+    background-color: #f8fafb;
     border: 1px solid #dddddd;
-	margin-top: 10px;
+	margin-top: 15px;
 	border-radius: 4px;
     margin-bottom: 16px;
     
@@ -115,7 +92,7 @@
 
 .stylish-panel img {
     border-radius: 3.5%;
-    padding: 4px;
+    /*padding: 4px;*/
     border-color: #fff;
     border: 1px solid #dddddd;
     width:210px;

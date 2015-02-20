@@ -24,5 +24,13 @@ Things you may want to cover:
 * ...
 
 
+COLORS:
+#3d525e --> link color
+#1FDA9A --> button color --> its green so they want to click it
+#0FA0CE --> hover over link
+#f8fafb --> background color --> ie: navbar
+
+
+
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.

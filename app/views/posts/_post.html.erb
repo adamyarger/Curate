@@ -9,7 +9,7 @@
         <div class="row">
           <div class="name_avatar u-pull-left">
           	<span class="round-image-50 name  user_avatar u-pull-left">
-          		<%= image_tag(post.user.avatar.url(:thumb)) %>
+          		<%= link_to image_tag(post.user.avatar.url(:thumb)), post.user %>
           	</span>
             <span class="user_name">
               <%= link_to post.user.name, post.user, class: "post_name u-pull-left" %>
