@@ -18,6 +18,11 @@
               <li class="navbar-item">
                   <%= link_to "Users", users_path, class: "navbar-link" %>
               </li>
+
+              <li class="navbar-item">
+                  <%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "navbar-link" %>
+              </li>
+
               <li class="navbar-avatar">
                   <%= link_to image_tag(current_user.avatar.url(:thumb)), current_user, class: "navbar-link round-image-50" %>
               </li>

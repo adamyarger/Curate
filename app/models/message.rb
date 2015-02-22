@@ -1,5 +1,5 @@
 class Message < ActiveRecord::Base
-
+	
 	attr_reader :user_tokens
 
 	belongs_to :sender, :class_name => 'User'

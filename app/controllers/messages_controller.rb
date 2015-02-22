@@ -32,3 +32,5 @@ class MessagesController < ApplicationController
 			params.require(:message).permit(:body, :sender_id, user_tokens: [])
 		end
 end
+
+
