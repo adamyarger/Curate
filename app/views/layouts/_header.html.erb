@@ -18,25 +18,37 @@
               <li class="navbar-item">
                   <%= link_to "Users", users_path, class: "navbar-link" %>
               </li>
+              <li class="navbar-avatar">
+                  <%= link_to image_tag(current_user.avatar.url(:thumb)), current_user, class: "navbar-link round-image-50" %>
+              </li>
+              
              
               <li class="navbar-item">
                 
-                <a class="navbar-link" href="#" data-popover="#moreNavPopover">
-                   <%= current_user.name.split(" ")[0] %>
-                </a>
-                   <div id="moreNavPopover" class="popover">
-                     <ul class="popover-list">
-                       <li class="popover-item">
-                         <%= link_to "Profile", current_user, class: "popover-link" %>
-                       </li>
-                       <li class="popover-item">
-                         <%= link_to "Settings", edit_user_registration_path, class: "popover-link" %>
-                       </li>
-                       <li class="popover-item">
-                         <%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "popover-link" %>
-                       </li>
-                     </ul>
-                   </div>
+                <div class="click-nav">
+                  <ul class="no-js">
+                    <li>
+                      <a href="#" class="clicker navbar-link">
+                          <%= current_user.name.split(" ")[0] %> <i class="fa fa-caret-down"></i>
+                      </a>
+                      <div class="dropdown">
+                        <ul>
+                          <li class="popover-item">
+                             <%= link_to "Profile", current_user, class: "popover-link" %>
+                           </li>
+                           <li class="popover-item">
+                             <%= link_to "Settings", edit_user_registration_path, class: "popover-link" %>
+                           </li>
+                           <li class="popover-item">
+                             <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+                           </li>
+                        </ul>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                   
                </li>
             <% else %>
                <li class="navbar-item">

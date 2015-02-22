@@ -125,7 +125,8 @@ body {
   line-height: 1.6;
   font-weight: 900;
   font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  color: #222;
+  padding-top: 70px; }
 
 
 /* Typography
@@ -300,7 +301,7 @@ ul ul,
 ul ol,
 ol ol,
 ol ul {
-  margin: 1.5rem 0 1.5rem 3rem;
+  
   font-size: 90%; }
 li {
   margin-bottom: 1rem;
