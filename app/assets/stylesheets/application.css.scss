@@ -1,12 +1,13 @@
 @import "bourbon";
-@import "variable";
-@import "mixins";
-@import "layout";
+@import "core/variable";
+@import "core/mixins";
+@import "core/layout";
 @import "custom";
 @import "primary";
 @import "sidebar";
 @import "feed";
-@import "reset";
+@import "forms";
+@import "core/reset";
 
 
 

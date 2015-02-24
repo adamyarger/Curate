@@ -1,12 +1,12 @@
 
 
-<div class="post_show">
-    <div class="panel panel-default">
+<li class="post_show">
+
       <div class="panel-heading post_media">
         <%= post.body_html %>
       </div>
       <div class="panel-footer">
-        <div class="row">
+
           <div class="name_avatar u-pull-left">
           	<span class="round-image-50 name  user_avatar u-pull-left">
           		<%= link_to image_tag(post.user.avatar.url(:thumb)), post.user %>
@@ -23,10 +23,8 @@
 	            <% if current_user?(post.user) %>
 		      		<%= link_to "delete", post, method: :delete,
 		                                       data: { confirm: "You sure?" }, class: "delete" %>
-			    <% end %>
+			        <% end %>
             </div>
-          
-        </div>
       </div>
-    </div>
-</div>
+
+</li>

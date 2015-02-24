@@ -1,0 +1,100 @@
+// colors
+
+$main-text: #31353d; // main text
+$link: #435779; // anchor tags
+$background: #eeeff7; // background color
+$header-bg: #31353d;
+
+$border: #e0e6ef;
+$light-text: #a5aebc;
+$green: #7dcf85;
+
+
+
+$color-1: #5f8ee4; // Cornflower Blue - Action color
+$color-2: #19191a; // Dark Blue
+$color-3: #e4655f; // Red
+$color-4: #e6e6e6; // light grey
+$color-5: #ffffff; // white
+
+// additional colors
+
+$success: #6fce72; // green
+$alert: $color-3;  // red
+
+$shadow-layer-bg: rgba(#435779, .6);
+
+// fonts 
+
+$primary-font: 'PT Sans', sans-serif;
+
+// z-index
+
+$header-zindex: 4;
+$sidebar-zindex: 3;
+$shadow-zindex: 2;
+$main-zindex: 1;
+
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
+
+.btn {
+	border: none;
+	box-shadow: none;
+	border-radius: .25em;
+	font: {
+		size: 1rem;
+	}
+	color: $color-5;
+	padding: .6em 1.2em;
+	cursor: pointer;
+	background: $color-1;
+
+	&:focus {
+		outline: none;
+	}
+
+	.no-touch &:hover {
+		background: lighten($color-1, 5%);
+	}
+
+	&.btn-success {
+		background: $success;
+
+		.no-touch &:hover {
+			background: lighten($success, 5%);
+		}
+	}
+
+	&.btn-alert {
+		background: $alert;
+
+		.no-touch &:hover {
+			background: lighten($alert, 5%);
+		}
+	}
+
+	&.btn-outline {
+		color: $color-1;
+		background: transparent;
+		box-shadow: inset 0 0 0 1px $color-1;
+
+		.no-touch &:hover {
+			color: $color-5;
+			background: $color-1;
+		}
+	}
+
+	font-size: 1rem;
+}
+
+.cd-buttons .cd-box:nth-of-type(2) span {
+	/* CSS class name color */ 
+	color: $color-1;
+}
+
+
+

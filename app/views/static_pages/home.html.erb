@@ -1,13 +1,6 @@
 <% if user_signed_in? %>
   <div class="row">
-       <div class="four columns">
-            <div class="stats">
-              <%= render 'shared/stats' %>
-            </div>
-            <div class="post_form ">
-              <%= render 'shared/post_form' %>
-            </div>
-       </div>
+       
        <div class="eight columns">
          <%= render 'shared/feed' %>
        </div>

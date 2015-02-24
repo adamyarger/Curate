@@ -1,5 +1,5 @@
 <% if @feed_items.any? %>
-  <ol class="posts">
+  <ol id="cd-gallery-items" class="cd-container">
     <%= render @feed_items %>
   </ol>
   <%= will_paginate @feed_items %>

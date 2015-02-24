@@ -23,16 +23,11 @@ main {
 	li {
 		margin-bottom: 1.5em;
 
-		img {
-			width: 100%;
-			display: block;
-			@include border-radius;
-		}
 	}
 
 	@include MQ(M) {
 		li {
-			@include column(.48); // see how this mixin works inside partials > _layout.scss
+			@include column(.6); // see how this mixin works inside partials > _layout.scss
 			margin-bottom: 2em;
 			margin-right: 4%;
 
@@ -44,7 +39,7 @@ main {
 
 	@include MQ(L) {
 		li {
-			@include column(.31);
+			@include column(.6);
 			margin-bottom: 2.5em;
 			margin-right: 3.5%;
 
@@ -57,23 +52,11 @@ main {
 			}
 		}
 	}
+
 }
 
-/*#cd-shadow-layer {
-	position: fixed;
-	min-height: 100%;
-	width: 100%;
-	top: 0;
-	left: 0;
-	background: $shadow-layer-bg;
-	cursor: pointer;
+.u-pull-right{
+	float:right;
+}
 
-	z-index: $shadow-zindex;
 
-	display: none;
-
-	&.is-visible {
-		display: block;
-		@include animation(cd-fade-in .3s);
-	}
-}*/
