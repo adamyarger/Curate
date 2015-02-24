@@ -1,60 +1,46 @@
+<header>
+    <div id="logo"><%= link_to "curate", root_path, id: "logo" %></div>
+    
+    <div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
+    <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>
+</header>
 
 
-
-<nav class="navbar">
-      <div class="container">
-        <li class="navbar-item navbar-brand"><h1><%= link_to "curate", root_path, id: "logo" %></h1></li>
-        <ul class="navbar-list u-pull-right">
+<nav id="main-nav">
+      
+        
+        <ul>
           
 
           <% if user_signed_in? %>
 
               <li class="navbar-item">
-                  <%= link_to "Send", new_message_path, class: "navbar-link" %>
+                  <%= link_to "Send", new_message_path %>
               </li>
               <li class="navbar-item">
-                  <%= link_to "Messages", messages_path, class: "navbar-link" %>
+                  <%= link_to "Messages", messages_path %>
               </li>
               <li class="navbar-item">
-                  <%= link_to "Users", users_path, class: "navbar-link" %>
-              </li>
-
-              <li class="navbar-item">
-                  <%= link_to "Log out", destroy_user_session_path, :method => :delete, class: "navbar-link" %>
+                  <%= link_to "Users", users_path %>
               </li>
 
               <li class="navbar-avatar">
                   <%= link_to image_tag(current_user.avatar.url(:thumb)), current_user, class: "navbar-link round-image-50" %>
               </li>
-              
-             
-              <li class="navbar-item">
-                
-                <div class="click-nav">
-                  <ul class="no-js">
-                    <li>
-                      <a href="#" class="clicker navbar-link">
-                          <%= current_user.name.split(" ")[0] %> <i class="fa fa-caret-down"></i>
-                      </a>
-                      <div class="dropdown">
-                        <ul>
-                          <li class="popover-item">
-                             <%= link_to "Profile", current_user, class: "popover-link" %>
-                           </li>
-                           <li class="popover-item">
-                             <%= link_to "Settings", edit_user_registration_path, class: "popover-link" %>
-                           </li>
-                           <li class="popover-item">
-                             <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
-                           </li>
-                        </ul>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
+                   
+               <li class="popover-item">
+                 <%= link_to "Profile", current_user, class: "popover-link" %>
+               </li>
+               <li class="popover-item">
+                 <%= link_to "Settings", edit_user_registration_path %>
+               </li>
+               <li class="popover-item">
+                 <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+               </li>
+                        
 
                    
-               </li>
+               
             <% else %>
                <li class="navbar-item">
                   <%= link_to "Sign In", new_user_session_path, class: "popover-link" %>
@@ -64,5 +50,7 @@
                </li>
           <% end %>
         </ul>
-      </div>
+      
 </nav>
+
+<%= render 'layouts/right_slide' %>
