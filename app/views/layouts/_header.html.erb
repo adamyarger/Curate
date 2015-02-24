@@ -1,5 +1,5 @@
 <header>
-    <div id="logo"><%= link_to "curate", root_path, id: "logo" %></div>
+    <div id="logo"><h1><%= link_to "curate", root_path, id: "logo" %></h1></div>
     
     <div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
     <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>
@@ -15,17 +15,13 @@
           <% if user_signed_in? %>
 
               <li class="navbar-item">
-                  <%= link_to "Send", new_message_path %>
+                  <%= link_to "Send", new_message_path, class: "current" %>
               </li>
               <li class="navbar-item">
                   <%= link_to "Messages", messages_path %>
               </li>
               <li class="navbar-item">
                   <%= link_to "Users", users_path %>
-              </li>
-
-              <li class="navbar-avatar">
-                  <%= link_to image_tag(current_user.avatar.url(:thumb)), current_user, class: "navbar-link round-image-50" %>
               </li>
                    
                <li class="popover-item">
