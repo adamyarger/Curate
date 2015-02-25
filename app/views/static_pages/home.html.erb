@@ -1,11 +1,13 @@
 <% if user_signed_in? %>
-  
-       
-       
-         <%= render 'messages/stream' %>
-      
 
-       <%= render 'messages/main' %>
+    <%= render 'messages/stream' %>
+
+    <div id="main-article-wrapper">
+        <div id="main-article">
+          <%= render 'shared/feed' %>
+        </div>
+    </div>
+    
   
 <% else %>
   <!-- landing page for new users -->

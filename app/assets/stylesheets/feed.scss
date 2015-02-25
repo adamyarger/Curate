@@ -27,7 +27,7 @@ main {
 
 	@include MQ(M) {
 		li {
-			@include column(.6); // see how this mixin works inside partials > _layout.scss
+			@include column(1); // see how this mixin works inside partials > _layout.scss
 			margin-bottom: 2em;
 			margin-right: 4%;
 
@@ -39,7 +39,7 @@ main {
 
 	@include MQ(L) {
 		li {
-			@include column(.6);
+			@include column(1);
 			margin-bottom: 2.5em;
 			margin-right: 3.5%;
 

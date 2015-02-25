@@ -1,6 +1,22 @@
+    <div id="top-stream">
+        
+        <ul>
+            <li id="latest">
+                Post
+            </li>
+            <li id="popular">
+                Message
+            </li>
+        </ul>
 
-    <%= form_for :message, url: messages_path do |f| %>
-        <%= f.text_area :body %>
+        <!--Start all-channels-->
+        <div id="message_body">
+            <%= form_for :message, url: messages_path do |f| %>
+            <%= f.text_area :body %>
+        </div>
+        <!--END all-channels-->
+    </div>
+    
         <ul>
            <% @user.each do |user| %>
            
@@ -23,6 +39,10 @@
     <!--END stream footer-->
         
     <% end %>
+
+
+
+
 
 
 
