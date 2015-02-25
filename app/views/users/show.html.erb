@@ -1,15 +1,20 @@
 <% provide(:title, @user.name) %>
-<div class="row">
+
   <aside class="four columns">
     <%= render 'users/profile_box' %>
   </aside>
-  <div class="eight columns">
-    <% if @user.posts.any? %>
-      
+  
+    
+
+
+
+<div id="main-article-wrapper">
+    <div id="main-article">
+      <% if @user.posts.any? %>
       <ol class="posts">
         <%= render @posts %>
       </ol>
       <%= will_paginate @posts %>
     <% end %>
-  </div>
+    </div>
 </div>
