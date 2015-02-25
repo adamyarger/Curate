@@ -1,5 +1,6 @@
+<div id="stream">
+
     <div id="top-stream">
-        
         <ul>
             <li id="latest">
                 Post
@@ -8,37 +9,31 @@
                 Message
             </li>
         </ul>
-
-        <!--Start all-channels-->
         <div id="message_body">
             <%= form_for :message, url: messages_path do |f| %>
             <%= f.text_area :body %>
         </div>
-        <!--END all-channels-->
     </div>
-    
-        <ul>
+    <div id="stream-list">
+        <ul>   <!-- stream list -->
            <% @user.each do |user| %>
-           
-                    <li id="stream_item">
-                        
-                            <span class="round-image-50 list-group-item"><%= image_tag(user.avatar.url(:thumb)) %></span>
-                            <span class="list-group-item"><%= user.name %></span>
-                            <span class="follow_list_box list-group-item">
-                                <%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user) %>
-                            </span>
-                        
-                    </li>
-                    <br>
+                <li id="stream_item">
+                    <span class="round-image-50 list-group-item"><%= image_tag(user.avatar.url(:thumb)) %></span>
+                    <span class="list-group-item"><%= user.name %></span>
+                    <span class="follow_list_box list-group-item">
+                        <%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user) %>
+                    </span>
+                </li>
+                <br>
            <% end %>
          </ul>
+    </div>
         <!--Start stream footer-->
     <div id ="stream-footer">
         <%= f.button :submit, class: "btn btn-primary" %>
     </div>
-    <!--END stream footer-->
-        
     <% end %>
+</div>
 
 
 
