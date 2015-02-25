@@ -21,13 +21,7 @@ body{
 	min-width:320px;
 	background-color:#FFF;
 }
-#hidden-burger{
-	width:24px;
-	height:24px;
-	display:none;
-	padding-top:.3em;
-	float:left;
-}
+
 #main-list{
 	width:45%;
 	float:left;
@@ -178,12 +172,13 @@ body{
 	padding: 0 0 .75em 0;
 	font-weight: 400;
 	float: left;
-	z-index: 88;
+	z-index: 2;
 	background: #fff;
 	border-right: 1px solid #d9e0e2;
 	height: 100%;
 	width: 325px;
 	-webkit-font-smoothing: antialiased;
+	margin-top: 52px;
 }
 #stream.sticky{
 	position:fixed;
@@ -317,6 +312,10 @@ body{
 	width: 324px;
 	color: #ff3c1f;
 	font-family:'Source Sans Pro', sans-serif;
+
+	.btn{
+		width: 95%;
+	}
 }
 #stream-footer ul{
 	margin:0;

@@ -1,11 +1,10 @@
 
-<div class="message_sidebar">
     <%= form_for :message, url: messages_path do |f| %>
-        <%= f.text_area :body,:cols => "50", :rows => "10" %>
-        <ul class="list-group-box">
+        <%= f.text_area :body %>
+        <ul>
            <% @user.each do |user| %>
            
-                    <li class="friends_list">
+                    <li id="stream_item">
                         
                             <span class="round-image-50 list-group-item"><%= image_tag(user.avatar.url(:thumb)) %></span>
                             <span class="list-group-item"><%= user.name %></span>
@@ -17,27 +16,13 @@
                     <br>
            <% end %>
          </ul>
-        <p><%= f.button :submit, class: "btn btn-primary" %></p>
+        <!--Start stream footer-->
+    <div id ="stream-footer">
+        <%= f.button :submit, class: "btn btn-primary" %>
+    </div>
+    <!--END stream footer-->
         
     <% end %>
-</div>
-
-
-<div class="modal-body">
-    <%= form_for :post, url: posts_path do |f| %>
-        <%= f.text_area :body, placeholder: "URL from, Soundcloud, Youtube or Vimeo", class: 'form-control' %>
-        <br>
-        <%= f.submit "Submit Post", class: "btn btn-primary" %>
-
-    <% end %>
-</div>
 
 
 
-<%= form_for(@post) do |f| %>
-  <%= render 'shared/error_messages', object: f.object %>
-  <div class="field u-max-full-width">
-    <%= f.text_area :body, placeholder: "Compose new post...", class: "u-max-full-width" %>
-  </div>
-  <%= f.submit "Post", class: "btn btn-primary" %>
-<% end %>
