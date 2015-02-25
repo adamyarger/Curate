@@ -1,0 +1,41 @@
+#cd-post-items {
+	li {
+		margin-bottom: 1.5em;
+
+	}
+
+	@include MQ(M) {
+		li {
+			@include column(.6); // see how this mixin works inside partials > _layout.scss
+			margin-bottom: 2em;
+			margin-right: 4%;
+
+			&:nth-child(2n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	@include MQ(L) {
+		li {
+			@include column(.6);
+			margin-bottom: 2.5em;
+			margin-right: 3.5%;
+
+			&:nth-child(2n) {
+				margin-right: 3.5%;
+			}
+
+			&:nth-child(3n) {
+				margin-right: 0;
+			}
+		}
+	}
+
+}
+
+.stylish-panel{
+	@include column(.25); // see how this mixin works inside partials > _layout.scss
+			margin-bottom: 2em;
+			margin-right: 4%;
+}

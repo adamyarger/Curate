@@ -81,7 +81,7 @@ header {
 	z-index: $header-zindex;
 
 	@include MQ(L) {
-		height: 80px;
+		height: 50px;
 	}
 }
 
@@ -93,7 +93,7 @@ header {
 	@include transform(scale(.8)); 
 
 	@include MQ(L) {
-		padding-top: 50px;
+		padding-top: 37px;
 		position: absolute;
 		/* logo left margin on Dekstop */
 		left: 2.4em; 
@@ -210,7 +210,7 @@ header {
 		box-shadow: none;
 
 		/* header height */
-		line-height: 80px; 
+		line-height: 50px; 
 
 		z-index: $header-zindex;
 
@@ -281,79 +281,6 @@ header {
 		}
 	}
 
-	.cd-qty, .cd-price {
-		color: $light-text;
-	}
-
-	.cd-price {
-		margin-top: .4em;
-	}
-
-	.cd-item-remove {
-		position: absolute;
-		right: 1em;
-		@include center(y); // see mixin inside partials > _mixins.scss
-		width: 32px;
-		height: 32px;
-		border-radius: 50%;
-		background: url('../img/cd-remove-item.svg') no-repeat center center;
-
-		.no-touch &:hover {
-			background-color: $border;
-		}
-	}
-
-	.cd-cart-total {
-		padding-top: 1em;
-		padding-bottom: 1em;
-
-		span {
-			float: right;
-		}
-
-		&::after { /* clearfix */
-			content: '';
-			display: table;
-			clear: both;
-		}
-	}
-
-	.checkout-btn {
-		display: block;
-		width: 100%;
-		height: 60px;
-		line-height: 60px;
-		background: $green;
-		color: #FFF;
-		text-align: center;
-
-		.no-touch &:hover {
-			background: lighten($green, 10%);
-		}
-	}
-
-	.cd-go-to-cart {
-		text-align: center;
-		margin: 1em 0;
-
-		a {
-			text-decoration: underline;
-		}
-	}
-
-	@include MQ(L) {
-		> * {
-			padding: 0 2em;
-		}
-
-		.cd-cart-items li {
-			padding: 1em 2em;
-		}
-
-		.cd-item-remove {
-			right: 2em;
-		}
-	}
 }
 
 
