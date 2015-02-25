@@ -80,6 +80,9 @@ body{
 	height: 100%;
 	overflow:scroll;
 	padding-bottom: 230px;
+	/*text-align: center;*/
+
+	
 }
 #stream-item{
 	height:100%;
@@ -90,12 +93,32 @@ body{
 	cursor:pointer;
 	display:block;
 	overflow:hidden;
+
 }
 #stream-item:last-child{
 	margin-bottom:3.5em;
 }
 
+.follow-list{
+	li{
+		border-bottom: 1px solid #e0e6ef;
+	}
 
+	span.list-user{
+		margin-bottom: 1px;
+	}
+	input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box;
+	padding: 0;
+	margin-left: 0px;
+	float: right;
+	margin-right: 22px;
+	/* line-height: 5; */
+	margin-top: 8px;
+	}
+
+
+}
 
 #stream-item-title p{
 	padding-top:.5em;
