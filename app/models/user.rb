@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
 
   # paperclip profile
   validates_with AttachmentSizeValidator, :attributes => :avatar, :less_than => 1.megabytes
-  has_attached_file :avatar, :styles => { :medium => "210x210>", :thumb => "100x100#" }, :default_url => ":style/missing.png"
+  has_attached_file :avatar, :styles => { :medium => "250x250#", :thumb => "100x100#" }, :default_url => ":style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
 
 	# Returns a user's status feed.
