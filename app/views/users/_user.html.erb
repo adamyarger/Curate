@@ -1,7 +1,19 @@
-<li>
-  <span class="round-image-50"><%= image_tag(user.avatar.url(:thumb)) %></span>
-  <span><%= link_to user.name, user %></span>
-  <% if current_user.admin? && !current_user?(user) %>
-    								| <%= link_to "delete", user, method: :delete,
+<li class="cart-item">
+	
+	<span class="round-image-50 cart-item-pic"><%= image_tag(user.avatar.url(:thumb)) %></span>
+	<span class="cart-item-desc"><%= link_to user.name, user %></span>
+	
+
+	<span id="cart-item-price">
+	<% if current_user.admin? && !current_user?(user) %>
+    								 <%= link_to "delete", user, method: :delete,
                                   		data: { confirm: "You sure?" } %><% end %>
+    </span>
 </li>
+
+ 
+    
+
+
+
+

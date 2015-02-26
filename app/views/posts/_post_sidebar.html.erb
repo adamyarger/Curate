@@ -1,0 +1,8 @@
+<div class="modal-body">
+    <%= form_for :post, url: posts_path do |f| %>
+        <%= f.text_area :body, placeholder: "URL from, Soundcloud, Youtube or Vimeo", class: 'form-control' %>
+        <br>
+        <%= f.submit "Submit Post", class: "btn btn-primary" %>
+
+    <% end %>
+</div>

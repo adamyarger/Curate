@@ -26,7 +26,7 @@ body{
 	height: 100%;
 	width: 325px;
 	-webkit-font-smoothing: antialiased;
-	margin-top: 52px;
+	margin-top: 2px;
 }
 #stream.sticky{
 	position:fixed;
@@ -169,7 +169,7 @@ textarea#message_body{
 /*********  Main Feed ********/
 
 #main-article-wrapper{
-	padding-top: 3em;
+	padding-top: 1em;
 	height:100%;
 	background-color:#F8F9FA;
 	margin-left:325px;
