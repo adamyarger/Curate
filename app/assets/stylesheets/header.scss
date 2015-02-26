@@ -128,6 +128,7 @@ header {
 
 .nav-avatar img{
 	border:1px solid #eeeff7;
+	margin-left: 15px;
 }
 
 
@@ -135,6 +136,10 @@ header {
 	position: absolute;
 	margin-top: -57px;
 	height: 100%;
+
+	.round-image-50{
+		margin-left: 15px;
+	}
 
 
 	a {
@@ -149,6 +154,7 @@ header {
 	position: absolute;
 	top: 16px;
 	height: 100%;
+
 
 
 	a {
@@ -167,6 +173,12 @@ header {
 
 #cd-hamburger-menu {
 	left: 0;
+
+	#name{
+		a{
+			margin-top: 1px;
+		}
+	}
 
 	
 
