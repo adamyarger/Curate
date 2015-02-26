@@ -1,10 +1,10 @@
 <% provide(:title, @user.name) %>
 
  
-    <%= render 'users/profile_box' %>
+<%= render 'users/profile_box' %>
 
-<div id="main-article-wrapper">
-    <div id="main-article">
+<div id="main-user-wrapper">
+    <div id="user-main">
       <% if @user.posts.any? %>
       <ol class="posts">
         <%= render @posts %>
