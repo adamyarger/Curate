@@ -1,8 +1,28 @@
 <header>
     <div id="logo"><h1><%= link_to "curate", root_path, id: "logo" %></h1></div>
     
-    <div id="cd-hamburger-menu"><a class="cd-img-replace" href="#0">Menu</a></div>
-    <div id="cd-cart-trigger"><a class="cd-img-replace" href="#0">Cart</a></div>
+
+    <!-- <div id="avatar-menu"><a href="#0">Menu</a></div> -->
+    <% if user_signed_in? %>
+        <div id="cd-hamburger-menu">
+            <span class="round-image-50 nav_avatar"><%= image_tag(current_user.avatar.url(:thumb)) %></span>
+            <a class="cd-img-replace" href="#0"><%= current_user.name.split(" ")[0] %></a>
+        </div>
+        <div id="cd-cart-trigger"><a>Post</a></div>
+          <% else %>
+                <div class="signed-out-nav">
+                  <ul>
+                     <li class="navbar-item sign-in">
+                        <%= link_to "Sign In", new_user_session_path, class: "popover-link" %>
+                     </li>
+                     <li class="navbar-item sign-in">
+                        <%= link_to "Register", new_user_registration_path, class: "popover-link" %>
+                     </li>
+                  </ul>
+                </div>
+          <% end %>
+    
+
 </header>
 
 
@@ -13,6 +33,9 @@
           
 
           <% if user_signed_in? %>
+              <li class="popover-item">
+                 <%= link_to "Home", root_path, class: "popover-link" %>
+              </li>
               <li class="popover-item">
                  <%= link_to "Profile", current_user, class: "popover-link" %>
               </li>
@@ -32,18 +55,8 @@
                <li class="popover-item">
                  <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
                </li>
-                        
-
-                   
-               
-            <% else %>
-               <li class="navbar-item">
-                  <%= link_to "Sign In", new_user_session_path, class: "popover-link" %>
-               </li>
-               <li class="navbar-item">
-                  <%= link_to "Register", new_user_registration_path, class: "popover-link" %>
-               </li>
           <% end %>
+
         </ul>
       
 </nav>

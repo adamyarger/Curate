@@ -55,12 +55,14 @@ Modules - reusable parts of our design
 	}
 }
 
-.cd-img-replace { /* replace text with a background-image */
+/*Use if you want a pic in nav*/
+
+/*.cd-img-replace { 
 	display: inline-block;
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
-}
+}*/
 
 /* -------------------------------- 
 
@@ -74,7 +76,7 @@ header {
 	left: 0;
 	height: 50px;
 	width: 100%;
-	background: $header-bg;
+	background: $color-5;
 	text-align: center;
 	box-shadow: 0 2px 0 rgba(#000, .1);
 
@@ -84,6 +86,28 @@ header {
 		height: 50px;
 	}
 }
+
+.signed-out-nav{
+	position: absolute;
+	height: auto;
+	width: auto;
+	left: auto;
+	right: 8em;
+	padding-top: 0;
+	top: 0;
+	background: transparent;
+	box-shadow: none;
+	line-height: 50px;
+	z-index: 4;
+
+	li {
+			display: inline-block;
+			margin-left: 1em;
+		}
+
+}
+
+
 
 #logo {
 	padding-top: 5px;
@@ -102,23 +126,49 @@ header {
 	}
 }
 
-#cd-hamburger-menu, #cd-cart-trigger {
+.nav-avatar img{
+	border:1px solid #eeeff7;
+}
+
+
+#cd-hamburger-menu {
 	position: absolute;
-	top: 0;
+	margin-top: -57px;
 	height: 100%;
+
 
 	a {
 		width: 60px;
 		height: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+#cd-cart-trigger {
+	position: absolute;
+	top: 16px;
+	height: 100%;
+
+
+	a {
+		width: 60px;
+		height: 100%;
+		padding-left: 20px;
+		padding-right: 20px;
+		cursor: pointer;
+		border: 1px solid #ff5a5f;
+		margin-right: 28px;
+		padding: 6px 20px 5px 20px;
+		border-radius: 4px;
+		color: #ff5a5f;
 	}
 }
 
 #cd-hamburger-menu {
 	left: 0;
 
-	a {
-		background: darken($header-bg, 5%) url('cd-hamburger-menu.svg') no-repeat center center;
-	}
+	
 
 	@include MQ(L) {
 		display: none;
@@ -128,9 +178,7 @@ header {
 #cd-cart-trigger {
 	right: 0;
 
-	a {
-		background: darken($header-bg, 5%) url('envelope.svg') no-repeat center center;
-	}
+	
 
 	@include MQ(L) {
 		/* cart right margin on desktop */
@@ -140,7 +188,12 @@ header {
 			position: relative;
 			width: 100px;
 			border-left: none;
-			background-color: darken($header-bg, 5%);
+			/* background-color: #f2f2f2; */
+			border: 1px solid #ff5a5f;
+			margin-right: 28px;
+			padding: 6px 20px 5px 20px;
+			border-radius: 4px;
+			color: #ff5a5f;
 		}
 	}
 }
@@ -225,7 +278,7 @@ header {
 			line-height: 1;
 			padding: 1em 1.4em;
 			border-bottom: none;
-			color: rgba(#FFF, .8);
+			/*color: rgba(#FFF, .8);*/
 			@include border-radius;
 
 			&.current {

@@ -12,11 +12,11 @@ $green: #7dcf85;
 
 
 
-$color-1: #5f8ee4; // Cornflower Blue - Action color
+$color-1: #ff5a5f; // airbnb red
 $color-2: #19191a; // Dark Blue
 $color-3: #e4655f; // Red
 $color-4: #e6e6e6; // light grey
-$color-5: #ffffff; // white
+$color-5: #fff; // white
 
 // additional colors
 
@@ -67,6 +67,14 @@ xButtons
 
 		.no-touch &:hover {
 			background: lighten($success, 5%);
+		}
+	}
+
+	&.btn-dull {
+		background: $color-4;
+
+		.no-touch &:hover {
+			background: lighten($color-4, 5%);
 		}
 	}
 
