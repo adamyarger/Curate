@@ -6,7 +6,9 @@
     <% if user_signed_in? %>
         <div id="cd-hamburger-menu">
             <span class="round-image-50 nav_avatar"><%= image_tag(current_user.avatar.url(:thumb)) %></span>
-            <a class="cd-img-replace" id="name" href="#0"><%= current_user.name.split(" ")[0] %></a>
+            <a class="cd-img-replace" id="name" href="#0"><%= current_user.name.split(" ")[0] %>
+              <span><i class="fa fa-angle-down"></i></span>
+            </a>
         </div>
         <div id="cd-cart-trigger"><a>Post</a></div>
           <% else %>
