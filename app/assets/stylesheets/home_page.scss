@@ -84,17 +84,7 @@ body{
 
 	
 }
-#stream-item{
-	height:100%;
-	float:left;
-	padding: .813em;
-	border-bottom: 1px solid rgba(217,224,226,0.4);
-	transition: all .4s;
-	cursor:pointer;
-	display:block;
-	overflow:hidden;
 
-}
 #stream-item:last-child{
 	margin-bottom:3.5em;
 }
@@ -159,6 +149,10 @@ textarea#message_body{
 	width: 100%;
 	margin-top: 13px;
 	height: 36px;
+}
+
+span.list-group-item{
+	margin-left: 10px
 }
 
 

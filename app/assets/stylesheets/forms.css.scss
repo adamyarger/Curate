@@ -17,3 +17,36 @@
 		text-align: center;
 	}
 }
+
+/********************* edit user form ****************************/
+
+#edit-wrapper{
+	padding-top: 1em;
+	height:100%;
+	background-color:#F8F9FA;
+}
+
+#edit-main{
+	width: 500px;
+	min-height: 100%;
+	height: auto;
+	max-width: 798px;
+	background-color: #FFF;
+	margin: auto;
+	padding: 25px;
+	border: 1px solid #d9e0e2;
+	border-radius: 0.35em;
+	box-shadow: 0 2px 0 rgba(217, 224, 226, 0.2);
+	margin-bottom: 50px;
+
+	input{
+		width: 100%;
+		margin-bottom: 20px;
+	}
+}
+
+#current-password{
+	i {
+		font-size: .75em;
+	}
+}

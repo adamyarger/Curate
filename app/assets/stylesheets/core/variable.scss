@@ -101,5 +101,56 @@ body{
   padding-top: 50px;
 }
 
+/* -------------------------------- 
+
+xForm 
+
+-------------------------------- */
+input[type=text], input[type=email], input[type=password], select, textarea  {
+  border: 1px solid #e0e6ef;
+  border-radius: .25em;
+  background: #ffffff;
+}
+input[type=text]:focus, select:focus, input[type=email]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+input[type=text], input[type=email], input[type=password] {
+  padding: .6em 1em;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
+}
+input[type=text], input[type=email], input[type=password] {
+  padding: .6em 1em;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+input[type=text], input[type=email], input[type=password] {
+  padding: .6em 1em;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+input[type=text].success {
+  border-color: #6fce72;
+  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+}
+
+input[type=password].success {
+  border-color: #6fce72;
+  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+}
+
+input[type=text].alert {
+  border-color: #e4655f;
+  box-shadow: 0 0 6px rgba(228, 101, 95, 0.2);
+}
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border-color: #5f8ee4;
+  box-shadow: 0 0 6px rgba(95, 142, 228, 0.2);
+}
+
+
+
+
+
 
 
