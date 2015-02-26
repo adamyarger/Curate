@@ -36,8 +36,13 @@
 	padding: 25px;
 	border: 1px solid #d9e0e2;
 	border-radius: 0.35em;
-	box-shadow: 0 2px 0 rgba(217, 224, 226, 0.2);
+	-webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
 	margin-bottom: 50px;
+
+	h1{
+		text-align: center;
+	}
 
 	input{
 		width: 100%;
@@ -50,3 +55,12 @@
 		font-size: .75em;
 	}
 }
+
+@media screen and (max-width:653px){
+	
+	#edit-main{
+		width: 92%;
+	}
+	
+}
+

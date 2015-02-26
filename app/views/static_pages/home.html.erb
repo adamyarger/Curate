@@ -11,18 +11,23 @@
   
 <% else %>
   <!-- landing page for new users -->
-  <div class="center jumbotron">
-    <h1>Welcome to curate,</h1>
+<div id="edit-wrapper">
+  <div id="edit-main">
 
-    <h2>
-      Share your favorite music with your favorite people,
-    </h2>
-    <h3>
-      From Youtube, Soundcloud and Vimeo.
-    </h3>
+      <div class="center jumbotron">
+        <h1>Welcome to curate,</h1>
 
-    <%= link_to "Sign up now!", new_user_registration_path, class: "button button-primary" %>
+        <h2>
+          Share your favorite music with your favorite people,
+        </h2>
+        <h3>
+          From Youtube, Soundcloud and Vimeo.
+        </h3>
+
+        <%= link_to "Sign up now!", new_user_registration_path, class: "button button-primary" %>
+      </div>
   </div>
+</div>
 
   
 <% end %>
