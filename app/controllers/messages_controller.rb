@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
 		@message = Message.new
 		@user = current_user.following
 		@users = User.all
-		# @friends = User.pluck(:name, :id).sort
 	end
 
 	def create
@@ -15,8 +14,8 @@ class MessagesController < ApplicationController
 			flash[:success] = "Message Sent!"
 			redirect_to messages_path
 		else
-			flash[:notice] = "Oops!"
-			render 'new'
+			flash[:notice] = "Great Scott! You need to pick some friends"
+			redirect_to root_url
 		end
 	end
 
