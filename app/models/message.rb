@@ -8,7 +8,10 @@ class Message < ActiveRecord::Base
 
 	default_scope -> {order(created_at: :desc)}
 
+	
+
 	validates :body, presence: true, length: {maximum: 300}
+	validates :body_html, presence: true, length: {maximum: 500}
 	validates :sender_id, presence: true
 
 
@@ -16,6 +19,9 @@ class Message < ActiveRecord::Base
 	def user_tokens=(ids)
 	    self.user_ids = ids
 	end
+
+
+
 
 	auto_html_for :body do
 	    html_escape

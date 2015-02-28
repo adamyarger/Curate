@@ -9,6 +9,7 @@ class PostsController < ApplicationController
 			redirect_to root_url
 		else
 			@feed_items = []
+			flash[:alert] = "You scared or somethin."
 			render 'static_pages/home'   
 		end
 	end

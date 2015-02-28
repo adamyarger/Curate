@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 			flash[:success] = "Message Sent!"
 			redirect_to messages_path
 		else
-			flash[:notice] = "Great Scott! You need to pick some friends"
+			flash[:alert] = "Great Scott! You need to pick some friends"
 			redirect_to root_url
 		end
 	end
@@ -22,7 +22,7 @@ class MessagesController < ApplicationController
 	def index
 		@user = User.find(current_user)
 		@messages = Recipient.where(:user_id => @user).order("created_at DESC")
-
+		@messages.unread.update_all(read: true, updated_at: Time.now.utc)
 	end
 
 	private
