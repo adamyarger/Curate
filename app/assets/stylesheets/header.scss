@@ -211,11 +211,11 @@ header {
 	z-index: $sidebar-zindex;
 
 	@include MQ(M) {
-		width: 350px;
+		width: 325px;
 	}
 
 	@include MQ(L) {
-		width: 30%;
+		width: 325px;
 
 		/* header height has changed */
 		padding-top: 80px; 
