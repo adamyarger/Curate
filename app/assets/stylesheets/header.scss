@@ -42,18 +42,7 @@ Modules - reusable parts of our design
 
 -------------------------------- */
 
-.cd-container { /* this class is used to horizontally align the gallery of items */
-	position: relative;
-	width: 90%;
-	max-width: $L; // breakpoints inside partials > _layout.scss
-	margin: 0 auto;
 
-	&::after { /* clearfix */
-		content: '';
-		display: table;
-		clear: both;
-	}
-}
 
 /*Use if you want a pic in nav*/
 
@@ -130,6 +119,7 @@ header {
 .nav-avatar img{
 	border:1px solid #eeeff7;
 	margin-left: 15px;
+	float: left;
 }
 
 
@@ -137,9 +127,11 @@ header {
 	position: absolute;
 	margin-top: -57px;
 	height: 100%;
+	margin-left: 16px;
 
 	.round-image-50{
 		margin-left: 6px;
+		float: left;
 	}
 
 
@@ -147,7 +139,9 @@ header {
 		width: 60px;
 		height: 100%;
 		padding-left: 0px;
-		padding-right: 20px;
+		padding-right: 0px;
+		float: left;
+		margin-top: 9px;
 	}
 }
 

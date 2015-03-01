@@ -12,7 +12,7 @@
         
         <div id="message_body">
             <%= form_for :message, url: messages_path do |f| %>
-            <%= f.text_area :body %>
+            <%= f.text_area :body, class: "message_body" %>
         </div>
     </div>
     <!-- stream list -->
