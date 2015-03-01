@@ -71,9 +71,7 @@ header {
 
 	z-index: $header-zindex;
 
-	@include MQ(L) {
-		height: 50px;
-	}
+	
 }
 
 
@@ -106,14 +104,7 @@ header {
 	/* delete this property if you don't want your logo to scale down on mobile devices */
 	@include transform(scale(.8)); 
 
-	@include MQ(L) {
-		padding-top: 37px;
-		position: absolute;
-		/* logo left margin on Dekstop */
-		left: 2.4em; 
-		top: 0;
-		@include transform(scale(1));
-	}
+	
 }
 
 .nav-avatar img{
@@ -177,9 +168,7 @@ header {
 
 	
 
-	@include MQ(L) {
-		display: none;
-	}
+	
 }
 
 #cd-cart-trigger {
@@ -258,48 +247,7 @@ header {
 		}
 	}
 
-	@include MQ(L) { /* reset main nav style */
-		position: absolute;
-		height: auto;
-		width: auto;
-		left: auto;
-		right: 8em;
-		padding-top: 0;
-		top: 0;
-		background: transparent;
-		box-shadow: none;
-
-		/* header height */
-		line-height: 50px; 
-
-		z-index: $header-zindex;
-
-		li {
-			display: inline-block;
-			margin-left: 1em;
-		}
-
-		ul a {
-			display: inline-block;
-			height: auto;
-			line-height: 1;
-			padding: 1em 1.4em;
-			border-bottom: none;
-			/*color: rgba(#FFF, .8);*/
-			@include border-radius;
-
-			&.current {
-				box-shadow: none;
-				background: $link;
-				color: #FFF;
-			}
-
-			.no-touch &:hover {
-				background: $link;
-				color: #FFF;
-			}
-		}
-	}
+	
 
 	.no-js & {
 		position: fixed;
