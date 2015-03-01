@@ -18,7 +18,7 @@
     <!-- stream list -->
     <div id="stream-list" class="follow-list">
         <ul>   
-           <% @user.each do |user| %>
+           <% @recipients.each do |user| %>
                 <li id="stream_item">
                     <span class="round-image-50 list-group-item"><%= image_tag(user.avatar.url(:thumb)) %></span>
                     <span class="list-group-item"><%= user.name %></span>

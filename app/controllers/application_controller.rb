@@ -7,6 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   before_filter :unread
+  before_filter :nav_message
 
 	protected
 
@@ -17,5 +18,10 @@ class ApplicationController < ActionController::Base
 
 	def unread
 		@count = Recipient.where(:user_id => current_user)
+	end
+
+	def nav_message
+		@message = Message.new
+      	@recipients = current_user.following
 	end
 end
