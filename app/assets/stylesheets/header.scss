@@ -74,7 +74,7 @@ header {
 	
 }
 
-li#post-button{
+li.cd-signin{
 	float: right;
 	margin-top: -56px;
 	margin-right: 118px;
@@ -123,6 +123,8 @@ li#post-button{
 
 	/* delete this property if you don't want your logo to scale down on mobile devices */
 	@include transform(scale(.8)); 
+
+
 
 	
 }

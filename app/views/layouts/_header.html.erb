@@ -16,11 +16,11 @@
             </span>
         </div>
 
-        <ul>
-          <li id="post-button"><a>Post</a></li>
+        <ul class="post">
+          <li><a class="cd-signin" href="#0">Post</a></li>
           <li id="cd-cart-trigger"><a>Share</a></li>
         </ul>
-        
+
           <% else %>
                 <div class="signed-out-nav">
                   <ul>
@@ -76,4 +76,8 @@
 
 <% if user_signed_in? %>
   <%= render 'layouts/right_slide' %>
+<% end %>
+
+<% if user_signed_in? %>
+  <%= render 'posts/post_modal' %>
 <% end %>
