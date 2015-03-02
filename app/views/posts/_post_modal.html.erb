@@ -6,19 +6,17 @@
 			
 
 			<div id="cd-login"> <!-- log in form -->
-				<form class="cd-form">
-					<p class="fieldset">
-						<label class="image-replace cd-email" for="signin-email">E-mail</label>
-						<input class="full-width has-padding has-border" id="signin-email" type="email" placeholder="E-mail">
-						<span class="cd-error-message">Error message here!</span>
-					</p>
-
+				<div class="cd-form">
 					
+				    <%= form_for :post, url: posts_path do |f| %>
+				        <%= f.text_area :body, placeholder: "URL from, Soundcloud, Youtube or Vimeo", class: 'form-control' %>
+				        <br>
+				        <%= f.submit "Submit Post", class: "full-width" %>
 
-					<p class="fieldset">
-						<input class="full-width" type="submit" value="Login">
-					</p>
-				</form>
+				    <% end %>
+				    
+				</div>
+				
 				
 				
 				<!-- <a href="#0" class="cd-close-form">Close</a> -->

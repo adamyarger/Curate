@@ -76,7 +76,7 @@ header {
 
 .post{
 	float: right;
-	margin-top: -56px;
+	margin-top: 10px;
 	margin-right: 118px;
 	width: 60px;
 	height: 100%;
@@ -125,13 +125,11 @@ header {
 	transform: scale(0.8);
 	width: 100px;
 	margin-left: 42%;
+	float: left;
 	
 
 	/* delete this property if you don't want your logo to scale down on mobile devices */
 	@include transform(scale(.8)); 
-
-
-
 	
 }
 
@@ -144,7 +142,7 @@ header {
 
 #cd-hamburger-menu {
 	position: absolute;
-	margin-top: -57px;
+	margin-top: 9px;
 	height: 100%;
 	margin-left: 16px;
 

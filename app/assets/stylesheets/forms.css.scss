@@ -1,10 +1,11 @@
 /******************* post form ***********************/
 
-.modal-body{
+.cd-form{
 	textarea{
 		width: 100%;
-		height: 55px;
+		height: 120px;
 		margin-bottom: 10px;
+		padding: 25px;
 	}
 
 	input.btn-primary{
@@ -161,6 +162,7 @@ xsigin/signup popup
 
 .cd-form {
   padding: 1.4em;
+  margin-top: 15%;
 }
 .cd-form .fieldset {
   position: relative;
