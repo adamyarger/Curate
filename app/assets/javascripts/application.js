@@ -19,26 +19,15 @@
 
 //*********************************** Navbar *****************************************//
 
+$(document).ready(function($){
+	
 $(function() {
-   $('.alert').delay(500).fadeIn('normal', function() {
+   $('.alert').hide().delay(800).fadeIn(800).delay(4000).fadeOut(800) {
       $(this).delay(2500).fadeOut();
    });
 });
 
-// $(function () {
-//   $('.click-nav > ul').toggleClass('no-js js');
-//   $('.click-nav .js ul').hide();
-//   $('.click-nav .js').click(function(e) {
-//     $('.click-nav .js ul').slideToggle(200);
-//     $('.clicker').toggleClass('active');
-//     e.stopPropagation();
-//   });
-//   $(document).click(function() {
-//     if ($('.click-nav .js ul').is(':visible')) {
-//       $('.click-nav .js ul', this).slideUp();
-//       $('.clicker').removeClass('active');
-//     }
-//   });
-// });
+)};
+
 
 

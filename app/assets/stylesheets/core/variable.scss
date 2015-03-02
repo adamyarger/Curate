@@ -12,7 +12,7 @@ $green: #7dcf85;
 
 
 
-$color-1: #ff5a5f; // airbnb red
+$color-1: #1CBCB0; // airbnb red
 $color-2: #19191a; // Dark Blue
 $color-3: #e4655f; // Red
 $color-4: #e6e6e6; // light grey
@@ -118,6 +118,7 @@ input[type=text], input[type=email], input[type=password], select, textarea  {
   border: 1px solid #e0e6ef;
   border-radius: .25em;
   background: #ffffff;
+  outline: none;
 }
 input[type=text]:focus, select:focus, input[type=email]:focus, input[type=password]:focus {
   outline: none;
