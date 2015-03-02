@@ -27,6 +27,7 @@ body{
 	width: 325px;
 	-webkit-font-smoothing: antialiased;
 	margin-top: 2px;
+	overflow: scroll;
 }
 #stream.sticky{
 	position:fixed;
@@ -131,19 +132,8 @@ body{
 		width: 95%;
 	}
 }
-#stream-footer ul{
-	margin:0;
-	padding:0;
-	list-style-type:none;
-	text-align:center;
-}
-#stream-footer li{
-	display:inline-block;
-	padding:.5em;
-}
-#stream-footer li:hover{
-	cursor:pointer;
-}
+
+
 
 textarea#message_body{
 	width: 98%;
@@ -151,10 +141,6 @@ textarea#message_body{
 	height: 36px;
 }
 
-span.list-group-item{
-	margin-left: 10px;
-	color: $link ;
-}
 
 
 /*********  end sidebar ********/
@@ -174,9 +160,6 @@ span.list-group-item{
 	width:500px ;
 	min-height:100%;
 	height:auto;
-	/*border-right: 1px solid #d9e0e2;
-	border-left: 1px solid #d9e0e2;
-	border-top: 1px solid #d9e0e2;;*/
 	max-width: 798px;
 	/*background-color:#FFF;*/
 	margin:auto;
@@ -184,43 +167,4 @@ span.list-group-item{
 
 
 
-@media screen and (max-width:1025px){
 
-	
-	
-	
-}
-@media screen and (max-width:849px){
-	
-	#stream{
-		display:none;
-	}
-	#main-article-wrapper{
-		margin-left:0;
-	}
-	#stream-footer{
-		display:none;
-	}
-
-}
-@media screen and (max-width:653px){
-	
-	#main-article-wrapper{
-		width:100%;
-		border-right:none;
-		border-left:none;
-		margin:0;
-	}
-
-
-	#main-article{
-		width: 95%;
-	}
-
-	
-}
-@media screen and (max-width:493px){
-	#social {
-		width:15em;
-	}
-}
