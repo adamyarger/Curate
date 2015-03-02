@@ -11,17 +11,17 @@
     <div id="stream-list" class="follow-list">
         <ul>   
            <% @recipients.each do |user| %>
-                
-                    
-                                
-                    <label for="user<%= user.id %>" >   
+                <label for="user<%= user.id %>" >
+              <li id="stream_item">
+                       
                         <span class="round-image-50 list-group-item"><%= image_tag(user.avatar.url(:thumb)) %></span>
                         <span class="list-group-item"><%= user.name %></span>
-                    </label>
+                    
                      
                         <%= check_box_tag "message[user_tokens][]", user.id, @message.users.include?(user), id: "user#{user.id}" %>
                     
                 </li>
+                </label>
                 <br>
            <% end %>
          </ul>
