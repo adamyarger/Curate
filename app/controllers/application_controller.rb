@@ -4,6 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include AutoHtml
 
+  
+
   before_filter :configure_permitted_parameters, if: :devise_controller?
 
   before_filter :unread
@@ -22,6 +24,8 @@ class ApplicationController < ActionController::Base
 
 	def nav_message
 		@message = Message.new
-      	@recipients = current_user.following
+		if user_signed_in?
+			@recipients = current_user.following
+		end
 	end
 end

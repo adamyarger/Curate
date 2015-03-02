@@ -68,4 +68,7 @@
       
 </nav>
 
-<%= render 'layouts/right_slide' %>
+
+<% if user_signed_in? %>
+  <%= render 'layouts/right_slide' %>
+<% end %>
