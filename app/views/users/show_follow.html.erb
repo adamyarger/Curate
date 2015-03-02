@@ -1,9 +1,11 @@
 <% provide(:title, @title) %>
-<div class="row">
-  <aside class="col-md-4">
+
+<div id="edit-wrapper">
+  <div id="edit-main">
+  
     <section class="user_info">
       
-      <h1><%= @user.name %></h1>
+      <h1><%= @user.name  %>| <%= @title  %></h1>
       <span><%= link_to "view my profile", @user %></span>
       <span><b>Posts:</b> <%= @user.posts.count %></span>
     </section>
@@ -15,7 +17,7 @@
         </div>
       <% end %>
     </section>
-  </aside>
+  
   <div class="col-md-8">
     <h3><%= @title %></h3>
     <% if @users.any? %>
@@ -24,5 +26,6 @@
       </ul>
       <%= will_paginate %>
     <% end %>
+  </div>
   </div>
 </div>
