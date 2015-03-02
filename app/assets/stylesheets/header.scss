@@ -83,13 +83,13 @@ header {
 	padding-left: 20px;
 	padding-right: 20px;
 	cursor: pointer;
-	border: 1px solid #2f889a;
+	border: 1px solid $color-1;
 	padding: 6px 20px 5px 14px;
 	border-radius: 4px;
 	
 
 	a{
-		color: #2f889a;
+		color: $color-1;
 		cursor: pointer;
 	}
 }
@@ -165,6 +165,7 @@ header {
 	position: absolute;
 	top: 16px;
 	height: 100%;
+	
 
 
 
@@ -174,11 +175,12 @@ header {
 		padding-left: 20px;
 		padding-right: 20px;
 		cursor: pointer;
-		border: 1px solid #ff5a5f;
+		border: 1px solid $color-1;
 		margin-right: 28px;
 		padding: 6px 20px 5px 20px;
 		border-radius: 4px;
-		color: #ff5a5f;
+		color: #fff;
+		background: $color-1;
 	}
 }
 
