@@ -74,7 +74,7 @@ header {
 	
 }
 
-li.cd-signin{
+.post{
 	float: right;
 	margin-top: -56px;
 	margin-right: 118px;
@@ -120,6 +120,12 @@ li.cd-signin{
 #logo {
 	padding-top: 5px;
 	margin-top: -15px;
+	-webkit-transform: scale(0.8);
+	-ms-transform: scale(0.8);
+	transform: scale(0.8);
+	width: 100px;
+	margin-left: 42%;
+	
 
 	/* delete this property if you don't want your logo to scale down on mobile devices */
 	@include transform(scale(.8)); 
