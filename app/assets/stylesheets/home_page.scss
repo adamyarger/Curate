@@ -78,9 +78,10 @@ body{
 
 
 textarea#message_body{
-	width: 98%;
+	width: 94%;
 	margin-top: 13px;
 	height: 36px;
+	margin-left: 3%;
 }
 
 
@@ -95,7 +96,6 @@ textarea#message_body{
 	padding-top: 1em;
 	height:100%;
 	background-color:#F8F9FA;
-	margin-left:325px;
 }
 
 #main-article{
@@ -106,6 +106,8 @@ textarea#message_body{
 	/*background-color:#FFF;*/
 	margin:auto;
 }
+
+
 
 
 

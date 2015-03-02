@@ -216,9 +216,6 @@ header {
 
 	@include MQ(L) {
 		width: 325px;
-
-		/* header height has changed */
-		padding-top: 80px; 
 	}
 }
 
