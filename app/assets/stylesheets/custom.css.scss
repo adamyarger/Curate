@@ -47,8 +47,10 @@ section.user_info{
 /****************************************** header avatar ******************************************/
 
 .round-image-50 img{
-  width: 35px;
-  border-radius: 4px;
+    width: 35px;
+    border-radius: 50%;
+    padding: 1px;
+    border: 1px solid #e0e6ef;
 }
 
 /********************************************* Profile*************************************/
