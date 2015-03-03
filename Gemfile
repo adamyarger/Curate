@@ -27,8 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'devise'
 
 gem 'autoprefixer-rails'
-# gem 'factory_girl'
-# gem "factory_girl_rails", "~> 4.0"
+
 gem 'will_paginate', '~> 3.0.7'
 
 gem "auto_html"
