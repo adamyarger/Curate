@@ -11,7 +11,7 @@ class Message < ActiveRecord::Base
 	
 
 	validates :body, presence: true, length: {maximum: 300}
-	validates :body_html, presence: true, length: {maximum: 500}
+	
 	validates :sender_id, presence: true
 
 
