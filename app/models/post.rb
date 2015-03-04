@@ -47,7 +47,7 @@ class Post < ActiveRecord::Base
     urls = [content]
 
     embedly_api = Embedly::API.new(:key => Setting.embedly_key)
-    embedly_objs = embedly_api.oembed(:urls => urls, :maxwidth => 500, :width => 500)
+    embedly_objs = embedly_api.oembed(:urls => urls, :maxwidth => 500, :width => 500, :autoplay => false)
     embedly_obj = embedly_objs[0]
  
     response_data = embedly_obj.marshal_dump
