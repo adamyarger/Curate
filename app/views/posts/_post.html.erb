@@ -23,8 +23,8 @@
 	                <!-- <i class="fa fa-star"></i> -->
 	                <!-- number of like goes here --> 
 	            <% if current_user?(post.user) %>
-		      		<%= link_to "delete", post, method: :delete,
-		                                       data: { confirm: "You sure?" }, class: "delete" %>
+		      		<%= link_to "delete", post, method: :delete %>
+		                                        
 			        <% end %>
             </div>
       </div>
