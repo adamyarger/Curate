@@ -120,6 +120,11 @@ input[type=text], input[type=email], input[type=password], select, textarea  {
   background: #ffffff;
   outline: none;
 }
+
+textarea:focus{
+	border: 1px solid $color-1;
+}
+
 input[type=text]:focus, select:focus, input[type=email]:focus, input[type=password]:focus {
   outline: none;
 }
@@ -153,7 +158,7 @@ input[type=text].alert {
   box-shadow: 0 0 6px rgba(228, 101, 95, 0.2);
 }
 input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
-  border-color: #5f8ee4;
+  border-color: $color-1;
   box-shadow: 0 0 6px rgba(95, 142, 228, 0.2);
 }
 
