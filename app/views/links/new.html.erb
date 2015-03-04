@@ -1,1 +1,32 @@
-<h1>hello world!</h1>
+<div id="page_input" class="float-clear mg-auto">
+  <h1 class="text-center">新增文章</h1>
+  <div class="form-area">
+    
+    <%= form_for @link do |f| %>
+      <%= f.text_field :content, placeholder: "Submit a URL", class: "form-control", id: "url" %><br>
+      
+      <div class="new_page_form">
+        <div class="selector-wrapper"></div>
+      </div>
+
+
+        <%= f.text_area :intro, placeholder: "Why is this song the shiznit?" %>
+        
+        <%= f.submit "Submit", class: "full-width" %>
+      <% end %>
+  </div>
+</div>
+
+<%= content_for :javascripts do %>
+  <%= javascript_tag do %>
+    // Set up preview.
+      
+    $('#url').preview({key: '<%= Setting.embedly_key %>'})
+
+    // On submit add hidden inputs to the form.
+    $('form').on('submit', function(){
+      $(this).addInputs($('#url').data('preview'));
+      return true;
+    });
+  <% end %>
+<% end %>

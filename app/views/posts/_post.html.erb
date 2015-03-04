@@ -3,7 +3,9 @@
 <li class="post_show">
 
       <div class="panel-heading post_media">
-        <%= post.body_html %>
+        <% if post.html.present? %>
+        <%= post.html.html_safe %>
+        <% end %>
       </div>
       <div class="panel-footer">
 

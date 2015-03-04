@@ -27,7 +27,7 @@ class LinksController < ApplicationController
 	private
 
 	def link_params
-		params.require(:link).permit(:content, :intro, :messenge, :page_tag, :title, :thumbnail_url, :description)
+		params.require(:link).permit(:content, :intro, :title, :thumbnail_url, :description)
 	end
 
 end

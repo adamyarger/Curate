@@ -1,1 +1,40 @@
-<h1>hello world!</h1>
+<div id="pages-index">
+  <div class="hero-unit">
+    <h1 class="text-center">Ruby on Rails<br>Exchange Center</h1>
+    <p class="text-center"><span class="word-block">Ruby on Rails</span></p>
+  </div>
+</div>
+
+<div id="pages">
+<% @links.each do |link| %>
+  <%= div_for link do %>
+  <div class="span6 mg-auto page_index_titles">
+    <h4 class="float-clear"> <%= link.owner.name %> ：&nbsp;<%= link.intro %></h4>
+    <div class="span6">
+      <div class="thumb">
+        <div class="items">
+          <% if link.thumbnail_url.nil? %>
+            <ul class="images"><li><%= image_tag("no_img.jpg") %></li></ul>
+          <% else %>
+            <ul class="images"><li><img src="<%= link.thumbnail_url %>"></li></ul>
+          <% end %>
+        </div>
+      </div>
+      <div class="attributes">
+        <%= link.html.html_safe %>
+        <%= link_to(link.title, link.content, :class => "index-title") %>
+        <% if link.description.nil? %>
+          <p class="index-p muted">遮了國防布，完全沒有內容 XD
+          <br>該網站無法自動抓取連結資訊
+          <br>如果您是作者，請點選下面按鈕幫忙調整 
+          <%= link_to("Here", edit_link_link_path(link) , :class => "btn btn-danger btn-mini" )%></p>
+        <% else %>
+          <p class="index-p muted"><%= link.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  
+  <% end %>
+<% end %>
+</div>

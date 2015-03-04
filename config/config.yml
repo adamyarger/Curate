@@ -1,0 +1,14 @@
+defaults: &defaults
+  app_name: "curate"
+  embedly_key: "527e94312ae44c169eb5b9cceab5d43f"
+
+development:
+  <<: *defaults
+  domain: "http://rorec.dev"
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  domain: "http://rorec.herokuapp.com"

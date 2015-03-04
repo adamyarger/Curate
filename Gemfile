@@ -30,9 +30,11 @@ gem 'autoprefixer-rails'
 
 gem 'will_paginate', '~> 3.0.7'
 
-gem "auto_html"
+# gem "auto_html"
 gem 'paperclip', '~> 4.2.1'
 gem 'bourbon', '~> 4.2.1'
+gem 'settingslogic', '~> 2.0.9'
+gem 'embedly', '~> 1.9.1'
 
 
 
