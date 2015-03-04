@@ -11,10 +11,32 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150227225645) do
+ActiveRecord::Schema.define(version: 20150304170415) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "links", force: :cascade do |t|
+    t.string   "title"
+    t.string   "type"
+    t.string   "author_name"
+    t.string   "author_url"
+    t.string   "provider_name"
+    t.string   "provider_url"
+    t.text     "description"
+    t.string   "thumbnail_url"
+    t.string   "thumbnail_width"
+    t.string   "thumbnail_height"
+    t.string   "html"
+    t.string   "width"
+    t.string   "height"
+    t.string   "favicon_url"
+    t.string   "content"
+    t.string   "intro"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
+    t.integer  "user_id"
+  end
 
   create_table "messages", force: :cascade do |t|
     t.text     "body"
