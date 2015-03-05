@@ -1,14 +1,14 @@
 defaults: &defaults
   app_name: "curate"
-  embedly_key: "527e94312ae44c169eb5b9cceab5d43f"
+  embedly_key: "77b9e769557a490e9e2ef087981131c3"
 
 development:
   <<: *defaults
-  domain: "http://rorec.dev"
+  domain: "http://localhost:3000/"
 
 test:
   <<: *defaults
 
 production:
   <<: *defaults
-  domain: "http://rorec.herokuapp.com"
+  domain: "https://fathomless-harbor-6451.herokuapp.com/"
