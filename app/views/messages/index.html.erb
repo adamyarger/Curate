@@ -3,7 +3,11 @@
 <div id="main-article-wrapper">
     <div id="main-article">
     	<h1>Messages</h1>
-      <%= render 'messages/message' %>
+    	<%= will_paginate %>
+    	<ol>
+	      <%= render 'messages/message' %>
+	    </ol>
+	    <%= will_paginate %>
     </div>
 </div>
 
