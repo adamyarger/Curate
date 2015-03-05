@@ -14,10 +14,8 @@ html * {
 }
 
 body {
-	font: {
-		size: 100%;
-		family: $primary-font; // variables inside partials > _variables.scss
-	}
+	font-size: 1em;
+	font-family: sans-serif;
 	color: $main-text;
 	background-color: $background;
 
