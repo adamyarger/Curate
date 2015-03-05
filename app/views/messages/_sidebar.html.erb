@@ -1,11 +1,8 @@
 <div id="stream">
 <!-- stream top -->
-    
-        
-        
-        
+
             <%= form_for :message, url: messages_path do |f| %>
-            <%= f.text_area :body,  id: "message_body" %>
+            <%= f.text_area :content,  id: "url", class: "message_body" %>
         
     <!-- stream list -->
     <div id="stream-list" class="follow-list">
@@ -32,6 +29,22 @@
     </div>
     <% end %>
 </div>
+
+<%= content_for :javascripts do %>
+  <%= javascript_tag do %>
+    // Set up preview.
+      
+    $('#url').preview({key: '<%= Setting.embedly_key %>'})
+
+    // On submit add hidden inputs to the form.
+    $('form').on('submit', function(){
+      $(this).addInputs($('#url').data('preview'));
+      return true;
+    });
+  <% end %>
+<% end %>
+
+
 
 
 

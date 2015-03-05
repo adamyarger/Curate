@@ -28,7 +28,7 @@ class MessagesController < ApplicationController
 	private
 
 		def message_params
-			params.require(:message).permit(:body, :sender_id, user_tokens: [])
+			params.require(:message).permit(:body, :content, :title, :thumbnail_url, :sender_id, user_tokens: [])
 		end
 end
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150304212653) do
+ActiveRecord::Schema.define(version: 20150305022248) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,8 +20,14 @@ ActiveRecord::Schema.define(version: 20150304212653) do
     t.text     "body"
     t.string   "body_html"
     t.integer  "sender_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+    t.string   "title"
+    t.string   "author_url"
+    t.string   "provider_name"
+    t.string   "content"
+    t.string   "html"
+    t.string   "thumbnail_url"
   end
 
   add_index "messages", ["sender_id"], name: "index_messages_on_sender_id", using: :btree

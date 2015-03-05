@@ -8,15 +8,13 @@ class Message < ActiveRecord::Base
 
 	
 
-	validates :body, presence: true, length: {maximum: 300}
+	# validates :body, presence: true, length: {maximum: 300}
 	validates :sender_id, presence: true
-	validates :content, :presence => true, :format => URI::regexp(%w(http https))
+	validates :content, :presence => true
 	
 	after_create :update_from_embedly
-
 	default_scope -> {order(created_at: :desc)}
-  	
-  	scope :recent, -> { order("updated_at DESC")}
+  scope :recent, -> { order("updated_at DESC")}
 
 	#this fixed the no id error
 	def user_tokens=(ids)
