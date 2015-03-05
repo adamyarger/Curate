@@ -80,3 +80,9 @@ function toggle_panel_visibility ($lateral_panel, $body) {
 // 		$navigation.insertAfter('header');
 // 	}
 // }
+
+$(function() {
+   $('.alert').delay(500).fadeIn('normal', function() {
+      $(this).delay(2500).fadeOut();
+   });
+});
