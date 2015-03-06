@@ -2,7 +2,9 @@
 
 
 <% if @count.unread.count > 0 %>
-	<%= @count.unread.count %>
+	<div class="notification">
+		<%= @count.unread.count %>
+	</div>
 <% end %>
 
 
