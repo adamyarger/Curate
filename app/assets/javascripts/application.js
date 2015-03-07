@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require gritter
 //= require jquery.turbolinks
 //= require turbolinks
 //= require_tree .
