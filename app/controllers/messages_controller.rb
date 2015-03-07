@@ -14,7 +14,7 @@ class MessagesController < ApplicationController
 			flash[:success] = "Message Sent!"
 			redirect_to messages_path
 		else
-			flash[:alert] = "Great Scott! You need to pick some friends"
+			flash[:alert] = "Great Scott!"
 			redirect_to root_url
 		end
 	end
