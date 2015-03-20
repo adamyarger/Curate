@@ -2,5 +2,11 @@ window.Curate = {
 	Models: {},
 	Collections: {},
 	Routers: {},
-	Views: {}
+	Views: {},
+
+	init: function(){
+		
+	}
 };
+
+$(Curate.init)

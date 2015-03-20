@@ -8,8 +8,8 @@ class StaticPagesController < ApplicationController
 	end
   end
 
-  def about
-  	
+  def root
+  	render "root"
   end
 
 
