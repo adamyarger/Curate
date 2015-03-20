@@ -5,4 +5,8 @@ class Api::UsersController < ApplicationController
 		render "users/index"
 	end
 
+	def show
+		
+	end
+
 end

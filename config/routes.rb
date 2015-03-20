@@ -14,7 +14,7 @@ Rails.application.routes.draw do
     end
 
     resources :links
-    resources  :posts, only: [:create, :destroy]
+    resources  :posts, only: [:create, :destroy, :show, :index]
     resources :relationships,       only: [:create, :destroy]
 
     resources :messages, only: [:create, :destroy, :index]

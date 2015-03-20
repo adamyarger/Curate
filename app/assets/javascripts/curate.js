@@ -9,4 +9,4 @@ window.Curate = {
 	}
 };
 
-$(Curate.init)
+$(Curate.init);
