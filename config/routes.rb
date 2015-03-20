@@ -1,12 +1,26 @@
 Rails.application.routes.draw do
 
   
-
-  get 'about' => 'static_pages#about'
+  devise_for :users
+  
   root 'static_pages#home'
   
-  devise_for :users
+  
+  namespace :api, :defaults => {:format => :json} do
+    resources :users, :only => [:show, :index, :destroy] do
+      member do
+        get :following, :followers
+      end
+    end
 
+    resources :links
+    resources  :posts, only: [:create, :destroy]
+    resources :relationships,       only: [:create, :destroy]
+
+    resources :messages, only: [:create, :destroy, :index]
+  end
+
+####################################
   resources :users, :only => [:show, :index, :destroy] do
     member do
       get :following, :followers
