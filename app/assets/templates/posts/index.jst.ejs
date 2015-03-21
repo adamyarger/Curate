@@ -1,0 +1,12 @@
+
+<div id="main-article-wrapper">
+    <div id="main-article">
+		<h1>hello mutha </h1>
+
+		<ul>
+			<% posts.each(function(post){ %>
+				<li><%= post.get("body")%></li>
+			<% }) %>
+		</ul>
+	</div>
+</div>
