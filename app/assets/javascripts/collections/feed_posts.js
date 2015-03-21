@@ -1,6 +1,7 @@
 window.Curate.Collections.FeedPosts = Backbone.Collection.extend({
 
-	url: 'api/posts',
+	url: '/api/posts',
+	model: Curate.Models.Post,
 
 	initialize: function(){
 		this.fetch();

@@ -1,11 +1,11 @@
 window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	routes: {
-		'': 'feedShow'
+		'': 'postIndex'
 	},
 
 	feedShow: function(){
-		var feedView = new Curate.Views.FeedShow({
+		var indexView = new Curate.Views.FeedShow({
 			collection: Curate.Collections.feed
 		});
 
