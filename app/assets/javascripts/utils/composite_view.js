@@ -1,14 +1,3 @@
-window.Curate = {
-	Models: {},
-	Collections: {},
-	Routers: {},
-	Views: {},
-
-	init: function(){
-		
-	}
-};
-
 Backbone.CompositeView = Backbone.View.extend({
 	addSubview: function(selector, subview){
 		var selectorSubviews = 
@@ -61,5 +50,3 @@ Backbone.CompositeView = Backbone.View.extend({
 		return this._subviews;
 	}
 });
-
-$(Curate.init);

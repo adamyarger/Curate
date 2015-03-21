@@ -72,6 +72,7 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    ejs (1.1.1)
     embedly (1.9.1)
       json
       oauth
@@ -194,6 +195,7 @@ DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
   devise
+  ejs
   embedly (~> 1.9.1)
   jbuilder (~> 2.0)
   jquery-rails

@@ -4,12 +4,20 @@ class Api::PostsController < ApplicationController
 		@post = current_user.posts.build(post_params)
 		
 		if @post.save  					
-			render "posts/show"
+			render :json => @post
 		else
 			# @feed_items = []
 			render :json => @posts.errors, :status => :unprocessable_entity   
 		end
 	end
+
+	def feed
+	  	
+		  	@post  = current_user.posts.build
+	      @feed_items = current_user.feed.paginate(:page => params[:page], :per_page => 10)
+	      
+		
+	  end
 
 	def index
 		@posts = Post.all
