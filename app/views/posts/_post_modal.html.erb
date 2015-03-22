@@ -1,42 +1,9 @@
 
 
 
-<div class="cd-user-modal"> <!-- this is the entire modal form, including the background -->
-		<div class="cd-user-modal-container"> <!-- this is the container wrapper -->
-			
-			<div id="cd-login"> <!-- log in form -->
-				<div class="cd-form">
-					
-				    <%= form_for :post, url: posts_path do |f| %>
-				        <%= f.text_field :content, placeholder: "URL from, Soundcloud, Youtube or Vimeo", class: 'full-width', id: "url" %>
-				        <br>
-				        <%= f.text_area :body, placeholder: "Wait... How good is this song?", class: "form-control" %>
-				        <%= f.submit "Submit Post", class: "full-width" %>
-
-				    <% end %>
-				    
-				</div>
-	
-				<!-- <a href="#0" class="cd-close-form">Close</a> -->
-			</div> <!-- cd-login -->
-
-			<a href="#0" class="cd-close-form">Close</a>
-		</div> <!-- cd-user-modal-container -->
-	</div> <!-- cd-user-modal -->
 
 
-<%= content_for :javascripts do %>
-  <%= javascript_tag do %>
-    // Set up preview.
-      
-    $('#url').preview({key: '<%= Setting.embedly_key %>'})
 
-    // On submit add hidden inputs to the form.
-    $('form').on('submit', function(){
-      $(this).addInputs($('#url').data('preview'));
-      return true;
-    });
-  <% end %>
-<% end %>
+
 
 

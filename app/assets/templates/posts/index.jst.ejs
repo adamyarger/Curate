@@ -5,7 +5,7 @@
 
 		<ul>
 			<% posts.each(function(post){ %>
-				<li><%= post.get("body")%></li>
+				<li><%= post.escape("body")%></li>
 			<% }) %>
 		</ul>
 	</div>

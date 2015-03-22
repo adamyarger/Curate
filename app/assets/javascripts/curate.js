@@ -4,15 +4,15 @@ window.Curate = {
 	Views: {},
 
 	init: function(){
-		var view = new Curate.Views.PostsIndex({
+		var indexView = new Curate.Views.PostsIndex({
 			collection: Curate.Collections.posts
 		});
 
-		Curate.Collections.posts.fetch({
-			success: function(){
-				$('.container').append(view.render().$el);
-			}
-		});
+		Curate.Collections.posts.fetch();
+		$('.container').append(indexView.render().$el);
+
+		var newView = new Curate.Views.PostsNew();
+		$('.container').append(newView.render().$el);
 	}
 };
 
