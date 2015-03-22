@@ -16,8 +16,9 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 	submit: function(event){
 		event.preventDefault();
 
-		var newPost = new Curate.Models.Post();
-		newPost.set('body', $('#post-body').val());
+		
+		var params = $(event.currentTarget).serializeJSON()['post'];
+		var newPost = new Curate.Models.Post(params);
 		newPost.save({}, {
 			success: function(){
 				Curate.Collections.posts.unshift(newPost);
