@@ -74,7 +74,9 @@ header {
 	
 }
 
-
+.nav_avatar{
+	cursor: pointer;
+}
 
 
 .signed-out-nav{
@@ -129,6 +131,10 @@ header {
 	}
 }
 
+.active{
+  	opacity: 1;
+  }
+
 #popover{
 
   overflow: hidden;
@@ -140,9 +146,31 @@ header {
   padding: 15px;
   opacity: 1;
   pointer-events: auto;
+  margin-left: -17px;
+
+  
 
 	ul{
 		display:block;
+	}
+
+	.popover-arrow{
+		top: 1px;
+  	clip: rect(0 18px 14px -4px);
+  	position: absolute;
+  	margin-left: 12px;
+	}
+
+	.popover-arrow:after {
+	  content: '';
+	  display: block;
+	  width: 14px;
+	  height: 14px;
+	  background: #fff;
+	  -webkit-transform: rotate(45deg) translate(6px, 6px);
+  -ms-transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(6px, 6px);
+  box-shadow: -1px -1px 1px -1px rgba(0,0,0,0.44);
 	}
 
 	.inner-popover{

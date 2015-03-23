@@ -1,3 +1,3 @@
-window.Curate.Views.PostShow = Backbone.CompositeView.extend({
+// window.Curate.Views.PostShow = Backbone.CompositeView.extend({
 
-});
+// });
