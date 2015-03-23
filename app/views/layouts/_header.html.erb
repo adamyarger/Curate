@@ -44,40 +44,7 @@
 </header>
 
 
-<nav id="main-nav">
-      
-        
-        <ul>
-          
 
-          <% if user_signed_in? %>
-              <li class="popover-item">
-                 <%= link_to "Home", root_path, class: "popover-link" %>
-              </li>
-              <li class="popover-item">
-                 <%= link_to "Profile", current_user, class: "popover-link" %>
-              </li>
-
-              <li class="navbar-item">
-                  <%= link_to "Messages", messages_path %>
-              </li>
-
-              <li class="navbar-item">
-                  <%= link_to "Users", users_path %>
-              </li>
-
-               <li class="popover-item">
-                 <%= link_to "Settings", edit_user_registration_path %>
-               </li>
-
-               <li class="popover-item">
-                 <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
-               </li>
-          <% end %>
-
-        </ul>
-      
-</nav>
 
 
 <% if user_signed_in? %>

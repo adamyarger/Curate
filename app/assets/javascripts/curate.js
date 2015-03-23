@@ -13,6 +13,9 @@ window.Curate = {
 
 		var newView = new Curate.Views.PostsNew();
 		$('.container').append(newView.render().$el);
+
+		var popOver = new Curate.Views.PopoverMenu();
+		$('.nav_avatar').append(popOver.render().$el);
 	}
 };
 
