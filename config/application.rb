@@ -20,6 +20,7 @@ module Curate2
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
     config.assets.paths << File.join(Rails.root, 'app', 'assets', 'templates')
+    config.assets.paths << Rails.root.join("app", "assets", "fonts")
 
     # Include the authenticity token in remote forms.
     config.action_view.embed_authenticity_token_in_remote_forms = true
