@@ -1,17 +1,17 @@
 @import "bourbon";
-@import "style";
+@import "font-icon";
 @import "core/variable";
 @import "core/mixins";
 @import "core/layout";
-@import "custom";
-@import "header";
-@import "feed";
-@import "forms";
-@import "posts";
-@import "profile";
-@import "home_page";
-@import "find_user";
-@import "message_form";
+@import "notifications/custom";
+@import "header/header";
+@import "body/feed";
+@import "header/forms";
+@import "body/posts";
+@import "body/profile";
+@import "body/home_page";
+@import "body/find_user";
+@import "sidebar/message_form";
 @import "core/reset";
 
 

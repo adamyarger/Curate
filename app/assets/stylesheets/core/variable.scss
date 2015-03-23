@@ -41,6 +41,39 @@ $main-zindex: 4;
 xButtons 
 
 -------------------------------- */
+.button {
+  display: inline-block;
+  position: relative;
+  height: 38px;
+  padding: 0 16px;
+  outline: 0;
+  color: rgba(0,0,0,0.44);
+  background: rgba(0,0,0,0);
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(0,0,0,0.15);
+  vertical-align: bottom;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  border-radius: 999em;
+  transition: 100ms background-color,100ms border-color,100ms color;
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+  }
+
 
 .btn {
 	border: none;
