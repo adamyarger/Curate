@@ -16,9 +16,12 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	},
 
 	userIndex: function(){
-		var usersView = new Curate.Views.UsersIndex();
+		var usersIndex = new Curate.Views.UsersIndex({
+			collection: Curate.Collections.users
+		});
 
-		$('.container').html(usersView.render().$el)
+		Curate.Collections.users.fetch();
+		$('.container').html(usersIndex.render().$el)
 	}
 
 	// _swapView: function(view){

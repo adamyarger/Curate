@@ -1,1 +1,15 @@
-<h1>users index</h1>
+
+
+
+<div id="main-article-wrapper">
+    <div id="main-article">
+		<h1>users index</h1>
+
+		<ul>
+			<% users.each(function(user){ %>
+				<li><%= user.get("name")%></li>
+			<% }) %>
+		</ul>
+	</div>
+</div>
+

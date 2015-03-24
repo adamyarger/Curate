@@ -1,6 +1,7 @@
 window.Curate.Views.PopoverMenu = Backbone.View.extend({
 
 	template: JST['header/popover'],
+	
 
 	events:{
 		'click .nav_avatar': 'togglePop'
@@ -17,14 +18,12 @@ window.Curate.Views.PopoverMenu = Backbone.View.extend({
 
 	togglePop: function(event){
 		// event.preventDefault();
-		// var popIt = $(event.currentTarget).addClass('active');
-		// return popIt;
-		$('div#popover').addClass('active');
 		
-		this.render();
+		// var popOver = new Curate.Views.PopoverMenu();
+		// $('.nav_avatar').append(popOver.render().$el);
+		
+		// return this;
+		alert("sup dude");	
 
 	}
-
-	
-
 });

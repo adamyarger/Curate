@@ -101,14 +101,15 @@ header {
 
 #right-nav{
 	float: right;
-	  margin-top: 6px;
+	margin-right: 20px;
+	margin-top: 6px;
 
 	ul{
 		display: flex;
 	}
 
 	.button{
-	  margin-right: 20px;
+	  margin-left: 10px;
 	  line-height: 36px;
 	}
 }
