@@ -7,9 +7,20 @@
 
 		<ul>
 			<% users.each(function(user){ %>
-				<li><%= user.get("name")%></li>
+				<li class="user-item">
+					<span class="round-image-50 user-item-pic"><img class="avatar" src="<%= user.escape("avatar") %>" /></span>
+					<span class="user-item-desc">
+						<a href='#/users/<%= user.escape("id") %>''>
+							<%= user.escape('name') %>
+						</a>
+						<%= user.escape('id') %>
+					</span>
+				</li>
+				
 			<% }) %>
 		</ul>
 	</div>
 </div>
+
+
 

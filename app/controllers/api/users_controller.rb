@@ -1,6 +1,6 @@
 class Api::UsersController < ApplicationController
 	
-	before_action :admin_user, only: :destroy
+	# before_action :admin_user, only: :destroy
 
 	def index
 		@users = User.all
@@ -12,7 +12,7 @@ class Api::UsersController < ApplicationController
 		@posts = @user.posts
 
 		render :json => @user
-		render :json => @posts
+		# render :json => @posts
 	end
 
 	def destroy
@@ -21,8 +21,8 @@ class Api::UsersController < ApplicationController
 
 	private
 
-		def admin_user
-			redirect_to(root_url) unless current_user.admin?
-		end
+		# def admin_user
+		# 	redirect_to(root_url) unless current_user.admin?
+		# end
 
 end

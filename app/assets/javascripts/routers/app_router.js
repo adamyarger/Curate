@@ -2,7 +2,8 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	routes: {
 		'': 'postIndex',
-		'users': 'userIndex'
+		'users': 'userIndex',
+		'users/:id': 'userShow'
 	},
 
 	postIndex: function(){
@@ -22,16 +23,36 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 		Curate.Collections.users.fetch();
 		$('.container').html(usersIndex.render().$el)
-	}
+	},
 
-	// _swapView: function(view){
-	// 	if(this.currentView){
-	// 		this.currentView.remove();
-	// 	}
-	// 	this.currentView = view;
+	// usersShow: function(id){
+	// 	var model = Curate.Collections.users.getOrFetch(id);
 
-	// 	$('.container').html(view.render().$el);
+	// 	var showUser = new Curate.Views.UsersShow({
+	// 		model: model
+	// 	});
+	// 	$('container').html(showUser.render().$el);
 	// }
+
+	userShow: function(id){
+		var profile = Curate.Collections.users.getOrFetch(id);
+		
+
+		var showView = new Curate.Views.UsersShow({
+			model: profile
+		});
+
+		this._swapView(showView);
+	},
+
+	_swapView: function(view){
+		if(this.currentView){
+			this.currentView.remove();
+		}
+		this.currentView = view;
+
+		$('.container').html(view.render().$el);
+	}
 
 
 
