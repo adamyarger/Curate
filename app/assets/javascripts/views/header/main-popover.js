@@ -10,6 +10,9 @@ window.Curate.Views.PopoverMenu = Backbone.View.extend({
 	
 
 	render: function(){
+		// var renderedContent = this.template({
+		// 	user: this.model
+		// });
 		var renderedContent = this.template();
 		this.$el.html(renderedContent);
 

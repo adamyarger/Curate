@@ -11,6 +11,32 @@
             </li>
             <li class="round-image-50 nav_avatar">
               <%= image_tag(current_user.avatar.url(:thumb)) %>
+                <div id="popover">
+                  <div class="inner-popover"> 
+                        <ul>
+                          <li class="popover-item">
+                            <a href="#">Home</a>
+                          </li>
+
+                          <li class="navbar-item">
+                            <a href='#/users/<%= current_user.id %>'>Profile</a>
+                          </li>
+
+                          <li class="navbar-item">
+                            <a href="#/users">Users</a>
+                          </li>
+
+                          <li class="popover-item">
+                            <a href="/users/edit">Settings</a>
+                          </li>
+
+                          <li class="popover-item">
+                             <%= link_to "Log out", destroy_user_session_path, :method => :delete %>
+                          </li>
+                        </ul>
+                  </div>
+                  <div class="popover-arrow"></div>  
+                </div>
             </li>
             
             <span>     
@@ -25,6 +51,7 @@
           <li class="post button"><a class="cd-signin" href="#0">Post</a></li>
           <li class="button button-circle" ><a class="icon-bell"></a></li>
           <li class="button button-circle" ><a class="icon-speech-bubble"></a></li>
+           <!-- <li><a href="/#/users/<%= current_user.id %>"><%= current_user.name %></a></li> -->
         </ul>
       </div>
 

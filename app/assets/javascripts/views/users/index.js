@@ -20,3 +20,14 @@ window.Curate.Views.UsersIndex = Backbone.View.extend({
 	}
 });
 
+// $('.nav_avatar').click(function(){
+// 	$('#popover').fadeToggle(300);
+// });
+
+// $(document).click(function(){
+// 	$('#popover').hide();
+// });
+
+// $('.nav_avatar').click(function(){
+// 	return false;
+// });

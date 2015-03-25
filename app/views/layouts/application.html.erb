@@ -10,12 +10,16 @@
 </head>
     <body>
     	  <%= render "layouts/header" %>
-      	<div class="container" id="main-container">
-          
-      			<%= render 'layouts/messages' %>
-      			<%= yield %>
+        <%= render 'layouts/messages' %>
+        <% if user_signed_in? %>
+        	<div class="container" id="main-container">
+          </div>
+        <% end %>
+  			
+
+  			<%= yield %>
       		
-        </div>
+        
     </body>
 </html>
 
