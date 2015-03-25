@@ -2,6 +2,7 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	routes: {
 		'': 'postIndex',
+		'posts/new': 'postsNew',
 		'users': 'userIndex',
 		'users/:id': 'userShow'
 	},
@@ -23,6 +24,11 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 		Curate.Collections.users.fetch();
 		$('.container').html(usersIndex.render().$el)
+	},
+
+	postsNew: function(){
+		var newView = new Curate.Views.PostsNew();
+		this._swapView(newView);
 	},
 
 

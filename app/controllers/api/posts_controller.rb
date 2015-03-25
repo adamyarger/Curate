@@ -21,10 +21,19 @@ class Api::PostsController < ApplicationController
 		render :json => @posts
 	end
 
-	def show 
-		@post = Post.find(params[:id])
-		render :json => @post
+	def show
+		@user = User.find(params[:id])
+		@posts = @user.posts
+
+		render :json => @user
+		# render :json => @posts
 	end
+
+	# def show 
+	# 	@post = Post.find(params[:id])
+	# 	render :json => @post
+
+	# end
 
 	# def destroy
 	#     @post.destroy

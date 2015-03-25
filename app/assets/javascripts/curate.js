@@ -6,8 +6,8 @@ window.Curate = {
 
 	init: function(){
 
-		// var popOver = new Curate.Views.PopoverMenu();
-		// $('.nav_avatar').append(popOver.render().$el);
+		// var newView = new Curate.Views.PostsNew();
+		// $('.container').append(newView.render().$el);
 
 		new Curate.Routers.AppRouter();
 		Backbone.history.start();

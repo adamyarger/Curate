@@ -8,7 +8,7 @@ window.Curate.Views.UsersIndex = Backbone.View.extend({
 
 	render: function(){
 
-		//allow us to use the users collection in the tempatre !important
+		//allow us to us the users collection in the tempatre !important
 		var renderedContent = this.template({
 			users: this.collection
 		});
@@ -20,14 +20,3 @@ window.Curate.Views.UsersIndex = Backbone.View.extend({
 	}
 });
 
-// $('.nav_avatar').click(function(){
-// 	$('#popover').fadeToggle(300);
-// });
-
-// $(document).click(function(){
-// 	$('#popover').hide();
-// });
-
-// $('.nav_avatar').click(function(){
-// 	return false;
-// });
