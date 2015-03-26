@@ -1,4 +1,4 @@
-window.Curate.Views.FollowingIndex = Backbone.View.extend({
+window.Curate.Views.Following = Backbone.View.extend({
 
 	template: JST['users/following'],
 

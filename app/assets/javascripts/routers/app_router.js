@@ -44,21 +44,13 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		this._swapView(showView);
 	},
 
-	// following: function(id){
-	// 	var following = Curate.Collections.following.get(id);
-	// 	var showView = new Curate.Views.FollowingIndex({
-	// 		model: following
-	// 	});
-
-	// 	this._swapView(showView);
-	// },
 
 	  following: function (id) {
 	    // TODO: this should be prefetched at startup
 	    var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
 	    var that = this;
 	    follows.fetch({
-	      success: function (photos) {
+	      success: function (follows) {
 	        var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
 	        var followingIndex = new Curate.Views.Following({
 	          collection: follows,
