@@ -4,7 +4,7 @@ class Api::PostsController < ApplicationController
 		@post = current_user.posts.build(post_params)
 		
 		if @post.save  					
-			render :json => @post
+			render 'api/posts/show'
 		else
 			# @feed_items = []
 			render :json => @posts.errors, :status => :unprocessable_entity   
@@ -18,14 +18,14 @@ class Api::PostsController < ApplicationController
 
 	def index
 		@posts = Post.all
-		render :json => @posts
+		render 'api/posts/index'
 	end
 
 	def show
 		@user = User.find(params[:id])
 		@posts = @user.posts
 
-		render :json => @user
+		render 'api/posts/show'
 		# render :json => @posts
 	end
 

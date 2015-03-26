@@ -4,19 +4,15 @@ class Api::UsersController < ApplicationController
 
 	def index
 		@users = User.all
-		render :json => @users
+		render 'api/users/index'
 	end
 
 	def show
 		# @user = User.includes(:posts).find(params[:id])
 		@user = User.find(params[:id])
 		@posts = @user.posts
-		respond_to do |format|
-		  format.json  { render :json => @user.to_json(:include => [:posts])}
-		end
-
-		# render :json => @user
-		# render :json => @posts
+		
+		render 'api/users/show'
 	end
 
 	def destroy
