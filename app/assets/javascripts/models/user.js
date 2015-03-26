@@ -9,6 +9,15 @@ window.Curate.Models.User = Backbone.Model.extend({
 			});
 		}
 		return this._posts;
+	},
+
+	parse: function(jsonResp){
+		if (jsonResp.posts){
+			this.posts().set(jsonResp.posts, {parse: true});
+			delete jsonResp.posts;
+		}
+		return jsonResp;
+		
 	}
 
 });
