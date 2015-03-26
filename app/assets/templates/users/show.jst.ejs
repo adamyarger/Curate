@@ -1,8 +1,23 @@
-<h1> hellooooooooo </h1>
-<%= user.escape('name') %>
 
-<div class="user_post">
-	<% user.posts().each(function(post){ %>
-		<%= post.get('body') %>
-	<% }) %>
-</div>
+<% user.posts().each(function(post){ %>
+	<li class="post_show">
+	      <div class="panel-heading post_media">
+	        <%= post.escape("html")%>
+	      </div>
+	      <div class="post-body">
+	        <%= post.escape('body') %>
+	      </div>
+	      <div class="panel-footer">
+
+	          <div class="name_avatar u-pull-left">
+	          	<span class="round-image-50 name  user_avatar u-pull-left">
+	          		<img class="avatar" src="<%= user.escape("avatar") %>" />
+	          	</span>
+	            <span class="user_name post_name u-pull-left">
+	              <%= user.escape('name')%>
+	            </span>
+	          </div>
+	          
+	      </div>
+</li>
+<% }) %>
