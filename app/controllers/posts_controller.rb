@@ -2,17 +2,17 @@ class PostsController < ApplicationController
 	before_action :authenticate_user!
 	before_action :correct_user, only: :destroy
 	
-	# def create
-	# 	@post = current_user.posts.build(post_params)
-	# 	if @post.save
-	# 		flash[:success] = "Hizzah! Post Created!"   					
-	# 		redirect_to root_url
-	# 	else
-	# 		@feed_items = []
-	# 		flash[:alert] = "Great Scott!"
-	# 		render 'static_pages/home'   
-	# 	end
-	# end
+	def create
+		@post = current_user.posts.build(post_params)
+		if @post.save
+			flash[:success] = "Hizzah! Post Created!"   					
+			redirect_to root_url
+		else
+			@feed_items = []
+			flash[:alert] = "Great Scott!"
+			render 'static_pages/home'   
+		end
+	end
 
 	def destroy
 	    @post.destroy
