@@ -23,7 +23,7 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		});
 
 		Curate.Collections.users.fetch();
-		$('.container').html(usersIndex.render().$el)
+		this._swapView(usersIndex);
 	},
 
 	postsNew: function(){
