@@ -4,4 +4,4 @@ window.Curate.Collections.Posts = Backbone.Collection.extend({
 });
 
 
-// window.Curate.Collections.posts = new Curate.Collections.Posts();
+window.Curate.Collections.posts = new Curate.Collections.Posts();

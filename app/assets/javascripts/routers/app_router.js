@@ -8,13 +8,13 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	},
 
 	postIndex: function(){
-		// var indexView = new Curate.Views.PostsIndex({
-		// 	collection: Curate.Collections.Posts
-		// });
+		var indexView = new Curate.Views.PostsIndex({
+			collection: Curate.Collections.posts
+		});
 
-		// // Curate.Collections.posts.fetch();
-		// // $('.container').html(indexView.render().$el)
-		// this._swapView(postView);
+		// Curate.Collections.posts.fetch();
+		// $('.container').html(indexView.render().$el)
+		this._swapView(indexView);
 	},
 
 	userIndex: function(){
