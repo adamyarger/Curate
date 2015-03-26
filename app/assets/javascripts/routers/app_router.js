@@ -5,7 +5,8 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		'posts/new': 'postsNew',
 		'users': 'userIndex',
 		'users/:id': 'userShow',
-		'users/:id/following': 'following'
+		'users/:id/following': 'following',
+		'users/:id/followers': 'followers'
 	},
 
 	postIndex: function(){
@@ -48,6 +49,23 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	  following: function (id) {
 	    // TODO: this should be prefetched at startup
 	    var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
+	    var that = this;
+	    follows.fetch({
+	      success: function (follows) {
+	        var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
+	        var followingIndex = new Curate.Views.Following({
+	          collection: follows,
+	          model: user
+	        });
+
+	        that._swapView(followingIndex);
+	      }
+	    })
+	  },
+
+	  followers: function (id) {
+	    // TODO: this should be prefetched at startup
+	    var follows = new Curate.Collections.Follower(null, { user_id: parseInt(id) });
 	    var that = this;
 	    follows.fetch({
 	      success: function (follows) {
