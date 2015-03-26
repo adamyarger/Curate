@@ -15,6 +15,20 @@ class Api::UsersController < ApplicationController
 		render 'api/users/show'
 	end
 
+	def following
+	  @title = "Following"
+	  @user  = User.find(params[:id])
+	  @users = @user.following.paginate(page: params[:page])
+	  render 'api/users/index'
+	end
+
+	def followers
+	  @title = "Followers"
+	  @user  = User.find(params[:id])
+	  @users = @user.followers.paginate(page: params[:page])
+	  render 'api/users/index'
+	end
+
 	def destroy
 		
 	end
