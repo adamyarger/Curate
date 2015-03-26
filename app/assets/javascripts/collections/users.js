@@ -4,11 +4,16 @@ window.Curate.Collections.Users = Backbone.Collection.extend({
 
 	getOrFetch: function(id){
 		var model;
+		var users =this
+
 		if (model = this.get(id)){
+			model.fetch();
 			return model;
 		} else{
 			model = new Curate.Models.User({id: id});
-			model.fetch();
+			model.fetch({
+				success: function(){users.add(model)}
+			});
 			return model;
 		}
 	}
