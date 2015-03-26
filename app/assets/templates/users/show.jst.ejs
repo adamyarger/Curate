@@ -2,5 +2,7 @@
 <%= user.escape('name') %>
 
 <div class="user_post">
-	
+	<% user.posts().each(function(post){ %>
+		<%= post.get('body') %>
+	<% }) %>
 </div>
