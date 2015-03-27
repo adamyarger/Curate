@@ -1,14 +1,29 @@
 
-<div id="main-article-wrapper">
-    <div id="main-article">
-		<h1>hello mutha </h1>
-		<h1><a href="#/posts/new">newpost</a></h1>
 
-		<ul>
-			<% posts.each(function(post){ %>
-				<li><%= post.escape("body")%></li>
-			<% }) %>
-		</ul>
+<div id="main-user-wrapper">
+	<div id="user-main">
+		<% posts.each(function(post){ %>
+			<li class="post_show">
+			      <div class="panel-heading post_media">
+			        <%= post.escape("html")%>
+			      </div>
+			      <div class="post-body">
+			        <%= post.escape('body') %>
+			      </div>
+			      <div class="panel-footer">
+
+			          <div class="name_avatar u-pull-left">
+			          	<span class="round-image-50 user_avatar u-pull-left">
+			          		
+			          	</span>
+			            <span class="user_name post_name u-pull-left">
+			              
+			            </span>
+			          </div>
+			       
+			      </div>
+		</li>
+		<% }) %>
 	</div>
 </div>
 
