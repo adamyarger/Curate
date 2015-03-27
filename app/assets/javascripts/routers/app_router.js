@@ -11,10 +11,10 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	postIndex: function(){
 		var indexView = new Curate.Views.PostsIndex({
-			collection: Curate.Collections.posts
+			collection: Curate.Collections.feed
 		});
 
-		Curate.Collections.posts.fetch();
+		Curate.Collections.feed.fetch();
 		this._swapView(indexView);
 	},
 
