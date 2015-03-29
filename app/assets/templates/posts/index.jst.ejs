@@ -14,10 +14,12 @@
 
 			          <div class="name_avatar u-pull-left">
 			          	<span class="round-image-50 user_avatar u-pull-left">
-			          		
+			          		<img class="avatar" src="<%= post.user().escape("avatar") %>" />          		
 			          	</span>
 			            <span class="user_name post_name u-pull-left">
-			              <%= post.user().get('name') %>
+				            <a href='#/users/<%= post.user().escape("id") %>'>
+				              <%= post.user().escape('name') %>
+				            </a>
 			            </span>
 			          </div>
 			       

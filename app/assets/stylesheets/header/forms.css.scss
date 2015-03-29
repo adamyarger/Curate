@@ -95,6 +95,9 @@ xsigin/signup popup
   -moz-transition: opacity 0.3s 0, visibility 0 0.3s;
   transition: opacity 0.3s 0, visibility 0 0.3s;
 }
+
+/*this is the blue modal background*/
+
 .cd-user-modal.is-visible {
   visibility: visible;
   opacity: 1;
