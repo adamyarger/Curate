@@ -6,8 +6,8 @@ window.Curate = {
 
 	init: function(){
 
-		// var newView = new Curate.Views.PostsNew();
-		// $('.container').append(newView.render().$el);
+		var rightNav = new Curate.Views.RightNav();
+		$('header').append(rightNav.render().$el);
 
 		new Curate.Routers.AppRouter();
 		Backbone.history.start();
