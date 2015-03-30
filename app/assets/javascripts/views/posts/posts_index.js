@@ -12,6 +12,10 @@ window.Curate.Views.PostsIndex = Backbone.View.extend({
 
 		this.$el.html(renderedContent);
 
+		var newPost = new Curate.Views.PostsNew();
+		$('.container').prepend(newPost.render().$el);
+
+
 		return this;
 	}
 });

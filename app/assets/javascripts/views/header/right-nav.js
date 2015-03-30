@@ -1,14 +1,11 @@
 window.Curate.Views.RightNav = Backbone.View.extend({
 	template: JST['header/right-nav'],
 
-	// initialize: function(options){
-	// 	this.listenTo(this.collection, 'sync unshift', this.render)
-	// },
-
-	
+	formTemplate: JST['header/post_modal'],
 
 	events: {
-		'click #notify': 'toggle'
+		'click #notify': 'open',
+		'click #message': 'openMessage'
 	},
 
 	render: function(){
@@ -21,9 +18,24 @@ window.Curate.Views.RightNav = Backbone.View.extend({
 		return this;
 	},
 
-	toggle: function(event){
-		event.preventDefault();
+	open: function(event){
+		$('#post-form').slideToggle(200);
 
-		alert('hello');
+		
+
+    
+
+
+	},
+
+	openMessage: function(event){
+
+		 
+		    $("#stream").toggle(200);
+		 
+		
 	}
+
+	
+	
 });

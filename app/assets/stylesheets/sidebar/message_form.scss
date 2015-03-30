@@ -1,9 +1,13 @@
+#cd-cart {
+	/*float: right;*/
+}
+
 #stream {
 	margin-bottom: 1.25em;
 	position: fixed;
 	padding: 0 0 .75em 0;
 	font-weight: 400;
-	float: left;
+	/*float: left;*/
 	z-index: 2;
 	background: #fff;
 	height: 100%;
@@ -11,6 +15,7 @@
 	-webkit-font-smoothing: antialiased;
 	margin-top: 2px;
 	overflow: scroll;
+	right: 0px;
 	display: none;
 }
 
