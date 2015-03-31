@@ -1,4 +1,4 @@
-window.Curate.Views.PostsIndex = Backbone.View.extend({
+window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 	template: JST['posts/index'],
 
 	initialize: function(options){
