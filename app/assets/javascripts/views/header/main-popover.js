@@ -31,20 +31,20 @@
 // 	}
 // });
 
-// $(document).ready(function() {
-//   $(".nav_avatar").on("click", "img", function() { 
-//     $("#popover").toggle();
-//   });
-// });
+$(document).ready(function(){
+	$('.nav_avatar').click( function(event){
+    event.stopPropagation();
+    $('#popover').toggle();
+	});
 
-$(document).on('click', 'img', function(){
- $("#popover").slideToggle(100); 
+	$(document).click( function(){
+	    $('#popover').hide();
+	});
 });
 
 
-$("#popover").click(function(e){
-  e.stopPropagation(); 
-});
+
+
 
 $(function() {
    $('.alert').delay(500).slideDown('normal', function() {
