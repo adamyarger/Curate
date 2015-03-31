@@ -37,7 +37,7 @@
 //   });
 // });
 
-$(document).click(function(){
+$(document).on('click', 'img', function(){
  $("#popover").slideToggle(100); 
 });
 
