@@ -31,10 +31,19 @@
 // 	}
 // });
 
-$(document).ready(function() {
-  $(".nav_avatar").on("click", "img", function() { 
-    $("#popover").toggle();
-  });
+// $(document).ready(function() {
+//   $(".nav_avatar").on("click", "img", function() { 
+//     $("#popover").toggle();
+//   });
+// });
+
+$(document).click(function(){
+ $("#popover").slideToggle(100); 
+});
+
+
+$("#popover").click(function(e){
+  e.stopPropagation(); 
 });
 
 $(function() {
