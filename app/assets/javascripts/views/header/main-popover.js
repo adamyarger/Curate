@@ -37,6 +37,12 @@ $(document).ready(function() {
   });
 });
 
+$(function() {
+   $('.alert').delay(500).slideDown('normal', function() {
+      $(this).delay(2500).slideUp();
+   });
+});
+
 
 
 // $('.nav_avatar').click(function(){
