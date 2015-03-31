@@ -34,11 +34,11 @@
 $(document).ready(function(){
 	$('.nav_avatar').click( function(event){
     event.stopPropagation();
-    $('#popover').toggle();
+    $('#popover').slideToggle(50);
 	});
 
 	$(document).click( function(){
-	    $('#popover').hide();
+	    $('#popover').slideUp(50);
 	});
 });
 

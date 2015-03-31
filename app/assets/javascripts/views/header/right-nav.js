@@ -4,7 +4,7 @@ window.Curate.Views.RightNav = Backbone.View.extend({
 	formTemplate: JST['header/post_modal'],
 
 	events: {
-		'click #notify': 'open',
+		'click #post': 'open',
 		'click #message': 'openMessage'
 	},
 
@@ -21,19 +21,10 @@ window.Curate.Views.RightNav = Backbone.View.extend({
 	open: function(event){
 		$('#post-form').slideToggle(200);
 
-		
-
-    
-
-
 	},
 
 	openMessage: function(event){
-
-		 
-		    $("#stream").toggle(200);
-		 
-		
+		$("#stream").toggle(200);
 	}
 
 	
