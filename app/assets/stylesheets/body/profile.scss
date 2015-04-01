@@ -3,13 +3,48 @@
 
 #profile-container{
   text-align: center;
+
+  .menu-item{
+    display: inline-block;
+  }
+
+  #medium-avatar{
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    padding: 0px;
+    background-color: #fff;
+    border: 3px solid #fff;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+  }
+
+  .button--chromeless{
+      border-radius: 0;
+    box-shadow: none;
+    background: rgba(0,0,0,0);
+    height: auto;
+    line-height: inherit;
+    border-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: rgba(0,0,0,0.3);
+    white-space: normal;
+  }
+
+  .button--chromeless{
+    padding: 10px 20px 5px;
+    color: rgba(0,0,0,0.8);
+    font-size: 24px;
+  }
+  
+  .before{
+    border-right: 1px solid rgba(0,0,0,0.05);
+  }
 }
 
-#medium-avatar{
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-}
+
 
 /*************** Profile Post **************/
 
