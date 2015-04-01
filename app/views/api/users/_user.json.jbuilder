@@ -11,10 +11,6 @@ unless posts.nil?
 	json.following_count user.following.count
 	json.followers_count user.followers.count
 end
-
-
-
-
 	
 json.is_owner current_user?(user)
 json.is_followed current_user.following?(user)
