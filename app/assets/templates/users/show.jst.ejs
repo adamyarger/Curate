@@ -33,7 +33,9 @@
 			</ul>
 
 			<% if (!user.get('is_owner')) { %>
-				<%= user.get('is_followed') ? 'follow' : 'unfollow' %>
+				<div id="follow-toggle" class="button">
+					<%= user.get('is_followed') ? 'unfollow' : 'follow' %>
+				</div>
 			<% } %>
 
 
