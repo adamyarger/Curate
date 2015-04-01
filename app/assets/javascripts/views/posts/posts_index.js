@@ -10,6 +10,14 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 		this.addSubview('#post-new', postNewView);
 	},
 
+	events: {
+		'click button#refresh': 'refresh'
+	},
+
+	refresh: function(){
+		this.collection.fetch();
+	},
+
 	render: function(){
 		var renderedContent = this.template({
 			posts: this.collection
