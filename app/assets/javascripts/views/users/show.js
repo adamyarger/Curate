@@ -6,8 +6,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 	},
 
 	events: {
-		'click #follow': 'followUser',
-		'click #unfollow': 'unfollowUser'
+		'click #follow-toggle': 'toggleFollow',
 	},
 
 	render: function(){
@@ -17,7 +16,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 
 		this.$el.html(renderedContent);
 
-		// if (Curate.currentUser.following().findWhere({id: this.model.id})) {
+		// if (Curate.current_user.following().findWhere({id: this.model.id})) {
 		// 	this.$el.find('.follow-buttons').toggleClass('followed');
 		// }
 

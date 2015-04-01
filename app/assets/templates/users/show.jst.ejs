@@ -31,9 +31,12 @@
 					</button>
 				</li>
 			</ul>
-			<div id="follow-toggle" class="button">
-				<p>follow</p>
-			</div>
+
+			<% if (!user.get('is_owner')) { %>
+				<%= user.get('is_followed') ? 'follow' : 'unfollow' %>
+			<% } %>
+
+
 		</div>
 	</div>
 </div>	
