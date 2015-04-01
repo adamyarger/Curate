@@ -1,4 +1,4 @@
-window.Curate.Models.UserFollowing = Backbone.Model.extend({
+window.Curate.Models.UserFollow = Backbone.Model.extend({
 
 	urlRoot: 'api/relationships'
 

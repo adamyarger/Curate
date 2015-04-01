@@ -6,7 +6,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 	},
 
 	events: {
-		'click #follow-toggle': 'toggleFollow',
+		'click .follow': 'toggleFollow',
 	},
 
 	render: function(){
@@ -20,7 +20,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 	},
 
 	toggleFollow: function(){
-		$.ajax('/api/relationships/' + this.model.id , {
+		$.ajax('/api/relationships/' + this.model.id + '/togglefollow', {
 			type: 'POST',
 			success: function(){
 				this.model.set('is_followed', !this.model.get('is_followed'));

@@ -14,4 +14,15 @@ class Api::RelationshipsController < ApplicationController
 
     render json: @user
   end
+
+  def toggle_follow
+    @user = User.find(params[:id])
+    if current_user.following?(@user)
+      current_user.unfollow(@user)
+    else
+      current_user.follow(@user)
+    end
+
+    render json: @user
+  end
 end

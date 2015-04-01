@@ -63,18 +63,19 @@
     padding-bottom: 4px;
   }
 
-  #follow{
+  .follow{
       margin-top: 10px;
       line-height: 2.5;
+      width: 125px;
   }
 
-  .unfollow{
+  #unfollow{
     border-color: $color-1;
     background: $color-1;
     color: #fff;
   }
 
-  .follow{
+  #follow{
     border-color: $color-1;
     color: $color-1;
   }
