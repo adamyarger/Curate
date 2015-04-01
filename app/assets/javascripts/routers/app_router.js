@@ -36,7 +36,6 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	userShow: function(id){
 		var profile = Curate.Collections.users.getOrFetch(id);
 		
-
 		var showView = new Curate.Views.UsersShow({
 			model: profile
 		});

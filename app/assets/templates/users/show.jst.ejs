@@ -1,5 +1,43 @@
+
+
+
+
 <div id="main-user-wrapper">
 	<div id="user-main">
+
+		<div id="profile-container">
+			<div class="hero-avatar">
+				<img class="avatar" src="<%= user.escape("medium_avatar") %>" />
+			</div>
+			<h1><%= user.escape('name') %></h1>
+			<p id="user-description"></p>
+			<ul>
+				<li class="menu-item">
+					<a href='#/users/<%= user.escape("id") %>/following'>
+						<button class="button button--chromeless">
+							<small class="menu-label">Following</small>
+							<%= user.escape('following_count') %>
+						</button>
+					</a>
+				</li>
+				<li class="menu-item">
+					<a href='#/users/<%= user.escape("id") %>/followers'>
+						<button class="button button--chromeless">
+							<small class="menu-label">Followers</small>
+							<%= user.escape('followers_count') %>
+						</button>
+					</a>
+				</li>
+				<li class="menu-item">
+					<button class="button button--chromeless">
+						<small class="menu-label">Likes</small>
+						23
+					</button>
+				</li>
+
+			</ul>
+		</div>
+
 		<% user.posts().each(function(post){ %>
 			<li class="post_show">
 			      <div class="panel-heading post_media">

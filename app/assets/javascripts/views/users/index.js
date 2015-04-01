@@ -13,7 +13,6 @@ window.Curate.Views.UsersIndex = Backbone.View.extend({
 			users: this.collection
 		});
 		
-
 		this.$el.html(renderedContent);
 
 		return this;
