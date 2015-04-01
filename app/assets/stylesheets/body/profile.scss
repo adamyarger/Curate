@@ -4,11 +4,16 @@
   width: 100%;
   background: #fff;
   padding-bottom: 30px;
-  padding-top: 27px
+  padding-top: 27px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
 }
 
 #profile-container{
   text-align: center;
+
+  h1{
+    font-size: 2.5em;
+  }
 
   .menu-item{
     display: inline-block;
