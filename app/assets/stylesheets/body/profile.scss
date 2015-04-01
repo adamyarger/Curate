@@ -63,9 +63,20 @@
     padding-bottom: 4px;
   }
 
-  #follow-toggle{
+  #follow{
       margin-top: 10px;
       line-height: 2.5;
+  }
+
+  .unfollow{
+    border-color: $color-1;
+    background: $color-1;
+    color: #fff;
+  }
+
+  .follow{
+    border-color: $color-1;
+    color: $color-1;
   }
 }
 

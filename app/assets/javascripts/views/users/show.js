@@ -16,18 +16,19 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 
 		this.$el.html(renderedContent);
 
-		// if (Curate.current_user.following().findWhere({id: this.model.id})) {
-		// 	this.$el.find('.follow-buttons').toggleClass('followed');
-		// }
-
 		return this;
 	},
 
-	followUser: function(){
-		var userFollow = new Curate.Models.UserFollow
-	},
-
-	unfollowUser: function(){
-
+	toggleFollow: function(){
+		$.ajax('/api/relationships/' + this.model.id , {
+			type: 'POST',
+			success: function(){
+				this.model.set('is_followed', !this.model.get('is_followed'));
+				this.render();
+			}.bind(this),
+			error: function(){
+				console.log('You are in grave danger!');
+			}
+		})
 	}
 });
