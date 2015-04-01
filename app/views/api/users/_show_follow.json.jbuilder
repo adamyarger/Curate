@@ -1,0 +1,1 @@
+json.(relationships, :id, :follower_id, :followed_id)

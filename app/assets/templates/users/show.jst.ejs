@@ -7,7 +7,7 @@
 			</div>
 			<h1><%= user.escape('name') %></h1>
 			<p id="user-description"></p>
-			<ul>
+			<ul class="menu">
 				<li class="menu-item">
 					<a href='#/users/<%= user.escape("id") %>/following'>
 						<button class="button button--chromeless before">
@@ -26,12 +26,14 @@
 				</li>
 				<li class="menu-item menu-last">
 					<button class="button button--chromeless">
-						<small class="menu-label">Likes</small>
+						<small class="menu-label">Favorites</small>
 						23
 					</button>
 				</li>
-
 			</ul>
+			<div id="follow-toggle" class="button">
+				<p>follow</p>
+			</div>
 		</div>
 	</div>
 </div>	
