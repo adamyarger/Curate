@@ -17,6 +17,7 @@
 //= require backbone
 //= require curate.js
 //= require ./utils/composite_view
+//= require ./utils/paginated_view
 //= require_tree ./models
 //= require_tree ./collections
 //= require_tree ../templates

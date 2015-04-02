@@ -25,14 +25,18 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 		$(window).on('scroll', throttledCallback);
 	},
 
-	nextPage: function(){
-		var view = this;
-		Curate.Collections.feed.fetch({
-			data: {page:  view.collection.page_number + 1},
-			remove: false
-		});
-		
-	},
+	nextPage: function () {
+	    var view = this;
+	    
+	        view.collection.fetch({
+	          data: { page: view.collection.page_number + 1 },
+	          // data: console.log(view.collection.page_number + 1) ,
+	          remove: false
+	        });
+
+
+	     
+	  },
 
 	render: function(){
 		var renderedContent = this.template({
