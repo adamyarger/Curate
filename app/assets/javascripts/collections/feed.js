@@ -1,6 +1,6 @@
 window.Curate.Collections.Feed = Backbone.Collection.extend({
 	url: '/api/posts',
-	model: Curate.Models.Feed,
+	model: Curate.Models.Post,
 
 	getOrFetch: function(id){
 		var model;
@@ -10,7 +10,7 @@ window.Curate.Collections.Feed = Backbone.Collection.extend({
 			model.fetch();
 			return model;
 		} else{
-			model = new Curate.Models.Feed({id: id});
+			model = new Curate.Models.Post({id: id});
 			model.fetch({
 				success: function(){feed.add(model)}
 			});
