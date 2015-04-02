@@ -28,7 +28,7 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 	nextPage: function(){
 		var view = this;
 		Curate.Collections.feed.fetch({
-			data: {page:  view.page_number + 1},
+			data: {page:  view.collection.page_number + 1},
 			remove: false
 		});
 		
