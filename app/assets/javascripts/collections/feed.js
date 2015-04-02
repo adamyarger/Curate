@@ -27,3 +27,6 @@ window.Curate.Collections.Feed = Backbone.Collection.extend({
 
 
 window.Curate.Collections.feed = new Curate.Collections.Feed();
+Curate.Collections.feed.fetch({
+  data: { page: 1 }
+});
