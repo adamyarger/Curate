@@ -7,7 +7,7 @@ window.Curate = {
 	init: function(){
 
 		var rightNav = new Curate.Views.RightNav();
-		$('header').append(rightNav.render().$el);
+		$('#right-nav').append(rightNav.render().$el);
 
 		new Curate.Routers.AppRouter();
 		Backbone.history.start();

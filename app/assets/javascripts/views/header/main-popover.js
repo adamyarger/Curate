@@ -31,6 +31,7 @@
 // 	}
 // });
 
+//this is causing a get request instead of a delete when logging out
 $(document).ready(function(){
 	$('.nav_avatar').click( function(event){
     event.stopPropagation();
