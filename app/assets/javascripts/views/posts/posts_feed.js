@@ -12,7 +12,7 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 
 	events: {
 		'click button#refresh': 'refresh',
-		'click button#next': 'nextPage'
+		// 'click button#next': 'nextPage'
 	},
 
 	refresh: function(){
@@ -27,16 +27,15 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 
 	nextPage: function () {
 	    var view = this;
-	    
-	        view.collection.fetch({
-	          data: { page: view.collection.page_number + 1 },
-	          // data: console.log(view.collection.page_number + 1) ,
-	          remove: false
-	        });
-
-
-	     
-	  },
+	    if($(window).scrollTop() > $(document).height() - $(window).height() - 50){
+	    	if(view.collection.page_number < view.collection.total_pages){
+	    		view.collection.fetch({
+	    			data: {page: view.collection.page_number + 1},
+	    			remove: false
+	    		});
+	    	}
+	    }     
+	},
 
 	render: function(){
 		var renderedContent = this.template({
@@ -44,7 +43,7 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 		});
 
 		this.$el.html(renderedContent);
-		// this.listenForScroll();
+		this.listenForScroll();
 
 		this.renderSubviews();
 
