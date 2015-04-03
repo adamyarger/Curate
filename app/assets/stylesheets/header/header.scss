@@ -136,6 +136,8 @@ header {
   	opacity: 1;
   }
 
+/*start of left drop down menu*/
+
 #popover{
 
   overflow: hidden;
@@ -183,11 +185,26 @@ header {
 	  border-radius: 4px;
 	  box-shadow: 0 1px 2px rgba(0,0,0,0.25),0 0 1px rgba(0,0,0,0.35);
 
-	  li{
-	  	padding: 7px 25px;
+	  .popover-item{
+	  		padding: 0;
+	  		text-align: left;
+			  width: 100%;
+			  line-height: 1.4;
+			  white-space: nowrap;
+
+			.button--chromeless{
+				color: rgba(0,0,0,0.7);
+			}
+
+			.icon{
+				width: 24px;
+				display: inline-block;
+				color: rgba(0,0,0,0.3);
+			}
 
 	  	a{
 	  		font-size: 1.2em;
+	  		padding: 7px 10px;
 	  	}
 	  }
 	}

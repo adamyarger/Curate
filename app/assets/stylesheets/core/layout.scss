@@ -41,3 +41,16 @@ $L:     1200px;
   float:left;
 }
 
+.button--chromeless{
+      border-radius: 0;
+    box-shadow: none;
+    background: rgba(0,0,0,0);
+    height: auto;
+    line-height: inherit;
+    border-width: 0;
+    padding: 0;
+    vertical-align: baseline;
+    color: rgba(0,0,0,0.3);
+    white-space: normal;
+  }
+
