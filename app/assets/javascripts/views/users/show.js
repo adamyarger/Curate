@@ -3,6 +3,9 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 
 	initialize: function(options){
 		this.listenTo(this.model, 'sync', this.render);
+		this.listenTo(this.model.posts(), 'add', this.addPost);
+
+		this.model.posts().each(this.addPost.bind(this));
 	},
 
 	events: {
@@ -15,8 +18,17 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 		});
 
 		this.$el.html(renderedContent);
-
+		this.renderSubviews();
 		return this;
+	},
+
+	addPost: function(post){
+		var postShow = new Curate.Views.PostsShow({
+			model: post
+		});
+
+		this.addSubview('.profile-posts', postShow);
+		postShow.render();
 	},
 
 	toggleFollow: function(){
