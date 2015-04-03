@@ -6,7 +6,7 @@ class Post < ActiveRecord::Base
   # validates :content, :presence => true, :format => URI::regexp(%w(http https))
 
 
-	after_create :update_from_embedly
+	# after_create :update_from_embedly
  
   # validates :content, :presence => true, :format => URI::regexp(%w(http https))
   
