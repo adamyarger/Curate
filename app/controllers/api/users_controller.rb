@@ -3,13 +3,13 @@ class Api::UsersController < ApplicationController
 	# before_action :admin_user, only: :destroy
 
 	def index
-		@users = User.all
+		@users = User.all.page(params[:page])
 		render 'api/users/index'
 	end
 
 	def show
 		@user = User.find(params[:id])
-		@posts = @user.posts
+		@posts = @user.posts.page(params[:page])
 		render 'api/users/show'
 	end
 

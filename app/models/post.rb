@@ -1,21 +1,12 @@
 class Post < ActiveRecord::Base
   belongs_to :user
   default_scope -> { order(created_at: :desc) }
-  # validates :user_id, presence: true
+  validates :user_id, presence: true
   # validates :body, presence: true, length: {maximum: 140}
   # validates :content, :presence => true, :format => URI::regexp(%w(http https))
 
- #    auto_html_for :body do
-	#     html_escape
-	#     image
-	#     youtube(:width => '100%', :height => 320, :autoplay => false)
-	#     vimeo(:width => 400, :height => 250, :autoplay => false)
-	#     soundcloud(:show_artwork => true, :color => '1E90FF')
-	#     link :target => "_blank", :rel => "nofollow"
-	#     simple_format
-	# end
 
-	# after_create :update_from_embedly
+	after_create :update_from_embedly
  
   # validates :content, :presence => true, :format => URI::regexp(%w(http https))
   

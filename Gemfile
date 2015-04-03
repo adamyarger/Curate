@@ -34,6 +34,7 @@ gem 'bourbon', '~> 4.2.1'
 gem 'settingslogic', '~> 2.0.9'
 gem 'embedly', '~> 1.9.1'
 gem 'ejs'
+gem "font-awesome-rails"
 
 
 
