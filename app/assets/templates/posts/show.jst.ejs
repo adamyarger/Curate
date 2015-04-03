@@ -16,6 +16,12 @@
               <%= post.escape('username')%>
             </span>
           </div>
+
+          <div id="star" class="star_group u-pull-right">
+            <% if (post.get('is_owner')){ %>
+              <a id="delete-post"><i class="fa fa-trash-o"></i></a>
+            <% } %>
+          </div>
        
       </div>
 </li>

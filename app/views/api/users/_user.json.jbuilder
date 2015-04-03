@@ -8,6 +8,7 @@ unless posts.nil?
 		json.partial!('api/posts/post', :post => post)
 		json.thumb_avatar user.avatar.url(:thumb)
 		json.username user.name
+		json.is_owner current_user?(user)
 	end
 
 	json.following_count user.following.count
