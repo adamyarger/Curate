@@ -74,6 +74,11 @@ xButtons
   -moz-font-feature-settings: "liga" on;
   }
 
+  .do{
+    color: $color-1;
+    border-color: $color-1;
+  }
+
   .button-circle {
     padding: 0;
     width: 38px;

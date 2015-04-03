@@ -21,8 +21,9 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		newPost.save({}, {
 			success: function(){
 				Curate.Collections.posts.unshift(newPost);
-				Curate.Collections.feed.fetch();
-				
+				Curate.Collections.feed.fetch({
+				  data: { page: 1 }
+				});
 			}
 		});
 	}
