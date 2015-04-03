@@ -1,5 +1,8 @@
 class Api::PostsController < ApplicationController
 
+	before_action :authenticate_user!
+	before_action :correct_user, only: :destroy
+
 	def create
 		@post = current_user.posts.build(post_params)
 		
@@ -19,11 +22,6 @@ class Api::PostsController < ApplicationController
 		end
 	end
 
-	# def index
-	# 	@posts = Post.all
-	# 	render 'api/posts/index'
-	# end
-
 	def show
 		@user = User.find(params[:id])
 		@posts = @user.posts
@@ -32,17 +30,11 @@ class Api::PostsController < ApplicationController
 		# render :json => @posts
 	end
 
-	# def show 
-	# 	@post = Post.find(params[:id])
-	# 	render :json => @post
-
-	# end
-
-	# def destroy
-	#     @post.destroy
-	#     flash[:success] = "Post deleted"
-	#     render ""
-	# end
+	def destroy
+		@post = Post.find(params[:id])
+	    @post.destroy
+	    render "api/posts/show"
+	end
 
 	private
 
