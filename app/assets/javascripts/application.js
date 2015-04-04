@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.visible
 //= require jquery.noty
+//= require default
 //= require top
 //= require jquery.serializejson
 //= require underscore
