@@ -6,10 +6,10 @@ $.noty.layouts.top = {
         selector: 'ul#noty_top_layout_container',
         style   : function() {
             $(this).css({
-                top          : 60,
-                left         : '5%',
+                top          : 52,
+                left         : '20%',
                 position     : 'fixed',
-                width        : '90%',
+                width        : '60%',
                 height       : 'auto',
                 margin       : 0,
                 padding      : 0,
