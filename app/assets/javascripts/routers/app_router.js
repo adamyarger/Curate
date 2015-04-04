@@ -6,7 +6,8 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		'users': 'userIndex',
 		'users/:id': 'userShow',
 		'users/:id/following': 'following',
-		'users/:id/followers': 'followers'
+		'users/:id/followers': 'followers',
+		'messages': 'messages'
 	},
 
 	postIndex: function(){
@@ -76,6 +77,15 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	        that._swapView(followingIndex);
 	      }
 	    })
+	  },
+
+	  messages: function(){
+	  	var messageIndex = new Curate.Views.MessagesIndex({
+	  		collection: Curate.Collections.messages
+	  	});
+
+	  	Curate.Collections.messages.fetch();
+	  	this._swapView(messageIndex);
 	  },
 
 	_swapView: function(view){
