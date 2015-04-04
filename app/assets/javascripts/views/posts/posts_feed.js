@@ -12,7 +12,11 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 
 	events: {
 		'click button#refresh': 'refresh',
-		// 'click button#next': 'nextPage'
+		'click button#flash': 'flash'
+	},
+
+	flash: function(){
+		Curate.Flash.notice('A notice message');
 	},
 
 	refresh: function(){
