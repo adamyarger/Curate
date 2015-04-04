@@ -27,12 +27,14 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 
 	nextPage: function () {
 	    var view = this;
-	    if($(window).scrollTop() > $(document).height() - $(window).height() - 50){
+	    if (this.$('.spinner').visible()) {
 	    	if(view.collection.page_number < view.collection.total_pages){
 	    		view.collection.fetch({
 	    			data: {page: view.collection.page_number + 1},
 	    			remove: false
 	    		});
+	    	} else {
+	    		view.$('.spinner').remove();
 	    	}
 	    }     
 	},
