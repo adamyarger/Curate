@@ -28,7 +28,7 @@ window.Curate.Flash = {
         easing: 'swing',
         speed: 500
       },
-      // timeout: timeout,
+      timeout: timeout,
       closeWith: ['click', 'button'],
       modal: false
     });
