@@ -16,7 +16,7 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
 	},
 
 	flash: function(){
-		Curate.Flash.success('A notice message');
+		Curate.Flash.success('Post success!');
 	},
 
 	refresh: function(){
