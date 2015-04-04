@@ -1,11 +1,17 @@
 window.Curate.Views.MessagesIndex = Backbone.View.extend({
 	template: JST['messages/index'],
 
-	render: function(){
-		var renderedContent = this.template({
-			message: this.model
-		});
-		this.$el.html(renderedContent);
-		return this;
+	initialize: function(options){
+		this.listenTo(this.collection, 'sync add', this.render);
+	},
+
+	render: function () {
+	    var renderedContent = this.template({
+		     messages: this.collection 
+		   });
+	    
+	    this.$el.html(renderedContent);
+	    return this;
 	}
+
 });
