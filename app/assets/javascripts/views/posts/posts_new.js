@@ -21,10 +21,10 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		newPost.save({}, {
 			success: function(){
 				Curate.Collections.posts.unshift(newPost);
-				Curate.Flash.success('Post success!');
 				Curate.Collections.feed.fetch({
 				  data: { page: 1 }
 				});
+				Curate.Flash.success('Post success!');
 			}
 		});
 	}

@@ -8,6 +8,9 @@ window.Curate.Flash = {
   error: function(msg) {
     return this.notification('error', 5000, msg);
   },
+  warning: function(msg) {
+    return this.notification('warning', 5000, msg);
+  },
   success: function(msg) {
     return this.notification('success', 5000, msg);
   },
@@ -26,7 +29,7 @@ window.Curate.Flash = {
           height: "toggle"
         },
         easing: 'swing',
-        speed: 500
+        speed: 200
       },
       timeout: timeout,
       closeWith: ['click', 'button'],
