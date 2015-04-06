@@ -1,4 +1,10 @@
 json.(message, :id, :message_id, :user_id, :created_at, :read)
 
-json.message_feed message.message.content
+json.content 		message.message.content
+json.sender  		message.message.sender.name
+json.sender_avatar  message.message.sender.avatar.url(:thumb)
+
+if message.message.html.present?
+	json.html	message.message.html
+end
 
