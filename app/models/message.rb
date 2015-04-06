@@ -28,14 +28,6 @@ class Message < ActiveRecord::Base
       title
     end
   end
-
-  def title_for_preview
-    if title.blank?
-      description
-    else
-      title
-    end
-  end
   
   def update_from_embedly
  

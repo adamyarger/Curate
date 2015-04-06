@@ -18,12 +18,15 @@ class Api::MessagesController < ApplicationController
 	end
 
 	def index
-		@user = User.find(current_user)
-		@unread = Recipient.where(:user_id => @user).order("created_at DESC")
-		@unread.unread.update_all(read: true, updated_at: Time.now.utc)
-		@messages = @user.messages
+		 @user = User.find(current_user)
+	     @messages = Recipient.where(:user_id => @user.id)
+	     # save message id then fetch through 
+	     # @id = @messages.id
+	     @sent_messages = Message.where(:sender_id => @user.id)
+	    
+	     # @message = Message.where(:id => @messages.message_id)
 
-		render 'api/messages/index'
+		render :json => @messages
 	end
 
 	private
