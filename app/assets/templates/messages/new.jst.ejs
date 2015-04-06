@@ -15,7 +15,8 @@
 							</span>
 							<span class="list-group-item"><%= user.get('name') %></span>
 
-							<input type="checkbox" name="message[user_tokens][]" id="user4" value="4" />
+							<input type="checkbox" name="message[user_tokens][]" 
+							id="user<%= user.escape('id') %>" value="<%= user.escape('id') %>" />
 						    
 						</li>
 						</label>
