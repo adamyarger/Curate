@@ -19,14 +19,10 @@ class Api::MessagesController < ApplicationController
 
 	def index
 		 @user = User.find(current_user)
-	     @messages = Recipient.where(:user_id => @user.id)
-	     # save message id then fetch through 
-	     # @id = @messages.id
+	     @messages = Recipient.where(:user_id => @user.id) 
 	     @sent_messages = Message.where(:sender_id => @user.id)
-	    
-	     # @message = Message.where(:id => @messages.message_id)
 
-		render :json => @messages
+		render 'api/messages/index'
 	end
 
 	private
