@@ -1,2 +1,28 @@
 
-<p>hello</p> 
+	<form>
+		      <input name="utf8" type="hidden" />
+		      <input type="hidden" name="authenticity_token"  />
+		      <textarea id="url" class="message_body" name="message[content]"></textarea>
+		        
+		  <div id="stream-list" class="follow-list">
+		      <ul>   
+		          <label for="user4" >
+		          <li id="stream_item">
+		                   
+		              
+		              <% messages.each(function(message){ %>
+		              	<%= message.get('id') %>
+		              <% }) %>
+
+		              <input type="checkbox" name="message[user_tokens][]" id="user4" value="4" />
+		                
+		            </li>
+		            </label>
+		            <br>
+		       </ul>
+		  </div>
+		        
+		  <div id ="stream-footer">
+		      <button name="button" type="submit" class="btn btn-outline">submit</button>
+		  </div>
+	</form>
