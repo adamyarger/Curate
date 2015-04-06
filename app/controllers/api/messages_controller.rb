@@ -11,7 +11,7 @@ class Api::MessagesController < ApplicationController
 		@message = current_user.messages.build(message_params)
 
 		if @message.save
-			render 'api/messages/show'
+			render :json => @message 
 		else
 			render :json => @messages.errors, :status => :unprocessable_entity
 		end
