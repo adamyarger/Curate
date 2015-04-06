@@ -1,9 +1,41 @@
 
 
-<% messages.each(function(message){ %>
-	
-	<h1><%= message.get('content') %><h1>
-	
-	
+<div id="main-user-wrapper">
+	<div id="user-main">
+		<button id="flash">flash</button>
 
-<% }) %>
+		<div id="post-new"></div>
+
+		<% messages.each(function(message){ %>
+			<li class="post_show">
+			      <div class="panel-heading post_media">
+			        <%= message.escape("html")%>
+			      </div>
+			      <div class="post-body">
+			        <%= message.escape('content') %>
+			      </div>
+			      <div class="panel-footer">
+
+			          <div class="name_avatar u-pull-left">
+			          	<span class="round-image-50 user_avatar u-pull-left">
+			          		<img class="avatar" src="<%= message.escape("thumb_avatar") %>" />          		
+			          	</span>
+			            <span class="user_name post_name u-pull-left">
+				            <a href='#/users/<%= message.escape("id") %>'>
+				              <%= message.escape('name') %>
+				            </a>
+			            </span>
+			          </div>
+			       
+			      </div>
+			</li>
+		<% }) %>
+
+		<div class="spinner">
+		  <div class="bounce1"></div>
+		  <div class="bounce2"></div>
+		  <div class="bounce3"></div>
+		</div>
+
+	</div>
+</div>
