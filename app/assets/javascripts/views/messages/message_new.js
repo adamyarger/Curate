@@ -2,12 +2,18 @@ window.Curate.Views.MessageNew = Backbone.View.extend({
 
 	template: JST['messages/new'],
 
+	initialize: function(options){
+		this.listenTo(Curate.Collections.users, 'sync', this.render)
+	},
+
 	// events: {
 	// 	'submit form': 'submit'
 	// },
 
 	render: function(){
-		var renderedContent = this.template();
+		var renderedContent = this.template({
+			users: Curate.Collections.users
+		});
 		this.$el.html(renderedContent);
 
 		return this;

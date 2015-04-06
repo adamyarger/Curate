@@ -15,7 +15,7 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 			collection: Curate.Collections.feed
 		});
 
-		// Curate.Collections.feed.fetch();
+		Curate.Collections.users.fetch();
 		this._swapView(indexView);
 	},
 
