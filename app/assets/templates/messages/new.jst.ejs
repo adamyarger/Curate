@@ -6,19 +6,22 @@
 		        
 		  <div id="stream-list" class="follow-list">
 		      <ul>   
-		          <label for="user4" >
-		          <li id="stream_item">
-		                   
-		              
-		              <% users.each(function(user){ %>
-		              	<%= user.get('id') %>
-		              <% }) %>
+		      	  	<% users.each(function(user){ %>
+		      	  		<label for="user<%= user.escape('id') %>" >
+						<li id="stream_item">
 
-		              <input type="checkbox" name="message[user_tokens][]" id="user4" value="4" />
-		                
-		            </li>
-		            </label>
-		            <br>
+							<span class="round-image-50 ">
+								<img class="avatar" src="<%= user.escape("thumb_avatar") %>" />
+							</span>
+							<span class="list-group-item"><%= user.get('name') %></span>
+
+							<input type="checkbox" name="message[user_tokens][]" id="user4" value="4" />
+						    
+						</li>
+						</label>
+						<br>
+		        	<% }) %>
+		            
 		       </ul>
 		  </div>
 		        
