@@ -16,6 +16,8 @@ Rails.application.routes.draw do
 
     post 'relationships/:id/togglefollow', to: 'relationships#toggle_follow'
 
+    resources :recipients, only: [:index]
+
     resources  :posts, only: [:create, :destroy, :show, :index]
     resources :relationships,       only: [:create, :destroy]
 

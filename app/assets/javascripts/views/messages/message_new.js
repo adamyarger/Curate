@@ -3,7 +3,7 @@ window.Curate.Views.MessageNew = Backbone.View.extend({
 	template: JST['messages/new'],
 
 	initialize: function(options){
-		this.listenTo(Curate.Collections.users, 'sync', this.render)
+		this.listenTo(Curate.Collections.recipients, 'sync', this.render)
 	},
 
 	events: {
@@ -12,7 +12,7 @@ window.Curate.Views.MessageNew = Backbone.View.extend({
 
 	render: function(){
 		var renderedContent = this.template({
-			users: Curate.Collections.users
+			users: Curate.Collections.recipients
 		});
 		this.$el.html(renderedContent);
 
@@ -29,7 +29,7 @@ window.Curate.Views.MessageNew = Backbone.View.extend({
 			success: function(){
 				Curate.Collections.messages.unshift(newMessage);
 				
-				Curate.Flash.success('message success!');
+				Curate.Flash.success('message sent!');
 			}
 		});
 	}
