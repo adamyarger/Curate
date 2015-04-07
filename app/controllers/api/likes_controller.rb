@@ -1,15 +1,12 @@
 class Api::LikesController < ApplicationController
+
   def create
-    @like = current_user.likes.create(like_params)
+    @like = current_user.build.likes(like_params)
 
-    user = (@like.likeable_type == "Post") ? @like.likeable.author : @like.likeable.user
-    notify!(user, @like)
-
-    if request.xhr?
-      render json: @like
+    if @like.save
+      render :json => @like
     else
-      flash[:notices] = ["liked"]
-      redirect_to :back
+      render :json => @messages.errors, :status => :unprocessable_entity
     end
   end
 

@@ -15,6 +15,10 @@ class Post < ActiveRecord::Base
 
   scope :recent, -> { order("updated_at DESC")}
 
+  def liked_by?(user)
+    self.likes.where(user_id: user).any?
+  end
+
   
 
   # def title_for_preview
