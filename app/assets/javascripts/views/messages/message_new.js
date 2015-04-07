@@ -22,7 +22,8 @@ window.Curate.Views.MessageNew = Backbone.View.extend({
 	submit: function(event){
 		event.preventDefault();
 
-		var params = $(event.currentTarget).serializeJSON()['message'];
+		var params = $(event.currentTarget).serializeJSON();
+		console.log(params);
 		var newMessage = new Curate.Models.Message(params);
 		newMessage.save({}, {
 			success: function(){
