@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   
   
   namespace :api, :defaults => {:format => :json} do
+
     resources :users, :only => [:show, :index, :destroy] do
       member do
         get :following, :followers
@@ -15,13 +16,20 @@ Rails.application.routes.draw do
     end
 
     post 'relationships/:id/togglefollow', to: 'relationships#toggle_follow'
-
+    
     resources :recipients, only: [:index]
 
-    resources  :posts, only: [:create, :destroy, :show, :index]
-    resources :relationships,       only: [:create, :destroy]
+    resources :likes, only: [:index]
+    
+    resources  :posts, only: [:create, :destroy, :show, :index] do
+      resources :likes, only: [:create, :destroy]
+    end
+    resources :relationships, only: [:create, :destroy] 
 
-    resources :messages, only: [:create, :destroy, :index]
+    resources :messages, only: [:create, :destroy, :index] do
+      resources :likes, only: [:create, :destroy]
+    end
+
   end
 
 ####################################
