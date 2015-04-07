@@ -16,18 +16,18 @@ class Api::LikesController < ApplicationController
     render :json => @likes
   end
 
-  def destroy
-    @like = current_user.likes.where(id: params[:id]).first!
+  # def destroy
+  #   @like = current_user.likes.where(id: params[:id]).first!
 
-    @like.destroy
+  #   @like.destroy
 
-    if request.xhr?
-      render json: @like
-    else
-      flash[:notices] = ["unliked"]
-      redirect_to :back
-    end
-  end
+  #   if request.xhr?
+  #     render json: @like
+  #   else
+  #     flash[:notices] = ["unliked"]
+  #     redirect_to :back
+  #   end
+  # end
 
   private
 
