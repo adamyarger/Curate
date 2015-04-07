@@ -16,6 +16,13 @@ class Api::LikesController < ApplicationController
     render :json => @likes
   end
 
+  def show
+    @user = User.find(params[:id])
+    @likes = @user.likes
+
+    render :json => @likes
+  end
+
   # def destroy
   #   @like = current_user.likes.where(id: params[:id]).first!
 

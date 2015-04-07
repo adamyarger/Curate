@@ -19,7 +19,7 @@ Rails.application.routes.draw do
     
     resources :recipients, only: [:index]
 
-    resources :likes, only: [:index]
+    resources :likes, only: [:index, :show]
     
     resources  :posts, only: [:create, :destroy, :show, :index] do
       resources :likes, only: [:create, :destroy]
