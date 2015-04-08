@@ -75,10 +75,10 @@ GEM
       oauth
       querystring
     erubis (2.7.0)
-    execjs (2.5.0)
+    execjs (2.5.1)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
-    globalid (0.3.3)
+    globalid (0.3.5)
       activesupport (>= 4.1.0)
     hike (1.2.3)
     i18n (0.7.0)
