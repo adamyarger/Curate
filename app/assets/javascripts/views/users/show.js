@@ -45,6 +45,8 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 			type: 'POST',
 			success: function(){
 				this.model.set('is_followed', !this.model.get('is_followed'));
+				
+				//fetch an updated feed when new user is followed
 				Curate.Collections.feed.fetch();
 				this.render();
 			}.bind(this),

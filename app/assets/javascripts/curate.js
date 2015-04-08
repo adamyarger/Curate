@@ -12,6 +12,8 @@ window.Curate = {
 		var messageForm = new Curate.Views.MessageNew();
 		$('#stream').append(messageForm.render().$el);
 
+		Curate.Collections.recipients.fetch();
+
 		new Curate.Routers.AppRouter();
 		Backbone.history.start();
 	}
