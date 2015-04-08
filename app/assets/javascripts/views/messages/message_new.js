@@ -3,7 +3,7 @@ window.Curate.Views.MessageNew = Backbone.View.extend({
 	template: JST['messages/new'],
 
 	initialize: function(options){
-		this.listenTo(Curate.Collections.recipients, 'sync', this.render)
+		this.listenTo(Curate.Collections.recipients, 'sync add', this.render)
 	},
 
 	events: {

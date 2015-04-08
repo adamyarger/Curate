@@ -21,13 +21,10 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   # paperclip profile
-  validates_with AttachmentSizeValidator, :attributes => :avatar, :less_than => 1.megabytes
-  has_attached_file :avatar, :styles => { :medium => "250x250#", :thumb => "100x100#" }, :default_url => ":style/missing.png"
+  validates_with AttachmentSizeValidator, :attributes => :avatar, :less_than => 2.megabytes
+  has_attached_file :avatar, :styles => { :medium => "250x250#", :thumb => "100x100#" }, 
+                                                    :default_url => ":style/missing.png"
   validates_attachment_content_type :avatar, :content_type => /\Aimage\/.*\Z/
-
-  def avatar_url
-      avatar.url(:medium)
-  end
 
 	# Returns a user's status feed.
   def feed
@@ -44,10 +41,6 @@ class User < ActiveRecord::Base
     end
     return false
   end
-
-  # def likeable
-  #   like = "SELECT "
-  # end
 
 	# Follows a user.
 	def follow(other_user)
