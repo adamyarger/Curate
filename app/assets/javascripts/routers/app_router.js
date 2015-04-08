@@ -7,7 +7,8 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		'users/:id': 'userShow',
 		'users/:id/following': 'following',
 		'users/:id/followers': 'followers',
-		'messages': 'messages'
+		'messages': 'messages',
+		'likes/:id': 'likes'
 	},
 
 	postIndex: function(){
@@ -86,6 +87,15 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	  	Curate.Collections.messages.fetch();
 	  	this._swapView(messageIndex);
+	  },
+
+	  likes: function(){
+	  	var userLikes = new Curate.Views.Likes({
+	  		collection: Curate.Collections.likes
+	  	});
+
+	  	var profile = Curate.Collections.likes.getOrFetch(id);
+	  	this._swapView(userLikes);
 	  },
 
 	_swapView: function(view){

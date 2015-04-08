@@ -45,6 +45,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend({
 			type: 'POST',
 			success: function(){
 				this.model.set('is_followed', !this.model.get('is_followed'));
+				Curate.Collections.feed.fetch();
 				this.render();
 			}.bind(this),
 			error: function(){

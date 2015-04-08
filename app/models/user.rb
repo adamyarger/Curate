@@ -38,6 +38,17 @@ class User < ActiveRecord::Base
                      OR user_id = :user_id", user_id: id)
   end
 
+  def like?(id, type)
+    if get_likes({:id => id, :type => type}).length > 0
+      return true
+    end
+    return false
+  end
+
+  # def likeable
+  #   like = "SELECT "
+  # end
+
 	# Follows a user.
 	def follow(other_user)
 		active_relationships.create(followed_id: other_user.id)

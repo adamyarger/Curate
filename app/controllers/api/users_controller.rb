@@ -20,6 +20,14 @@ class Api::UsersController < ApplicationController
 	  render 'api/users/index'
 	end
 
+	def likes
+		@user = User.find(params[:id])
+    @likes = @user.likes
+
+    # render :json => @likes
+    render 'api/likes/index'
+	end
+
 	def followers
 	  @title = "Followers"
 	  @user  = User.find(params[:id])

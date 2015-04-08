@@ -1,6 +1,8 @@
 json.(user, :id, :name, :created_at, :avatar)
-json.thumb_avatar user.avatar.url(:thumb)
-json.medium_avatar user.avatar.url(:medium)
+json.thumb_avatar 		user.avatar.url(:thumb)
+json.medium_avatar 		user.avatar.url(:medium)
+json.is_owner 			current_user?(user)
+json.is_followed 		current_user.following?(user)
 
 posts ||= nil
 unless posts.nil?
@@ -14,9 +16,21 @@ unless posts.nil?
 	json.following_count user.following.count
 	json.followers_count user.followers.count
 end
+
+likes ||= nil
+unless likes.nil?
+	json.likes(likes) do |likes|
+		json.partial!('api/likes/like', :like => like)
+	end
+end
+
+json.likes user.likes do |post|
+  json.extract! post, :id, :likeable_type
+end
+
+
 	
-json.is_owner current_user?(user)
-json.is_followed current_user.following?(user)
+
 	
 
 

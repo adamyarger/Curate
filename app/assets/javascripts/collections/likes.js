@@ -1,14 +1,26 @@
 window.Curate.Collections.Likes = Backbone.Collection.extend({
+	url: function () {
+	    return '/api/likes/' + this.user_id;
+	  },
 
-	model: Curate.Models.Like,
+	model: Curate.Models.User,
 
-	url: function(){
-		return '/users/' + this.likeable.get('recipient').get('id') + '/posts/' + this.likeable.get('id') + '/likes';
-	},
+	getOrFetch: function(id){
+		var model;
+		var likes =this
 
-	initialize: function(models, options){
-		this.likeable = options.likeable;
-		this.add(models);
+		if (model = this.get(id)){
+			model.fetch();
+			return model;
+		} else{
+			model = new Curate.Models.Like({id: id});
+			model.fetch({
+				success: function(){likes.add(model)}
+			});
+			return model;
+		}
 	}
-
 });
+
+
+window.Curate.Collections.likes = new Curate.Collections.Likes();
