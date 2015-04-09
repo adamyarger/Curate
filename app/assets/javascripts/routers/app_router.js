@@ -84,7 +84,7 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	  		collection: Curate.Collections.messages
 	  	});
 
-	  	Curate.Collections.messages.fetch();
+	  	// Curate.Collections.messages.fetch();
 	  	this._swapView(messageIndex);
 	  },
 

@@ -19,7 +19,9 @@ class Api::MessagesController < ApplicationController
 
 	def index
 		 @user = User.find(current_user)
-	     @messages = Recipient.where(:user_id => @user.id) 
+		 
+	     @messages = Recipient.where(:user_id => @user.id).page(params[:page])
+
 	     @sent_messages = Message.where(:sender_id => @user.id)
 
 		render 'api/messages/index'
