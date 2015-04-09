@@ -21,10 +21,10 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	userIndex: function(){
 		var usersIndex = new Curate.Views.UsersIndex({
-			collection: Curate.Collections.users
+			collection: Curate.Collections.usersIndex
 		});
 
-		Curate.Collections.users.fetch();
+		// Curate.Collections.users.fetch();
 		this._swapView(usersIndex);
 	},
 
