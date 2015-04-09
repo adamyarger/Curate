@@ -21,7 +21,8 @@ users = User.order(:created_at).take(6)
   users.each { |user| user.posts.create!(body: body) }
 end
 
-# Messages
+# Messages 
+# needs recipient relation ships 
 users = User.order(:created_at).take(6)
 50.times do
   content = Faker::Lorem.sentence(5)
