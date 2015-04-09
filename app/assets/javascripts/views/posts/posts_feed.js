@@ -1,58 +1,40 @@
-window.Curate.Views.PostsIndex = Backbone.CompositeView.extend({
-	template: JST['posts/index'],
+window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
+	_.extend({}, Curate.PaginatedView,{
+		template: JST['posts/index'],
 
-	initialize: function(options){
-		this.listenTo(this.collection, 'sync add', this.render);
+		initialize: function(options){
+			this.listenTo(this.collection, 'sync add', this.render);
 
-		var postNewView = new Curate.Views.PostsNew({
-			post: this.model
-		});
-		this.addSubview('#post-new', postNewView);
-	},
+			var postNewView = new Curate.Views.PostsNew({
+				post: this.model
+			});
+			this.addSubview('#post-new', postNewView);
+		},
 
-	events: {
-		'click button#refresh': 'refresh',
-		'click button#flash': 'flash'
-	},
+		events: {
+			'click button#refresh': 'refresh',
+			'click button#flash': 'flash'
+		},
 
-	flash: function(){
-		Curate.Flash.success('Post success!');
-	},
+		flash: function(){
+			Curate.Flash.success('Post success!');
+		},
 
-	refresh: function(){
-		this.collection.fetch();
-	},
+		refresh: function(){
+			this.collection.fetch();
+		},
 
-	listenForScroll: function(){
-		$(window).off('scroll'); //remove previous listeners
-		var throttledCallback = _.throttle(this.nextPage.bind(this), 200);
-		$(window).on('scroll', throttledCallback);
-	},
+		render: function(){
+			var renderedContent = this.template({
+				posts: this.collection
+			});
 
-	nextPage: function () {
-	    var view = this;
-	    if (this.$('.spinner').visible()) {
-	    	if(view.collection.page_number < view.collection.total_pages){
-	    		view.collection.fetch({
-	    			data: {page: view.collection.page_number + 1},
-	    			remove: false
-	    		});
-	    	} else {
-	    		view.$('.spinner').remove();
-	    	}
-	    }     
-	},
+			this.$el.html(renderedContent);
+			this.listenForScroll();
 
-	render: function(){
-		var renderedContent = this.template({
-			posts: this.collection
-		});
+			this.renderSubviews();
 
-		this.$el.html(renderedContent);
-		this.listenForScroll();
-
-		this.renderSubviews();
-
-		return this;
-	}
-});
+			return this;
+		}
+	})
+);
