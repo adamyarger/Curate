@@ -6,6 +6,9 @@ json.is_followed 		current_user.following?(user)
 
 posts ||= nil
 unless posts.nil?
+	json.page_number params[:page]
+	json.total_pages @posts.total_pages
+
 	json.posts(posts) do |post|
 		json.partial!('api/posts/post', :post => post)
 		json.thumb_avatar image_path(user.avatar.url(:thumb))

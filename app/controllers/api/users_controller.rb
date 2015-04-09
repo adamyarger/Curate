@@ -22,7 +22,7 @@ class Api::UsersController < ApplicationController
 
 	def likes
 		@user = User.find(params[:id])
-    @likes = @user.likes
+		@likes = @user.likes
 
     # render :json => @likes
     render 'api/likes/index'

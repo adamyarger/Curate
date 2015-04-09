@@ -46,39 +46,39 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 
 	following: function (id) {
-	// TODO: this should be prefetched at startup
-	var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
-	var that = this;
-	follows.fetch({
-		data: { page: 1 },
-	  success: function (follows) {
-	    var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
-	    var followingIndex = new Curate.Views.Following({
-	      collection: follows,
-	      model: user
-	    });
+		// TODO: this should be prefetched at startup
+		var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
+		var that = this;
+		follows.fetch({
+			data: { page: 1 },
+		  success: function (follows) {
+		    var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
+		    var followingIndex = new Curate.Views.Following({
+		      collection: follows,
+		      model: user
+		    });
 
-	    that._swapView(followingIndex);
-	  }
-	})
+		    that._swapView(followingIndex);
+		  }
+		})
 	},
 
 	followers: function (id) {
 	// TODO: this should be prefetched at startup
-	var follows = new Curate.Collections.Follower(null, { user_id: parseInt(id) });
-	var that = this;
-	follows.fetch({
-		data: { page: 1 },
-	  success: function (follows) {
-	    var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
-	    var followingIndex = new Curate.Views.Follower({
-	      collection: follows,
-	      model: user
-	    });
+		var follows = new Curate.Collections.Follower(null, { user_id: parseInt(id) });
+		var that = this;
+		follows.fetch({
+			data: { page: 1 },
+		  success: function (follows) {
+		    var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
+		    var followingIndex = new Curate.Views.Follower({
+		      collection: follows,
+		      model: user
+		    });
 
-	    that._swapView(followingIndex);
-	  }
-	})
+		    that._swapView(followingIndex);
+		  }
+		})
 	},
 
 	messages: function(){

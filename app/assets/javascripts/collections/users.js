@@ -16,8 +16,17 @@ window.Curate.Collections.Users = Backbone.Collection.extend({
 			});
 			return model;
 		}
+	},
+
+	parse: function(response){
+		this.page_number = parseInt(response.page_number);
+    	this.total_pages = parseInt(response.total_pages);
+		return response.posts;
 	}
 });
 
 
 window.Curate.Collections.users = new Curate.Collections.Users();
+Curate.Collections.users.fetch({
+  data: { page: 1 }
+});

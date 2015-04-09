@@ -26,7 +26,7 @@ window.Curate.Views.PostsShow = Backbone.View.extend({
 	        console.log('Something went wrong!');
 	      }
 	    });
-	  },
+	},
 
 	render: function(){
 		var renderedContent = this.template({
