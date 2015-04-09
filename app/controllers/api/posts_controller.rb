@@ -7,7 +7,8 @@ class Api::PostsController < ApplicationController
 		@post = current_user.posts.build(post_params)
 		
 		if @post.save  					
-			render 'api/posts/show'
+			# render 'api/posts/show'
+			render :json => @post
 		else
 			# @feed_items = []
 			render :json => @posts.errors, :status => :unprocessable_entity   

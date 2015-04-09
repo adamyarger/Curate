@@ -1,0 +1,21 @@
+
+					
+<%= form_for :post, url: posts_path do |f| %>
+    <%= f.text_field :content, placeholder: "URL from, Soundcloud, Youtube or Vimeo", class: 'full-width', id: "url" %>
+    <br>
+    <%= f.text_area :body, placeholder: "Wait... How good is this song?", class: "form-control" %>
+    <%= f.submit "Submit Post", class: "full-width" %>
+
+<% end %>
+				    
+
+	
+
+
+
+
+
+
+
+
+
