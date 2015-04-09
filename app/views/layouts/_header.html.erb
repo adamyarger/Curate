@@ -4,11 +4,9 @@
     <% if user_signed_in? %>
       <div id="left-nav">
 
-        <% unless params[:action] == "root" && params[:controller] == "static_pages" %>
-            <%= render 'layouts/popover_static_page' %>
-          <% else %>
+       
             <%= render 'layouts/popover_backbone' %>
-        <% end %>
+        
 
       </div>
         
