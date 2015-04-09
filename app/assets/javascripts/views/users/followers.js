@@ -1,4 +1,5 @@
-window.Curate.Views.Follower = Backbone.View.extend({
+window.Curate.Views.Follower = Backbone.View.extend(
+_.extend({}, Curate.PaginatedView,{
 
 	template: JST['users/following'],
 
@@ -6,25 +7,6 @@ window.Curate.Views.Follower = Backbone.View.extend({
 		this.listenTo(this.collection, 'sync add', this.render)
 	},
 
-	listenForScroll: function(){
-		$(window).off('scroll'); //remove previous listeners
-		var throttledCallback = _.throttle(this.nextPage.bind(this), 200);
-		$(window).on('scroll', throttledCallback);
-	},
-
-	nextPage: function () {
-	    var view = this;
-	    if (this.$('.spinner').visible()) {
-	    	if(view.collection.page_number < view.collection.total_pages){
-	    		view.collection.fetch({
-	    			data: {page: view.collection.page_number + 1},
-	    			remove: false
-	    		});
-	    	} else {
-	    		view.$('.spinner').remove();
-	    	}
-	    }     
-	},
 
 	render: function(){
 
@@ -40,4 +22,5 @@ window.Curate.Views.Follower = Backbone.View.extend({
 
 		return this;
 	}
-});
+})
+);

@@ -1,18 +1,22 @@
-// Allonsy.Mixins.PaginatedView = {
-//   // I set an interval-based callback to nextPage in my child views.
+Curate.PaginatedView = {
 
-//   nextPage: function (collection) {
-//     var self = this;
-//     if (this.$('.spinner').visible()) {
-//       if (collection.page < collection.total_pages) {
-//         collection.fetch({
-//           data: { page: parseInt(collection.page) + 1 },
-//           remove: false,
-//           wait: true
-//         });
-//       } else {
-//         self.$('.spinner').remove();
-//       }
-//     }
-//   }
-// };
+  listenForScroll: function(){
+		$(window).off('scroll'); //remove previous listeners
+		var throttledCallback = _.throttle(this.nextPage.bind(this), 200);
+		$(window).on('scroll', throttledCallback);
+	},
+
+	nextPage: function () {
+	    var view = this;
+	    if (this.$('.spinner').visible()) {
+	    	if(view.collection.page_number < view.collection.total_pages){
+	    		view.collection.fetch({
+	    			data: {page: view.collection.page_number + 1},
+	    			remove: false
+	    		});
+	    	} else {
+	    		view.$('.spinner').remove();
+	    	}
+	    }     
+	}
+};
