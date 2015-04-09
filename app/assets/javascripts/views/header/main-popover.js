@@ -34,14 +34,20 @@
 //this is causing a get request instead of a delete when logging out
 //the problem is somewhere in stopPropogation
 
+// $(document).ready(function(){
+// 	$('.nav_avatar').click( function(event){
+//     event.stopPropagation();
+//     $('#popover').slideToggle(50);
+// 	});
+
+// 	$(document).click( function(){
+// 	    $('#popover').slideUp(50);
+// 	});
+// });
+
 $(document).ready(function(){
 	$('.nav_avatar').click( function(event){
-    event.stopPropagation();
     $('#popover').slideToggle(50);
-	});
-
-	$(document).click( function(){
-	    $('#popover').slideUp(50);
 	});
 });
 
