@@ -1,0 +1,50 @@
+<ul>
+    <li>
+      <a id="nav-logo" href="#">R</a>
+    </li>
+    <li class="round-image-50 nav_avatar">
+      <%= image_tag(current_user.avatar.url(:thumb)) %>
+        <div id="popover">
+          <div class="inner-popover"> 
+                <ul>
+                  <li class="popover-item">
+                    <span class="icon icon-monospace" ><i class="fa fa-home"></i></span>
+                    
+                    <%= link_to "Home", root_path, class: "button button--chromeless" %>
+                  </li>
+
+                  <li class="popover-item">
+                    <span class="icon icon-monospace" ><i class="fa fa-inbox"></i></span>
+                    <a class="button button--chromeless" href='#/messages'>Messages</a>
+                  </li>
+
+                  <li class="popover-item">
+                    <span class="icon icon-monospace" ><i class="fa fa-user"></i></span>
+                    <a class="button button--chromeless" href='#/users/<%= current_user.id %>'>Profile</a>
+                  </li>
+
+                  <li class="popover-item">
+                    <span class="icon icon-monospace" ><i class="fa fa-users"></i></span>
+                    <a class="button button--chromeless" href="#/users">Users</a>
+                  </li>
+
+                  <li class="popover-item">
+                    <span class="icon icon-monospace" ><i class="fa fa-cog"></i></span>
+                    <a class="button button--chromeless" href="/users/edit">Settings</a>
+                  </li>
+
+                  <li class="popover-item">
+                    <span class="icon icon-monospace" ><i class="fa fa-sign-out"></i></span>
+                     <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "button button--chromeless" %>
+                  </li>
+                </ul>
+          </div>
+          <div class="popover-arrow"></div>  
+        </div>
+    </li>
+    
+    <span>     
+        <!-- render 'messages/count'  red dot for messages-->
+    </span>
+    
+</ul>
