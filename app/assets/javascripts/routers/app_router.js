@@ -44,12 +44,23 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		this._swapView(showView);
 	},
 
+	// following: function(id){
+	// 	var followingIndex = Curate.Collections.following.getOrFetch(id);
+		
+	// 	var showFollowing = new Curate.Views.Following({
+	// 		collection: followingIndex
+	// 	});
+
+	// 	this._swapView(showFollowing);
+	// },
+
 
 	  following: function (id) {
 	    // TODO: this should be prefetched at startup
 	    var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
 	    var that = this;
 	    follows.fetch({
+	    	data: { page: 1 },
 	      success: function (follows) {
 	        var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
 	        var followingIndex = new Curate.Views.Following({
