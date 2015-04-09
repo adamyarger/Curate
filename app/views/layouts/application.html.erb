@@ -11,9 +11,12 @@
     <body>
     	  <%= render "layouts/header" %>
         <%= render 'layouts/messages' %>
-        <% if user_signed_in? %>
-        	<div class="container" id="main-container">
-          </div>
+
+        <% if params[:action] == "root" && params[:controller] == "static_pages" %>
+          <% if user_signed_in? %>
+          	<div class="container" id="main-container">
+            </div>
+          <% end %>
         <% end %>
   			
 
