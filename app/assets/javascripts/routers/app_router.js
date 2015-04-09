@@ -44,69 +44,60 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		this._swapView(showView);
 	},
 
-	// following: function(id){
-	// 	var followingIndex = Curate.Collections.following.getOrFetch(id);
-		
-	// 	var showFollowing = new Curate.Views.Following({
-	// 		collection: followingIndex
-	// 	});
 
-	// 	this._swapView(showFollowing);
-	// },
+	following: function (id) {
+	// TODO: this should be prefetched at startup
+	var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
+	var that = this;
+	follows.fetch({
+		data: { page: 1 },
+	  success: function (follows) {
+	    var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
+	    var followingIndex = new Curate.Views.Following({
+	      collection: follows,
+	      model: user
+	    });
 
+	    that._swapView(followingIndex);
+	  }
+	})
+	},
 
-	  following: function (id) {
-	    // TODO: this should be prefetched at startup
-	    var follows = new Curate.Collections.Following(null, { user_id: parseInt(id) });
-	    var that = this;
-	    follows.fetch({
-	    	data: { page: 1 },
-	      success: function (follows) {
-	        var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
-	        var followingIndex = new Curate.Views.Following({
-	          collection: follows,
-	          model: user
-	        });
+	followers: function (id) {
+	// TODO: this should be prefetched at startup
+	var follows = new Curate.Collections.Follower(null, { user_id: parseInt(id) });
+	var that = this;
+	follows.fetch({
+		data: { page: 1 },
+	  success: function (follows) {
+	    var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
+	    var followingIndex = new Curate.Views.Follower({
+	      collection: follows,
+	      model: user
+	    });
 
-	        that._swapView(followingIndex);
-	      }
-	    })
-	  },
+	    that._swapView(followingIndex);
+	  }
+	})
+	},
 
-	  followers: function (id) {
-	    // TODO: this should be prefetched at startup
-	    var follows = new Curate.Collections.Follower(null, { user_id: parseInt(id) });
-	    var that = this;
-	    follows.fetch({
-	      success: function (follows) {
-	        var user = Curate.Collections.users.findWhere({ id: parseInt(id) });
-	        var followingIndex = new Curate.Views.Following({
-	          collection: follows,
-	          model: user
-	        });
+	messages: function(){
+		var messageIndex = new Curate.Views.MessagesIndex({
+			collection: Curate.Collections.messages
+		});
 
-	        that._swapView(followingIndex);
-	      }
-	    })
-	  },
+		// Curate.Collections.messages.fetch();
+		this._swapView(messageIndex);
+	},
 
-	  messages: function(){
-	  	var messageIndex = new Curate.Views.MessagesIndex({
-	  		collection: Curate.Collections.messages
-	  	});
+	likes: function(){
+		var userLikes = new Curate.Views.Likes({
+			collection: Curate.Collections.likes
+		});
 
-	  	// Curate.Collections.messages.fetch();
-	  	this._swapView(messageIndex);
-	  },
-
-	  likes: function(){
-	  	var userLikes = new Curate.Views.Likes({
-	  		collection: Curate.Collections.likes
-	  	});
-
-	  	var profile = Curate.Collections.likes.getOrFetch(id);
-	  	this._swapView(userLikes);
-	  },
+		var profile = Curate.Collections.likes.getOrFetch(id);
+		this._swapView(userLikes);
+	},
 
 	_swapView: function(view){
 		if(this.currentView){
