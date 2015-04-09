@@ -9,7 +9,16 @@ window.Curate.Collections.Following = Backbone.Collection.extend({
 
   url: function () {
     return '/api/users/' + this.user_id + '/following';
+  },
+
+  parse: function(response){
+		this.page_number = parseInt(response.page_number);
+    	this.total_pages = parseInt(response.total_pages);
+		return response.users;
   }
 });
 
-// window.Curate.Collections.following = new Curate.Collections.FollowingIndex();
+window.Curate.Collections.following = new Curate.Collections.Following();
+Curate.Collections.following.fetch({
+  data: { page: 1 }
+});
