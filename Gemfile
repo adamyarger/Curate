@@ -18,6 +18,7 @@ gem 'settingslogic', '~> 2.0.9'
 gem 'embedly', '~> 1.9.1'
 gem 'ejs'
 gem "font-awesome-rails"
+gem 'faker',                '1.4.2'
 
 group :development, :test do
   gem 'byebug'
