@@ -20,11 +20,12 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		var newPost = new Curate.Models.Post(params);
 		newPost.save({}, {
 			success: function(){
-				Curate.Collections.posts.unshift(newPost);
-				Curate.Collections.feed.fetch({
-				  data: { page: 1 }
-				});
+				Curate.Collections.posts.add(newPost);
 				Curate.Flash.success('Post success!');
+				Curate.Collections.feed.fetch({
+				  data: { page: 1 },
+				});
+				
 			}
 		});
 	}

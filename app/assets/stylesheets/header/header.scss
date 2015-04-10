@@ -19,7 +19,7 @@ body {
 		family: $primary-font; // variables inside partials > _variables.scss
 	}
 	color: $main-text;
-	background-color: $background;
+	/*background-color: $background;*/
 
 	&.overflow-hidden {
 		/* prevent 2 vertical scrollbars on ie and firefox when the cart is visible */ 

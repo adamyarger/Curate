@@ -3,8 +3,10 @@
 $main-text: #31353d; // main text
 $link: #435779; // anchor tags
 $background: #eeeff7; // background color
+$background2: #435779;
 $header-bg: #31353d;
 $border-color: #d9e0e2;
+
 
 $border: #e0e6ef;
 $light-text: #a5aebc;
@@ -35,6 +37,12 @@ $header-zindex: 4;
 $sidebar-zindex: 3;
 $shadow-zindex: 2;
 $main-zindex: 4;
+
+/************** Backgroundcolor **********/
+
+body{
+  background-color: $background2;
+}
 
 /* -------------------------------- 
 

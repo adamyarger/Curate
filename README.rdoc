@@ -31,6 +31,17 @@ COLORS:
 #f8fafb --> background color --> ie: navbar
 
 
+Website Urls for music provider
+
+https://www.youtube.com/watch?v=C_TBChxsOKE
+https://soundcloud.com/lidogotsongs/slow
+https://www.mixcloud.com/LaidBackRadio/ldbk-hotlist-32/
+http://rd.io/x/Rl7Q8So-BxXT/
+https://bop.fm/s/major-lazor-feat.-amber-coffman/get-free
+https://play.spotify.com/track/1LeItUMezKA1HdCHxYICed
+https://vimeo.com/6540668
+
+
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
