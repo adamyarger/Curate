@@ -1,6 +1,6 @@
 window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
 	_.extend({}, Curate.PaginatedView,{
-		template: JST['posts/index'],
+		template: JST['posts/feed'],
 
 		initialize: function(options){
 			this.listenTo(this.collection, 'sync add', this.render);
