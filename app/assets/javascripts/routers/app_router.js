@@ -12,10 +12,12 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	},
 
 	postIndex: function(){
+		var feed = new Curate.Models.Feed();
+
 		var indexView = new Curate.Views.PostsIndex({
-			collection: Curate.Collections.feed
+			model: feed
 		});
-		// Curate.Collections.users.fetch();
+
 		this._swapView(indexView);
 	},
 

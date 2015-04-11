@@ -1,28 +1,38 @@
 window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
-	_.extend({}, Curate.PaginatedView,{
+	_.extend({}, Curate.NestedPaginate,{
 		template: JST['posts/feed'],
 
 		initialize: function(options){
-			this.listenTo(this.collection, 'sync add', this.render);
+			this.listenTo(this.model, 'sync', this.render);
+			this.listenTo(this.model.posts(), 'add', this.addPost);
+			// this.listenTo(this.model.posts(), 'remove', this.removePost);
+
+		this.model.posts().each(this.addPost.bind(this));
+
+			setInterval(this.nextPosts.bind(this), 1000);
 
 			var postNewView = new Curate.Views.PostsNew({
 				post: this.model
 			});
+
 			this.addSubview('#post-new', postNewView);
 		},
 
-		events: {
-			'click button#refresh': 'refresh',
-			'click button#flash': 'flash'
-		},
+		addPost: function (post) {
+			var postShow = new Curate.Views.PostsShow({
+				model: post
+			});
+			
+			this.addSubview("#feed-posts", postShow.render());
+	    },
 
-		flash: function(){
-			Curate.Flash.success('Post success!');
-		},
+	    nextPosts: function () {
+	      this.nextPage(this.model.posts());
+	    },
 
-		refresh: function(){
-			this.collection.fetch();
-		},
+	    renderTemplate: function(){
+	    	return this.template();
+	    },
 
 		render: function(){
 			var renderedContent = this.template({
@@ -30,7 +40,6 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
 			});
 
 			this.$el.html(renderedContent);
-			this.listenForScroll();
 
 			this.renderSubviews();
 

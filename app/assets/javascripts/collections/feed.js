@@ -3,14 +3,13 @@ window.Curate.Collections.Feed = Backbone.Collection.extend({
 	model: Curate.Models.Post,
 
 	parse: function(response){
-		this.page_number = parseInt(response.page_number);
-    	this.total_pages = parseInt(response.total_pages);
 		return response.posts;
+	},
+
+	initialize: function(){
+		this.fetch();
 	}
 });
 
 
-window.Curate.Collections.feed = new Curate.Collections.Feed();
-Curate.Collections.feed.fetch({
-  data: { page: 1 },
-});
+// window.Curate.Collections.feed = new Curate.Collections.Feed();
