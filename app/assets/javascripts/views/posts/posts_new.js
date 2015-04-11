@@ -6,6 +6,10 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		'submit form': 'submit'
 	},
 
+	initialize: function(options){
+		this.post = options.post;
+	},
+
 	render: function(){
 		var renderedContent = this.template();
 		this.$el.html(renderedContent);
@@ -15,14 +19,18 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 
 	submit: function(event){
 		event.preventDefault();
+		var view = this;
 
 		var params = $(event.currentTarget).serializeJSON()['post'];
 		var newPost = new Curate.Models.Post(params);
 		newPost.save({}, {
 			success: function(){
-				Curate.Collections.feed.add(newPost);
-				Curate.Flash.success('Post success!');
 				console.log('success');
+				// Curate.Collections.feed.unshift(newPost);
+				view.post.posts().add(newPost);
+
+				Curate.Flash.success('Post success!');
+				
 				
 			}
 		});

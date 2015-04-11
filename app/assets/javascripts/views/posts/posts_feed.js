@@ -3,7 +3,7 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
 		template: JST['posts/feed'],
 
 		initialize: function(options){
-			this.listenTo(this.model, 'sync', this.render);
+			this.listenTo(this.model, 'sync add', this.render);
 			this.listenTo(this.model.posts(), 'add', this.addPost);
 			// this.listenTo(this.model.posts(), 'remove', this.removePost);
 
