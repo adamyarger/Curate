@@ -27,7 +27,7 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 			success: function(){
 				console.log('success');
 				// Curate.Collections.feed.unshift(newPost);
-				view.post.posts().add(newPost);
+				view.post.posts().unshift(newPost);
 
 				Curate.Flash.success('Post success!');
 				
