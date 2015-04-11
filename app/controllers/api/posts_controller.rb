@@ -18,7 +18,8 @@ class Api::PostsController < ApplicationController
 	def index
 		if user_signed_in?
 		  	# @post  = current_user.posts.build
-		  	@posts = current_user.feed.page(params[:page])
+		  	@posts = current_user.feed.paginate(:page => params[:page], :per_page => 10)
+
 		  	render 'api/posts/index'
 		end
 	end
