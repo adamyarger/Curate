@@ -1,7 +1,7 @@
 window.Curate.Models.Feed = Backbone.Model.extend({
   posts: function () {
     if (!this._posts) {
-      this._posts = new Curate.Collections.Posts();
+      this._posts = new Curate.Collections.Feed();
     }
     return this._posts;
   },
