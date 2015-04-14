@@ -8,6 +8,9 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
 			// this.listenTo(this.model.posts(), 'remove', this.removePost);
 
 			// this.model.posts().each(this.addPost.bind(this));
+			$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'})
+
+			$('#post-body').on('loading', function(){$('.loading').show()});
 
 			setInterval(this.nextPosts.bind(this), 1000);
 

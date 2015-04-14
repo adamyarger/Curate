@@ -8,11 +8,14 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 
 	initialize: function(options){
 		this.post = options.post;
+		
 	},
 
 	render: function(){
 		var renderedContent = this.template();
 		this.$el.html(renderedContent);
+		$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'})
+		$('#post-body').on('loading', function(){$('.loading').show()});
 
 		return this;
 	},
@@ -26,8 +29,9 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		newPost.save({}, {
 			success: function(){
 				console.log('success');
-				// Curate.Collections.feed.unshift(newPost);
 				view.post.posts().unshift(newPost);
+				
+				view.render();
 
 				Curate.Flash.success('Post success!');
 				

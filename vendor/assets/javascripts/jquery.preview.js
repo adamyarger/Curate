@@ -440,7 +440,7 @@ var vsprintf = function(fmt, argv) {
     var attributes = [
       '<div class="attributes">',
         '<a class="title" href="#" contenteditable=true>%(title)s</a>',
-        '<p><a class="description" href="#" contenteditable=true>%(description)s</a></p>',
+        // '<p><a class="description" href="#" contenteditable=true>%(description)s</a></p>',
         '<span class="meta">',
           favicon,
           '<a class="provider" href="%(provider_url)s">%(provider_display)s</a>',
