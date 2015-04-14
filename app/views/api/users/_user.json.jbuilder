@@ -6,7 +6,7 @@ json.is_followed 		current_user.following?(user)
 
 posts ||= nil
 unless posts.nil?
-	json.page_number params[:page]
+	json.page params[:page] || 1
 	json.total_pages @posts.total_pages
 
 	json.posts(posts) do |post|
