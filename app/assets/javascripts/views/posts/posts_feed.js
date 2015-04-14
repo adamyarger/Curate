@@ -7,7 +7,7 @@ window.Curate.Views.PostsIndex = Backbone.CompositeView.extend(
 			this.listenTo(this.model.posts(), 'add', this.addPost);
 			// this.listenTo(this.model.posts(), 'remove', this.removePost);
 
-			this.model.posts().each(this.addPost.bind(this));
+			// this.model.posts().each(this.addPost.bind(this));
 
 			setInterval(this.nextPosts.bind(this), 1000);
 

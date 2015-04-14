@@ -4,13 +4,11 @@ window.Curate.Collections.Feed = Backbone.Collection.extend({
 
 	parse: function(response){
 		this.page = response.page;
-    	this.total_pages = response.total_pages;
-		return response.posts;
-	}
+	},
 
-	// initialize: function(){
-	// 	this.fetch();
-	// }
+	initialize: function(){
+		this.fetch();
+	}
 });
 
 

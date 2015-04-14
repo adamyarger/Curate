@@ -4,7 +4,7 @@ window.Curate.Models.Post = Backbone.Model.extend({
 
 	user: function(){
 		if (!this._user){
-			this._user = new Curate.Models.Post();
+			this._user = new Curate.Models.User();
 		}
 		return this._user;
 	},

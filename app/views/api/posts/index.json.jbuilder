@@ -1,4 +1,4 @@
-json.page_number params[:page]
+json.page params[:page] || 1
 json.total_pages @posts.total_pages
 
 

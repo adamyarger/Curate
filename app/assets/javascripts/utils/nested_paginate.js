@@ -1,5 +1,6 @@
 Curate.NestedPaginate = {
   // I set an interval-based callback to nextPage in my child views.
+
   nextPage: function (collection) {
     var self = this;
     if (this.$('.spinner').visible()) {
