@@ -13,7 +13,6 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	postIndex: function(){
 		var feed = new Curate.Models.Feed();
-
 		var indexView = new Curate.Views.PostsIndex({
 			model: feed
 		});
@@ -38,7 +37,7 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	userShow: function(id){
 		var profile = Curate.Collections.users.getOrFetch(id);
-		
+		// user.posts().fetch();
 		var showView = new Curate.Views.UsersShow({
 			model: profile
 		});
