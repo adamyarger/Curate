@@ -45,10 +45,14 @@
 // 	});
 // });
 
+
+
 $(document).ready(function(){
 	$('.nav_avatar').click( function(event){
     $('#popover').slideToggle(50);
 	});
+
+	$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'})
 });
 
 // $(document).ready(function(){
