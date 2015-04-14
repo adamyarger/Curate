@@ -17,6 +17,8 @@
 //= require default
 //= require top
 //= require jquery.serializejson
+//= require jquery.embedly
+//= require jquery.preview
 //= require underscore
 //= require backbone
 //= require curate.js
