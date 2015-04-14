@@ -5,4 +5,14 @@ json.likes post.likes do |like|
 end
 
 
+json.user do
+	json.name post.user.name
+	json.thumb_avatar image_path(post.user.avatar.url(:thumb))
+end
+
+
+
+
+
+
 
