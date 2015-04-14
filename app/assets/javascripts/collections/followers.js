@@ -4,6 +4,7 @@ window.Curate.Collections.Follower = Backbone.Collection.extend({
 
   initialize: function (models, options) {
     this.add(models);
+    //throws error but cant work with out it... strange
     this.user_id = options.user_id;
   },
 
