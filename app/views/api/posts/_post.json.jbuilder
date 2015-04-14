@@ -8,6 +8,7 @@ end
 json.user do
 	json.name post.user.name
 	json.thumb_avatar image_path(post.user.avatar.url(:thumb))
+	json.id post.user.id
 end
 
 

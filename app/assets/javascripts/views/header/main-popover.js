@@ -53,7 +53,6 @@ $(document).ready(function(){
 	});
 
 	$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'})
-
 	$('#post-body').on('loading', function(){$('.loading').show()});
 });
 
