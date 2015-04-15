@@ -13,6 +13,12 @@ class Api::UsersController < ApplicationController
 		render 'api/users/show'
 	end
 
+	def posts
+		@user = User.find(params[:id])
+		@posts = @user.posts.page(params[:page])
+		render 'api/posts/index'
+	end
+
 	def following
 	  @title = "Following"
 	  @user  = User.find(params[:id])

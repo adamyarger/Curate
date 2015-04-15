@@ -8,8 +8,8 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend(
 			this.listenTo(this.model.posts(), 'remove', this.removePost);
 
 			setInterval(this.nextPosts.bind(this), 1000);
-
-			// this.model.posts().each(this.addPost.bind(this));
+			this.model.posts().each(this.addPost.bind(this));
+			
 			var postNewView = new Curate.Views.PostsNew({
 				post: this.model
 			});

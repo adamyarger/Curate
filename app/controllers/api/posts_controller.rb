@@ -15,6 +15,8 @@ class Api::PostsController < ApplicationController
 		end
 	end
 
+	
+
 	def index
 		if user_signed_in?
 		  	# @post  = current_user.posts.build

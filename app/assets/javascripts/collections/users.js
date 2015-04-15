@@ -19,8 +19,8 @@ window.Curate.Collections.Users = Backbone.Collection.extend({
 	},
 
 	parse: function(response){
-		this.page_number = parseInt(response.page_number);
-    	this.total_pages = parseInt(response.total_pages);
+		this.page = response.page;
+    	this.total_pages = response.total_pages;
 		return response.posts;
 	}
 });

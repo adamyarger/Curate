@@ -13,7 +13,7 @@ window.Curate.Collections.Following = Backbone.Collection.extend({
 
   parse: function(response){
 		this.page_number = parseInt(response.page_number);
-    	this.total_pages = parseInt(response.total_pages);
+    this.total_pages = parseInt(response.total_pages);
 		return response.users;
   }
 });
