@@ -8,13 +8,9 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend(
 			this.listenTo(this.model.posts(), 'remove', this.removePost);
 
 			setInterval(this.nextPosts.bind(this), 1000);
-			this.model.posts().each(this.addPost.bind(this));
 			
-			var postNewView = new Curate.Views.PostsNew({
-				post: this.model
-			});
-
-			this.addSubview('#post-new', postNewView);
+			//user to remove zombie views
+			this.model.posts().each(this.addPost.bind(this));
 		},
 
 		events: {

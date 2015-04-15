@@ -4,24 +4,22 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 
 	events: {
 		'submit form': 'submit',
-		'#post-body': 'loading'
+		'click #post-body': 'loading'
 	},
 
 	loading: function(){
-		preview({key:'77b9e769557a490e9e2ef087981131c3'});
-		 $('.loading').show();
+		$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'});
+		 // $('.loading').show();
 	}, 
 
 	initialize: function(options){
 		this.post = options.post;
-		
 	},
 
 	render: function(){
 		var renderedContent = this.template();
 		this.$el.html(renderedContent);
-		$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'})
-		$('#post-body').on('loading', function(){$('.loading').show()});
+		
 
 		return this;
 	},
