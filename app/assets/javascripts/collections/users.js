@@ -27,6 +27,6 @@ window.Curate.Collections.Users = Backbone.Collection.extend({
 
 
 window.Curate.Collections.users = new Curate.Collections.Users();
-Curate.Collections.users.fetch({
-  data: { page: 1 }
-});
+// Curate.Collections.users.fetch({
+//   data: { page: 1 }
+// });

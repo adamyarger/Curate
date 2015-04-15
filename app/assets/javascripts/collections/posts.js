@@ -1,20 +1,16 @@
 window.Curate.Collections.Posts = Backbone.Collection.extend({
 	
-	url: function () {
-	    if (this.user) {
-	      return '/api/users/' + this.user.id + '/posts'
-	    } else {
-	      return '/api/posts'
-	    
-	    }
-	  },
-
-	
-
 	model: Curate.Models.Post,
 
-	initialize: function (models, options) {
+	url: function () {
+		if (this.user) {
+		  return '/api/users/' + this.user.id + '/posts'
+		} else {
+		  return '/api/posts'
+		}
+	},
 
+	initialize: function (models, options) {
 	    if (options) {
 	      if (options.user) {
 	        this.user = options.user
