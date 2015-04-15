@@ -3,8 +3,14 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 	template: JST['posts/new'],
 
 	events: {
-		'submit form': 'submit'
+		'submit form': 'submit',
+		'#post-body': 'loading'
 	},
+
+	loading: function(){
+		preview({key:'77b9e769557a490e9e2ef087981131c3'});
+		 $('.loading').show();
+	}, 
 
 	initialize: function(options){
 		this.post = options.post;
@@ -29,7 +35,7 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		newPost.save({}, {
 			success: function(){
 				console.log('success');
-				view.post.posts().unshift(newPost);
+				view.post.posts().add(newPost);
 				
 				view.render();
 
