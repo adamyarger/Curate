@@ -1,15 +1,5 @@
 class Api::LikesController < ApplicationController
 
-  # def create
-  #   @like = current_user.build.likes(like_params)
-
-  #   if @like.save
-  #     render :json => @like
-  #   else
-  #     render :json => @messages.errors, :status => :unprocessable_entity
-  #   end
-  # end
-
   def create
       @likeable = find_likeable
           @user = current_user
@@ -22,12 +12,17 @@ class Api::LikesController < ApplicationController
           end
   end
 
+  def destroy
+    @like = Like.find(params[:id])
+    @like.destroy
+    render :json => @like
+  end
+
   def index
-    @likes = Like.all
+    @likeable = find_likeable
+    @likes = @likeable.all
 
     render :json => @likes
-
-    # render :json => @likes
   end
 
   def show
@@ -38,18 +33,6 @@ class Api::LikesController < ApplicationController
     # render 'api/likes/show'
   end
 
-  # def destroy
-  #   @like = current_user.likes.where(id: params[:id]).first!
-
-  #   @like.destroy
-
-  #   if request.xhr?
-  #     render json: @like
-  #   else
-  #     flash[:notices] = ["unliked"]
-  #     redirect_to :back
-  #   end
-  # end
 
   private
 
