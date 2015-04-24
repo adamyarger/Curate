@@ -8,7 +8,7 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		'users/:id/following': 'following',
 		'users/:id/followers': 'followers',
 		'messages': 'messages',
-		'likes/:id': 'likes'
+		'users/:id/likes': 'likes'
 	},
 
 	postIndex: function(){
@@ -91,13 +91,32 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		this._swapView(messageIndex);
 	},
 
-	likes: function(){
-		var userLikes = new Curate.Views.Likes({
-			collection: Curate.Collections.likes
-		});
+	// likes: function(){
+	// 	var userLikes = new Curate.Views.Likes({
+	// 		collection: Curate.Collections.likes
+	// 	});
+	// 	// Curate.Collections.likes.fetch();
 
-		var profile = Curate.Collections.likes.getOrFetch(id);
-		this._swapView(userLikes);
+	// 	var profile = Curate.Collections.likes.getOrFetch(id);
+	// 	this._swapView(userLikes);
+	// },
+
+	likes: function (id) {
+	// TODO: this should be prefetched at startup
+		var userLikes = new Curate.Collections.Likes(null, { user_id: parseInt(id) });
+		var that = this;
+		userLikes.fetch({
+			data: { page: 1 },
+		  success: function (likes) {
+		    var user = Curate.Collections.likes.findWhere({ id: parseInt(id) });
+		    var likesIndex = new Curate.Views.Likes({
+		      collection: userLikes,
+		      model: user
+		    });
+
+		    that._swapView(likesIndex);
+		  }
+		})
 	},
 
 	_swapView: function(view){
