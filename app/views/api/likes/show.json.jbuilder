@@ -1,1 +1,1 @@
-json.(@likes, :id, :likeable_id, :likeable_type, :user_id, :created_at)
+json.(@likes, :id, :post_id, :user_id, :created_at)

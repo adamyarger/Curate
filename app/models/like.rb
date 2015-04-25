@@ -1,14 +1,11 @@
 class Like < ActiveRecord::Base
   
+  belongs_to :post
 
-  validates_uniqueness_of :user_id, scope: [:likeable_id, :likeable_type]
+  belongs_to :user
 
-  belongs_to :user, class_name: "User", foreign_key: :user_id, primary_key: :id
-  
-
-  belongs_to :likeable, polymorphic: true, foreign_key: :likeable_id, primary_key: :id
-  
-
-  # has_many :notifications, as: :notifiable, foreign_key: :notifiable_id, primary_key: :id
+  def self.find_by_ids(post_id, user_id)
+  	Like.where("post_id = ? AND user_id = ?", post_id, user_id).first
+  end
   
 end

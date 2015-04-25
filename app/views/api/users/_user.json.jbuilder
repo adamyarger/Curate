@@ -27,9 +27,7 @@ unless likes.nil?
 	end
 end
 
-json.likes user.likes do |post|
-  json.extract! post, :id, :likeable_type
-end
+
 
 
 	

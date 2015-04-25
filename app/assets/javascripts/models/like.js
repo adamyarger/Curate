@@ -1,3 +1,5 @@
 window.Curate.Models.Like = Backbone.Model.extend({
-	urlRoot: '/api/likes'
+	url: function () {
+    return '/api/likes/' + this.user_id;
+  }
 });

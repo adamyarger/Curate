@@ -1,6 +1,6 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  has_many :likes, as: :likeable, foreign_key: :likeable_id, dependent: :destroy
+  has_many :likes, inverse_of: :post, dependent: :destroy
 
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
