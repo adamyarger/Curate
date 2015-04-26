@@ -1,26 +1,24 @@
-window.Curate.Collections.Likes = Backbone.Collection.extend({
-	model: Curate.Models.Like,
+Curate.Collections.Likes = Backbone.Collection.extend({
+  model: Curate.Models.Like,
+  
+  url: "/api/likes",
+  
+  getOrFetch: function (id) {
+      var like = this.get(id);
 
-  initialize: function (models, options) {
-    this.add(models);
-    //throws error but cant work with out it... strange
-    this.user_id = options.user_id;
-  },
-
-  url: function () {
-    return '/api/likes/' + this.user_id;
-  },
-
-  parse: function(response){
-		this.page_number = parseInt(response.page_number);
-    	this.total_pages = parseInt(response.total_pages);
-		return response.users;
-  }
-});
+      if(!like) {
+        like = new Curate.Models.Like({ id: id });
+        like.fetch({
+          success: function () {
+            Curate.Likes.add(like)
+          }
+        });
+      } else {
+        like.fetch();
+      }
+      
+      return like;
+    }
+})
 
 window.Curate.Collections.likes = new Curate.Collections.Likes();
-Curate.Collections.likes.fetch({
-  data: { page: 1 }
-});
-
-

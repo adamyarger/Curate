@@ -1,15 +1,13 @@
 class Api::LikesController < ApplicationController
 
   def create
-      @likeable = find_likeable
-          @user = current_user
-          @like = @user.likes.build(likeable: @likeable)
+     @like = current_user.likes.build(message_params)
 
-          if @like.save
-              redirect_to @likeable, notice: "Liked!"
-          else
-              redirect_to @likeable, notice: "Not liked!"
-          end
+    if @like.save
+      render :json => @like 
+    else
+      render :json => @like.errors, :status => :unprocessable_entity
+    end
   end
 
   def destroy
@@ -19,9 +17,8 @@ class Api::LikesController < ApplicationController
   end
 
   def index
-    @likeable = find_likeable
-    @likes = @likeable.all
-
+    @likes = Like.where(user_id: current_user.id)
+    # @like = Like.all
     render :json => @likes
   end
 
@@ -37,15 +34,7 @@ class Api::LikesController < ApplicationController
   private
 
   def like_params
-    params.require(:likes).permit(:user_id, :likeable_id, :likeable_type)
+    params.require(:likes).permit(:user_id, :post_id)
   end
 
-  def find_likeable
-    params.each do |name, value|
-      if name =~ /(.+)_id$/
-        return $1.classify.constantize.find(value)
-      end
-    end
-    nil
-  end
 end

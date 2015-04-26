@@ -13,15 +13,13 @@ class Api::MessagesController < ApplicationController
 		if @message.save
 			render :json => @message 
 		else
-			render :json => @messages.errors, :status => :unprocessable_entity
+			render :json => @message.errors, :status => :unprocessable_entity
 		end
 	end
 
 	def index
 		 @user = User.find(current_user)
-		 
 	     @messages = Recipient.where(:user_id => @user.id).page(params[:page])
-
 	     @sent_messages = Message.where(:sender_id => @user.id)
 
 		render 'api/messages/index'

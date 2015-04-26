@@ -15,7 +15,7 @@ window.Curate.Views.PostsShow = Backbone.View.extend({
 	},
 
 	toggleLike: function (event) {
-	    $.ajax('/api/posts/' + this.model.id + '/likes', {
+	    $.ajax('/api/posts/' + this.model.id + '/togglelike', {
 	      type: 'POST',
 	      success: function (response) {
 	        this.model.set('is_liked', response.is_liked);

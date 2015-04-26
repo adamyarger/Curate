@@ -12,16 +12,18 @@ Rails.application.routes.draw do
     resources :users, :only => [:show, :index, :destroy] do
       member do
         get :following, :followers
-        get :likes
+        # get :likes
         get :posts
       end
     end
 
     post 'relationships/:id/togglefollow', to: 'relationships#toggle_follow'
+
+    # post 'posts/:id/togglelike', to: 'likes#toggle_like'
     
     resources :recipients, only: [:index]
 
-    resources :likes, only: [:index, :show]
+    resources :likes, only: [:index, :show, :create]
     
     resources  :posts, only: [:create, :destroy, :show, :index] do
       resources :likes, only: [:create, :destroy]
