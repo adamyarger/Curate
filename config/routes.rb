@@ -18,8 +18,7 @@ Rails.application.routes.draw do
     end
 
     post 'relationships/:id/togglefollow', to: 'relationships#toggle_follow'
-
-    # post 'posts/:id/togglelike', to: 'likes#toggle_like'
+    post 'posts/:id/togglelike', to: 'posts#toggle_like'
     
     resources :recipients, only: [:index]
 

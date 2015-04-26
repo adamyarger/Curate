@@ -14,8 +14,8 @@ class User < ActiveRecord::Base
 
   has_many :messages, :foreign_key => :sender_id
 
-  has_many :likes, through: :liked_posts, source: :post
-  has_many :liked_posts, inverse_of: :user
+  has_many :likes, dependent: :destroy  
+  has_many :liked_posts, through: :likes, source: :post
 
 
   devise :database_authenticatable, :registerable,

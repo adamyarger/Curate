@@ -1,12 +1,12 @@
 class Post < ActiveRecord::Base
   belongs_to :user
-  has_many :likes, inverse_of: :post, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :users_liked_by, through: :likes, source: :user
 
   default_scope -> { order(created_at: :desc) }
   validates :user_id, presence: true
   # validates :body, presence: true, length: {maximum: 500}
   # validates :content, :presence => true, :format => URI::regexp(%w(http https))
-
 
 	after_create :update_from_embedly
  
@@ -16,7 +16,7 @@ class Post < ActiveRecord::Base
   scope :recent, -> { order("updated_at DESC")}
 
   def is_liked_by?(user)
-    self.users.where(user_id: user).any?
+    self.users_liked_by.include?(user)
   end
   
   def update_from_embedly
