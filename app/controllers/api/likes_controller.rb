@@ -17,7 +17,7 @@ class Api::LikesController < ApplicationController
   end
 
   def index
-    @likes = Like.where(user_id: current_user.id)
+    @likes = Like.where(user_id: current_user.id).paginate(:page => params[:page], :per_page => 10)
     # @like = Like.all
     # render :json => @likes
     render "api/likes/index"

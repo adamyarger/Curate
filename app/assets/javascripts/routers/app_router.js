@@ -92,15 +92,33 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 	},
 
 	likes: function (id) {
-		var like = new Curate.Collections.Likes();
-		var indexView = new Curate.Views.Likes({
-			collection: like
-		});
+		// TODO: this should be prefetched at startup
+		var likes = new Curate.Collections.Likes(null, { user_id: parseInt(id) });
+		var that = this;
+		likes.fetch({
+			data: { page: 1 },
+		  success: function (likes) {
+		    var user = Curate.Collections.likes.findWhere({ id: parseInt(id) });
+		    var likeIndex = new Curate.Views.Likes({
+		      collection: likes,
+		      model: user
+		    });
 
-		Curate.Collections.likes.fetch();
-
-		this._swapView(indexView);
+		    that._swapView(likeIndex);
+		  }
+		})
 	},
+
+	// likes: function (id) {
+	// 	var like = new Curate.Collections.Likes();
+	// 	var indexView = new Curate.Views.Likes({
+	// 		collection: like
+	// 	});
+
+	// 	Curate.Collections.likes.fetch();
+
+	// 	this._swapView(indexView);
+	// },
 
 	_swapView: function(view){
 		if(this.currentView){
