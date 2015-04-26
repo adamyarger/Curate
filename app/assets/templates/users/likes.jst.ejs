@@ -1,8 +1,46 @@
 <h1>hello</h1>
 
 <% likes.each(function(like){ %>
-	<p><%= like.escape("name") %></p>
+	<li class="post_show">
+      <div class="panel-heading post_media">
+        <%= like.get("content")%>
+      </div>
+      <div class="post-body">
+        <%= like.escape('body') %>
+      </div>
+      <div class="panel-footer">
+
+          <div class="name_avatar u-pull-left">
+          	<span class="round-image-50 user_avatar u-pull-left">
+          		<img class="avatar" src="<%= like.escape("avatar") %>" />
+          	</span>
+
+            
+            <span class="user_name post_name u-pull-left">
+              <a href='#/users/<%= like.escape("id") %>'> 
+                <%= like.escape('name')%>
+              </a>
+            </span>
+          </div>
+
+          <div id="star" class="star_group u-pull-right">
+
+
+            <% if (like.get('is_liked')) { %>
+              <div id="like">
+                <i class="fa fa-heart"></i>
+              </div>
+            <% } else { %>
+              <div id="like">
+                <i class="fa fa-heart-o"></i>
+              </div>
+            <% } %>
+          </div>
+       
+      </div>
+</li>
 <% }) %>
+
 
 
 
