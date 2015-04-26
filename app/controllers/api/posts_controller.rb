@@ -39,6 +39,17 @@ class Api::PostsController < ApplicationController
 	    render "api/posts/show"
 	end
 
+	def toggle_like
+		@post = Post.find(params[:id])
+		if @post.is_liked_by?(current_user)
+			current_user.liked_posts.delete(@post)
+		else
+			current_user.liked_posts << @post
+		end
+
+		render :json => @post
+	end
+
 	private
 
 		def post_params

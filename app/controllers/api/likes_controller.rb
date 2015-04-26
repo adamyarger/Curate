@@ -19,7 +19,8 @@ class Api::LikesController < ApplicationController
   def index
     @likes = Like.where(user_id: current_user.id)
     # @like = Like.all
-    render :json => @likes
+    # render :json => @likes
+    render "api/likes/index"
   end
 
   def show
