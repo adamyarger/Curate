@@ -26,9 +26,16 @@
               <a id="delete-post"> <i class="fa fa-trash-o"></i></a>
             <% } %>
 
-            <a id="like">
-              <i class="fa fa-heart-o"></i>
-            </a>
+
+            <% if (post.get('is_liked')) { %>
+              <div id="unlike">
+                <i class="fa fa-heart"></i>
+              </div>
+            <% } else { %>
+              <div id="like">
+                <i class="fa fa-heart-o"></i>
+              </div>
+            <% } %>
           </div>
        
       </div>

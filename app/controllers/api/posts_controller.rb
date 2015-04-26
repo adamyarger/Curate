@@ -47,7 +47,7 @@ class Api::PostsController < ApplicationController
 			current_user.liked_posts << @post
 		end
 
-		render :json => @post
+		render 'api/posts/show'
 	end
 
 	private

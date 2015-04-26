@@ -1,8 +1,7 @@
 json.(post, :id, :user_id, :body, :content, :created_at, :html)
 
-json.likes post.likes do |like|
-  json.(like, :id, :post_id, :user_id)
-end
+json.is_liked post.is_liked_by?(current_user)
+json.num_likes post.likes.count
 
 
 json.user do
