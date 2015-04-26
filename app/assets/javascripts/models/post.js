@@ -11,7 +11,7 @@ window.Curate.Models.Post = Backbone.Model.extend({
 
 	likes: function() {
 	    if (!this._likes) {
-	      this._likes = new Curate.Collections.Likes([], { song: this });
+	      this._likes = new Curate.Collections.Likes([], { post: this });
 	    };
 	    
 	    return this._likes;
@@ -23,8 +23,8 @@ window.Curate.Models.Post = Backbone.Model.extend({
 			delete jsonResp.user;
 		};
 
-		if (response.likes) {
-	      this.likes().set(response.likes, { parse: true });
+		if (jsonResp.likes) {
+	      this.likes().set(jsonResp.likes, { parse: true });
 	      delete response.likes
 	    };
 	    
