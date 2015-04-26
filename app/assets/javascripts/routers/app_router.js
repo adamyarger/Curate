@@ -109,16 +109,6 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		})
 	},
 
-	// likes: function (id) {
-	// 	var like = new Curate.Collections.Likes();
-	// 	var indexView = new Curate.Views.Likes({
-	// 		collection: like
-	// 	});
-
-	// 	Curate.Collections.likes.fetch();
-
-	// 	this._swapView(indexView);
-	// },
 
 	_swapView: function(view){
 		if(this.currentView){

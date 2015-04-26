@@ -4,3 +4,4 @@ json.array!(@likes) do |like|
 	json.name like.user.name
 	
 end
+
