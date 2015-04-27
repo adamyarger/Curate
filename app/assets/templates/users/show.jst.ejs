@@ -28,7 +28,7 @@
 					<a href='#/users/<%= user.escape("id") %>/likes'>
 						<button class="button button--chromeless">
 							<small class="menu-label">Favorites</small>
-							23
+							<%= user.escape('num_likes') %>
 						</button>
 					</a>
 				</li>

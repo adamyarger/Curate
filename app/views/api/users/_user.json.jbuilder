@@ -3,6 +3,7 @@ json.thumb_avatar 		image_path(user.avatar.url(:thumb))
 json.medium_avatar 		image_path(user.avatar.url(:medium))
 json.is_owner 			current_user?(user)
 json.is_followed 		current_user.following?(user)
+json.num_likes 			user.likes.count
 
 posts ||= nil
 unless posts.nil?
