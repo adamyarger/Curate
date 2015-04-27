@@ -4,7 +4,7 @@
       <% likes.each(function(like){ %>
       	<li class="post_show">
             <div class="panel-heading post_media">
-              <%= like.get("content")%>
+              <%= like.get("html")%>
             </div>
             <div class="post-body">
               <%= like.escape('body') %>

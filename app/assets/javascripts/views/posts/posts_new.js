@@ -11,7 +11,7 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		$('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'});
 		$('#post-body').on('loading', function(){
 		$('.loading').show();
-		$('.selector-wrapper').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
+		$('.selector-wrapper').html('<div class="spinner_post"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
 
 	});
 	}, 
