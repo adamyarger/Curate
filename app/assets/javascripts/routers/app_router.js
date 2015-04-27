@@ -98,10 +98,10 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 		likes.fetch({
 			data: { page: 1 },
 		  success: function (likes) {
-		    var user = Curate.Collections.likes.findWhere({ id: parseInt(id) });
+		    // var likes = Curate.Collections.likes.findWhere({ id: parseInt(id) });
 		    var likeIndex = new Curate.Views.Likes({
 		      collection: likes,
-		      model: user
+		      // model: user
 		    });
 
 		    that._swapView(likeIndex);
