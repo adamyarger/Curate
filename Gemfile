@@ -20,11 +20,11 @@ gem 'ejs'
 gem "font-awesome-rails"
 gem 'faker',                '1.4.2'
 gem 'aws-sdk'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
-  gem 'rails_12factor', group: :production
 end
 
