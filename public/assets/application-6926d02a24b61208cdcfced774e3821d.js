@@ -16437,79 +16437,79 @@ window.Curate.Collections.Feed = Backbone.Collection.extend({
 
 window.Curate.Collections.feed = new Curate.Collections.Feed();
 
-window.Curate.Collections.Follower = Backbone.Collection.extend({
-	model: Curate.Models.User,
+// window.Curate.Collections.Follower = Backbone.Collection.extend({
+// 	model: Curate.Models.User,
 
-  initialize: function (models, options) {
-    this.add(models);
-    //throws error but cant work with out it... strange
-    this.user_id = options.user_id;
-  },
+//   initialize: function (models, options) {
+//     this.add(models);
+//     //throws error but cant work with out it... strange
+//     // this.user_id = options.user_id;
+//   },
 
-  url: function () {
-    return '/api/users/' + this.user_id + '/followers';
-  },
+//   url: function () {
+//     return '/api/users/' + this.user_id + '/followers';
+//   },
 
-  parse: function(response){
-		this.page_number = parseInt(response.page_number);
-    	this.total_pages = parseInt(response.total_pages);
-		return response.users;
-  }
-});
+//   parse: function(response){
+// 		this.page_number = parseInt(response.page_number);
+//     	this.total_pages = parseInt(response.total_pages);
+// 		return response.users;
+//   }
+// });
 
-window.Curate.Collections.followers = new Curate.Collections.Follower();
-Curate.Collections.followers.fetch({
-  data: { page: 1 }
-});
+// window.Curate.Collections.followers = new Curate.Collections.Follower();
+// Curate.Collections.followers.fetch({
+//   data: { page: 1 }
+// });
 
-window.Curate.Collections.Following = Backbone.Collection.extend({
-	model: Curate.Models.User,
+// window.Curate.Collections.Following = Backbone.Collection.extend({
+// 	model: Curate.Models.User,
 
-  initialize: function (models, options) {
-    this.add(models);
-    this.user_id = options.user_id;
-  },
+//   initialize: function (models, options) {
+//     this.add(models);
+//     this.user_id = options.user_id;
+//   },
 
-  url: function () {
-    return '/api/users/' + this.user_id + '/following';
-  },
+//   url: function () {
+//     return '/api/users/' + this.user_id + '/following';
+//   },
 
-  parse: function(response){
-		this.page_number = parseInt(response.page_number);
-    this.total_pages = parseInt(response.total_pages);
-		return response.users;
-  }
-});
+//   parse: function(response){
+// 		this.page_number = parseInt(response.page_number);
+//     	this.total_pages = parseInt(response.total_pages);
+// 		return response.users;
+//   }
+// });
 
-window.Curate.Collections.following = new Curate.Collections.Following();
-Curate.Collections.following.fetch({
-  data: { page: 1 }
-});
+// window.Curate.Collections.following = new Curate.Collections.Following();
+// Curate.Collections.following.fetch({
+//   data: { page: 1 }
+// });
 
-window.Curate.Collections.Likes = Backbone.Collection.extend({
-  model: Curate.Models.Like,
+// window.Curate.Collections.Likes = Backbone.Collection.extend({
+//   model: Curate.Models.Like,
 
-  initialize: function (models, options) {
-    this.add(models);
-    //throws error but cant work with out it... strange
-    this.user_id = options.user_id;
-  },
+//   initialize: function (models, options) {
+//     this.add(models);
+//     //throws error but cant work with out it... strange
+//     this.user_id = options.user_id;
+//   },
 
-  url: function () {
-    return '/api/users/' + this.user_id + '/likes';
-  },
+//   url: function () {
+//     return '/api/users/' + this.user_id + '/likes';
+//   },
 
-  parse: function(response){
-    this.page_number = parseInt(response.page_number);
-    this.total_pages = parseInt(response.total_pages);
-    return response.likes;
-  }
-});
+//   parse: function(response){
+//     this.page_number = parseInt(response.page_number);
+//     this.total_pages = parseInt(response.total_pages);
+//     return response.likes;
+//   }
+// });
 
-window.Curate.Collections.likes = new Curate.Collections.Likes();
-Curate.Collections.likes.fetch({
-  data: { page: 1 }
-});
+// window.Curate.Collections.likes = new Curate.Collections.Likes();
+// Curate.Collections.likes.fetch({
+//   data: { page: 1 }
+// });
 window.Curate.Collections.Messages = Backbone.Collection.extend({
 	url: '/api/messages',
 	model: Curate.Models.Message,
@@ -16615,94 +16615,6 @@ window.Curate.Collections.Users = Backbone.Collection.extend({
 window.Curate.Collections.users = new Curate.Collections.Users();
 // Curate.Collections.users.fetch({
 //   data: { page: 1 }
-// });
-// window.Curate.Views.PopoverMenu = Backbone.View.extend({
-
-// 	template: JST['header/popover'],
-	
-
-// 	events:{
-// 		'click .nav_avatar': 'togglePop'
-// 	},
-
-	
-
-// 	render: function(){
-// 		// var renderedContent = this.template({
-// 		// 	user: this.model
-// 		// });
-// 		var renderedContent = this.template();
-// 		this.$el.html(renderedContent);
-
-// 		return this;
-// 	},
-
-// 	togglePop: function(event){
-// 		// event.preventDefault();
-		
-// 		// var popOver = new Curate.Views.PopoverMenu();
-// 		// $('.nav_avatar').append(popOver.render().$el);
-		
-// 		// return this;
-// 		alert("sup dude");	
-
-// 	}
-// });
-
-//this is causing a get request instead of a delete when logging out
-//the problem is somewhere in stopPropogation
-
-// $(document).ready(function(){
-// 	$('.nav_avatar').click( function(event){
-//     event.stopPropagation();
-//     $('#popover').slideToggle(50);
-// 	});
-
-// 	$(document).click( function(){
-// 	    $('#popover').slideUp(50);
-// 	});
-// });
-
-
-
-$(document).ready(function(){
-	$('.nav_avatar').click( function(event){
-    $('#popover').slideToggle(50);
-	});
-
-	// $('#post-body').preview({key:'77b9e769557a490e9e2ef087981131c3'})
-	// $('#post-body').on('loading', function(){
-	// 	$('.loading').show();
-	// 	$('.selector-wrapper').html('<div class="spinner"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
-
-	// });
-});
-
-// $(document).ready(function(){
-// 	$('.nav_avatar').on('click', function(){
-// 		$('#popover').toggle(200);
-// 	});
-// });
-
-
-$(function() {
-   $('.alert').delay(500).slideDown('normal', function() {
-      $(this).delay(2500).slideUp();
-   });
-});
-
-
-
-// $('.nav_avatar').click(function(){
-// 	$('#popover').fadeToggle(300);
-// });
-
-// $(document).click(function(){
-// 	$('#popover').hide();
-// });
-
-// $('.nav_avatar').click(function(){
-// 	return false;
 // });
 window.Curate.Views.RightNav = Backbone.View.extend({
 	template: JST['header/right-nav'],
@@ -17043,7 +16955,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend(
 
 			setInterval(this.nextPosts.bind(this), 1000);
 			
-			//user to remove zombie views
+			//used to remove zombie views
 			this.model.posts().each(this.addPost.bind(this));
 		},
 
@@ -17099,106 +17011,6 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend(
 		}
 	})
 );
-// jQuery(document).ready(function($){
-// 	var $form_modal = $('.cd-user-modal'),
-// 		$form_login = $form_modal.find('#cd-login'),
-// 		$form_signup = $form_modal.find('#cd-signup'),
-// 		$form_forgot_password = $form_modal.find('#cd-reset-password'),
-// 		$form_modal_tab = $('.cd-switcher'),
-// 		$tab_login = $form_modal_tab.children('li').eq(0).children('a'),
-// 		$tab_signup = $form_modal_tab.children('li').eq(1).children('a'),
-// 		$forgot_password_link = $form_login.find('.cd-form-bottom-message a'),
-// 		$back_to_login_link = $form_forgot_password.find('.cd-form-bottom-message a'),
-// 		$main_nav = $('.post');
-
-// 	//open modal
-// 	$main_nav.on('click', function(event){
-
-// 		if( $(event.target).is($main_nav) ) {
-// 			// on mobile open the submenu
-// 			$(this).children('ul').toggleClass('is-visible');
-// 		} else {
-// 			// on mobile close submenu
-// 			$main_nav.children('ul').removeClass('is-visible');
-// 			//show modal layer
-// 			$form_modal.addClass('is-visible');	
-// 			//show the selected form
-// 			( $(event.target).is('.cd-signup') ) ? signup_selected() : login_selected();
-// 		}
-
-// 	});
-
-// 	//close modal
-// 	$('.cd-user-modal').on('click', function(event){
-// 		if( $(event.target).is($form_modal) || $(event.target).is('.cd-close-form') ) {
-// 			$form_modal.removeClass('is-visible');
-// 		}	
-// 	});
-// 	//close modal when clicking the esc keyboard button
-// 	$(document).keyup(function(event){
-//     	if(event.which=='27'){
-//     		$form_modal.removeClass('is-visible');
-// 	    }
-//     });
-
-// 	function login_selected(){
-// 		$form_login.addClass('is-selected');
-// 		$form_signup.removeClass('is-selected');
-// 		$form_forgot_password.removeClass('is-selected');
-// 		$tab_login.addClass('selected');
-// 		$tab_signup.removeClass('selected');
-
-// 	}
-
-	
-
-// 	//REMOVE THIS - it's just to show error messages 
-	
-
-
-// 	//IE9 placeholder fallback
-// 	//credits http://www.hagenburger.net/BLOG/HTML5-Input-Placeholder-Fix-With-jQuery.html
-// 	if(!Modernizr.input.placeholder){
-// 		$('[placeholder]').focus(function() {
-// 			var input = $(this);
-// 			if (input.val() == input.attr('placeholder')) {
-// 				input.val('');
-// 		  	}
-// 		}).blur(function() {
-// 		 	var input = $(this);
-// 		  	if (input.val() == '' || input.val() == input.attr('placeholder')) {
-// 				input.val(input.attr('placeholder'));
-// 		  	}
-// 		}).blur();
-// 		$('[placeholder]').parents('form').submit(function() {
-// 		  	$(this).find('[placeholder]').each(function() {
-// 				var input = $(this);
-// 				if (input.val() == input.attr('placeholder')) {
-// 			 		input.val('');
-// 				}
-// 		  	})
-// 		});
-// 	}
-
-// });
-
-
-// //credits http://css-tricks.com/snippets/jquery/move-cursor-to-end-of-textarea-or-input/
-// jQuery.fn.putCursorAtEnd = function() {
-// 	return this.each(function() {
-//     	// If this function exists...
-//     	if (this.setSelectionRange) {
-//       		// ... then use it (Doesn't work in IE)
-//       		// Double the length because Opera is inconsistent about whether a carriage return is one character or two. Sigh.
-//       		var len = $(this).val().length * 2;
-//       		this.setSelectionRange(len, len);
-//     	} else {
-//     		// ... otherwise replace the contents with itself
-//     		// (Doesn't work in Google Chrome)
-//       		$(this).val($(this).val());
-//     	}
-// 	});
-// };
 window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 	routes: {
@@ -17357,6 +17169,20 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 
 
+$(document).ready(function(){
+	$('.nav_avatar').click( function(event){
+    $('#popover').slideToggle(50);
+	});
+});
+
+
+
+
+$(function() {
+   $('.alert').delay(500).slideDown('normal', function() {
+      $(this).delay(2500).slideUp();
+   });
+});
 
 
 
@@ -17369,4 +17195,4 @@ window.Curate.Routers.AppRouter = Backbone.Router.extend({
 
 
 
-;
+
