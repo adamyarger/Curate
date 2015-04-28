@@ -4,7 +4,7 @@ window.Curate = {
 	Views: {},
 	Routers: {},
 
-	init: function(){
+	initialize: function(){
 		var rightNav = new Curate.Views.RightNav();
 		$('#right-nav').append(rightNav.render().$el);
 
@@ -18,4 +18,4 @@ window.Curate = {
 	}
 };
 
-$(Curate.init);
+$(Curate.initialize);
