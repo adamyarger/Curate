@@ -20,6 +20,7 @@ gem 'ejs'
 gem "font-awesome-rails"
 gem 'faker',                '1.4.2'
 gem 'aws-sdk'
+
 gem 'rails_12factor'
 
 group :development, :test do
