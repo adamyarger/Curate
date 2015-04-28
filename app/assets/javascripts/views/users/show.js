@@ -9,7 +9,7 @@ window.Curate.Views.UsersShow = Backbone.CompositeView.extend(
 
 			setInterval(this.nextPosts.bind(this), 1000);
 			
-			//user to remove zombie views
+			//used to remove zombie views
 			this.model.posts().each(this.addPost.bind(this));
 		},
 
