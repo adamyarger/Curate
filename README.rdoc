@@ -1,4 +1,4 @@
-### Overview
+## Overview ##
 
 Live At: https://fathomless-harbor-6451.herokuapp.com/
 
@@ -8,7 +8,7 @@ with this demo user info:
 * email: 		example@example.com
 * password: 	example123
 
-### Features
+## Features ##
 
 * custom scss design
 * single page front end thanks to backbone
@@ -34,7 +34,7 @@ just copy and paste a url into the text area and watch the magic happen
 * https://play.spotify.com/track/1LeItUMezKA1HdCHxYICed
 * https://vimeo.com/6540668
 
-### Todos 
+## Todos ##
 
 (Theres a lot of these left)
 * add iframes to messages
