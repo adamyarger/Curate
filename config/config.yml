@@ -1,6 +1,6 @@
 defaults: &defaults
   app_name: "curate"
-  
+  embedly_key: "77b9e769557a490e9e2ef087981131c3"
 
 development:
   <<: *defaults
