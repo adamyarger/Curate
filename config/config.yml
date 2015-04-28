@@ -11,4 +11,4 @@ test:
 
 production:
   <<: *defaults
-  domain: "https://fathomless-harbor-6451.herokuapp.com/"
+  domain: "http://fathomless-harbor-6451.herokuapp.com/"
