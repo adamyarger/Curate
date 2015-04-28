@@ -1,0 +1,4760 @@
+/* line 2, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb {
+  float: left;
+  margin: 0 10px 0 0;
+  position: relative;
+  width: 100px;
+}
+/* line 7, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .items {
+  position: relative;
+  overflow: hidden;
+  padding: 0px;
+  height: 100px;
+  width: 100px;
+}
+/* line 13, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .items .images {
+  position: absolute;
+  width: 300em;
+  margin: 0px;
+  padding: 0px;
+  left: 0px;
+}
+/* line 19, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .items .images li {
+  list-style: none;
+  float: left;
+  margin: 0px;
+  padding: 0px;
+  width: 100px;
+  height: 100px;
+}
+/* line 27, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .items .images img {
+  max-width: 100px;
+  max-height: 100px;
+}
+/* line 33, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .controls {
+  top: 0px;
+  left: 0px;
+  width: 100px;
+  position: absolute;
+  height: 16px;
+  z-index: 1;
+  background-color: #222;
+  opacity: 0.5;
+}
+/* line 42, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .controls .left, .thumb .controls .right, .thumb .controls .nothumb {
+  display: block;
+  position: absolute;
+  top: 2px;
+  color: #fff;
+}
+/* line 47, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .controls .left:hover, .thumb .controls .right:hover, .thumb .controls .nothumb:hover {
+  text-decoration: none;
+}
+/* line 51, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .controls .nothumb {
+  right: 2px;
+  font-weight: bold;
+  top: 1px;
+}
+/* line 56, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .controls .left {
+  left: 2px;
+}
+/* line 59, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .controls .right {
+  left: 16px;
+}
+/* line 63, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.thumb .nothumb {
+  right: 2px;
+  font-weight: bold;
+  top: 1px;
+}
+
+/* line 69, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector {
+  margin: 10px auto;
+  position: relative;
+  min-height: 85px;
+}
+/* line 75, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector input {
+  width: 420px;
+}
+/* line 78, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector textarea {
+  width: 420px;
+  margin: 5px 0;
+}
+/* line 83, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .media iframe, .selector .media object, .selector .media embed, .selector .media img {
+  margin: 10px auto;
+  display: block;
+}
+/* line 87, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .media img {
+  max-width: 500px;
+}
+/* line 94, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .attributes a {
+  text-decoration: none;
+}
+/* line 97, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .attributes a.title:hover, .selector .attributes a.description:hover {
+  text-decoration: none;
+  background-color: #FFF6D9;
+}
+/* line 102, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .attributes a.description {
+  color: #000;
+}
+/* line 105, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .attributes a.title {
+  margin: 0 0 5px;
+  display: block;
+}
+/* line 111, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .attributes .meta {
+  display: block;
+}
+/* line 113, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .attributes .meta .favicon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 3px 0 0;
+}
+/* line 125, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.selector .action {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: none;
+}
+
+/* line 136, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.loading {
+  display: none;
+}
+/* line 138, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.loading img {
+  display: block;
+  margin: 10px auto;
+}
+
+/* line 144, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item {
+  margin: 10px 0;
+  border-top: 1px solid #DDD;
+  padding: 10px 0;
+}
+/* line 151, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item.video .media iframe, .item.video .media object, .item.video .media embed, .item.video .media img, .item.rich .media iframe, .item.rich .media object, .item.rich .media embed, .item.rich .media img, .item.photo .media iframe, .item.photo .media object, .item.photo .media embed, .item.photo .media img {
+  margin: 10px auto;
+  display: block;
+}
+/* line 155, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item.video .media img, .item.rich .media img, .item.photo .media img {
+  max-width: 560px;
+}
+/* line 159, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item.video .title, .item.rich .title, .item.photo .title {
+  margin: 10px 0;
+  display: block;
+  font-weight: bold;
+  font-size: 1.1em;
+  color: #333;
+}
+/* line 168, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .status {
+  line-height: 1.2em;
+  margin: 10px 0;
+  padding: 5px;
+}
+/* line 173, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .thumbnail {
+  margin: 10px 10px 10px 5px;
+  width: 105px;
+  float: left;
+}
+/* line 177, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .thumbnail a {
+  display: table-cell;
+  width: 100px;
+  height: 75px;
+  overflow: hidden;
+  background-color: #DDD;
+  vertical-align: middle;
+  position: relative;
+  text-align: center;
+}
+/* line 187, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .thumbnail img {
+  max-width: 100px;
+  vertical-align: middle;
+  max-height: 75px;
+}
+/* line 193, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .thumbnail.video .overlay, .item .thumbnail.rich .overlay {
+  background-image: url(../images/play.png);
+  width: 26px;
+  height: 25px;
+  position: absolute;
+  right: 5px;
+  bottom: 5px;
+}
+/* line 203, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .attributes {
+  background-color: #EFEFEF;
+  padding: 5px;
+}
+/* line 208, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .meta {
+  display: block;
+}
+/* line 210, /Users/adamyarger/curate/curate_3/vendor/assets/stylesheets/preview.scss */
+.item .meta .favicon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin: 0 3px 0 0;
+}
+
+/*!
+ *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+/* FONT PATH
+ * -------------------------- */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("/assets/fontawesome-webfont-4cf06051de8689239e7087de4b11649c.eot?v=4.3.0");
+  src: url("/assets/fontawesome-webfont-4cf06051de8689239e7087de4b11649c.eot?#iefix&v=4.3.0") format("embedded-opentype"), url("/assets/fontawesome-webfont-bdd5fe963cf9a6bcf9c449166e2e5a57.woff2?v=4.3.0") format("woff2"), url("/assets/fontawesome-webfont-e1e9796e37de923cfba919958e1e7fb0.woff?v=4.3.0") format("woff"), url("/assets/fontawesome-webfont-d920bcf0942384a482f36f878d199d56.ttf?v=4.3.0") format("truetype"), url("/assets/fontawesome-webfont-94502ffb2152a9d2797417d053c954d0.svg?v=4.3.0#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 19, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transform: translate(0, 0);
+      -ms-transform: translate(0, 0);
+          transform: translate(0, 0);
+}
+
+/* makes the font 33% larger relative to the icon container */
+/* line 29, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+
+/* line 34, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-2x {
+  font-size: 2em;
+}
+
+/* line 37, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-3x {
+  font-size: 3em;
+}
+
+/* line 40, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-4x {
+  font-size: 4em;
+}
+
+/* line 43, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-5x {
+  font-size: 5em;
+}
+
+/* line 46, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fw {
+  width: 1.28571429em;
+  text-align: center;
+}
+
+/* line 50, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ul {
+  padding-left: 0;
+  margin-left: 2.14285714em;
+  list-style-type: none;
+}
+
+/* line 55, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ul > li {
+  position: relative;
+}
+
+/* line 58, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-li {
+  position: absolute;
+  left: -2.14285714em;
+  width: 2.14285714em;
+  top: 0.14285714em;
+  text-align: center;
+}
+
+/* line 65, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-li.fa-lg {
+  left: -1.85714286em;
+}
+
+/* line 68, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+
+/* line 73, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.pull-right {
+  float: right;
+}
+
+/* line 76, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.pull-left {
+  float: left;
+}
+
+/* line 79, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa.pull-left {
+  margin-right: .3em;
+}
+
+/* line 82, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa.pull-right {
+  margin-left: .3em;
+}
+
+/* line 85, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-spin {
+  -webkit-animation: fa-spin 2s infinite linear;
+  animation: fa-spin 2s infinite linear;
+}
+
+/* line 89, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pulse {
+  -webkit-animation: fa-spin 1s infinite steps(8);
+  animation: fa-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes fa-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+/* line 113, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+/* line 119, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 125, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+/* line 131, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+/* line 137, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/* line 143, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+:root .fa-rotate-90,
+:root .fa-rotate-180,
+:root .fa-rotate-270,
+:root .fa-flip-horizontal,
+:root .fa-flip-vertical {
+  -webkit-filter: none;
+          filter: none;
+}
+
+/* line 150, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stack {
+  position: relative;
+  display: inline-block;
+  width: 2em;
+  height: 2em;
+  line-height: 2em;
+  vertical-align: middle;
+}
+
+/* line 158, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stack-1x,
+.fa-stack-2x {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
+/* line 165, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stack-1x {
+  line-height: inherit;
+}
+
+/* line 168, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stack-2x {
+  font-size: 2em;
+}
+
+/* line 171, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-inverse {
+  color: #ffffff;
+}
+
+/* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
+   readers do not read off random characters that represent icons */
+/* line 176, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-glass:before {
+  content: "\f000";
+}
+
+/* line 179, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-music:before {
+  content: "\f001";
+}
+
+/* line 182, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-search:before {
+  content: "\f002";
+}
+
+/* line 185, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-envelope-o:before {
+  content: "\f003";
+}
+
+/* line 188, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-heart:before {
+  content: "\f004";
+}
+
+/* line 191, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-star:before {
+  content: "\f005";
+}
+
+/* line 194, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-star-o:before {
+  content: "\f006";
+}
+
+/* line 197, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-user:before {
+  content: "\f007";
+}
+
+/* line 200, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-film:before {
+  content: "\f008";
+}
+
+/* line 203, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-th-large:before {
+  content: "\f009";
+}
+
+/* line 206, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-th:before {
+  content: "\f00a";
+}
+
+/* line 209, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-th-list:before {
+  content: "\f00b";
+}
+
+/* line 212, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-check:before {
+  content: "\f00c";
+}
+
+/* line 215, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-remove:before,
+.fa-close:before,
+.fa-times:before {
+  content: "\f00d";
+}
+
+/* line 220, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-search-plus:before {
+  content: "\f00e";
+}
+
+/* line 223, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-search-minus:before {
+  content: "\f010";
+}
+
+/* line 226, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-power-off:before {
+  content: "\f011";
+}
+
+/* line 229, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-signal:before {
+  content: "\f012";
+}
+
+/* line 232, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-gear:before,
+.fa-cog:before {
+  content: "\f013";
+}
+
+/* line 236, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-trash-o:before {
+  content: "\f014";
+}
+
+/* line 239, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-home:before {
+  content: "\f015";
+}
+
+/* line 242, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-o:before {
+  content: "\f016";
+}
+
+/* line 245, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-clock-o:before {
+  content: "\f017";
+}
+
+/* line 248, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-road:before {
+  content: "\f018";
+}
+
+/* line 251, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-download:before {
+  content: "\f019";
+}
+
+/* line 254, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-o-down:before {
+  content: "\f01a";
+}
+
+/* line 257, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-o-up:before {
+  content: "\f01b";
+}
+
+/* line 260, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-inbox:before {
+  content: "\f01c";
+}
+
+/* line 263, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-play-circle-o:before {
+  content: "\f01d";
+}
+
+/* line 266, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rotate-right:before,
+.fa-repeat:before {
+  content: "\f01e";
+}
+
+/* line 270, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-refresh:before {
+  content: "\f021";
+}
+
+/* line 273, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-list-alt:before {
+  content: "\f022";
+}
+
+/* line 276, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-lock:before {
+  content: "\f023";
+}
+
+/* line 279, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flag:before {
+  content: "\f024";
+}
+
+/* line 282, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-headphones:before {
+  content: "\f025";
+}
+
+/* line 285, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-volume-off:before {
+  content: "\f026";
+}
+
+/* line 288, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-volume-down:before {
+  content: "\f027";
+}
+
+/* line 291, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-volume-up:before {
+  content: "\f028";
+}
+
+/* line 294, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-qrcode:before {
+  content: "\f029";
+}
+
+/* line 297, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-barcode:before {
+  content: "\f02a";
+}
+
+/* line 300, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tag:before {
+  content: "\f02b";
+}
+
+/* line 303, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tags:before {
+  content: "\f02c";
+}
+
+/* line 306, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-book:before {
+  content: "\f02d";
+}
+
+/* line 309, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bookmark:before {
+  content: "\f02e";
+}
+
+/* line 312, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-print:before {
+  content: "\f02f";
+}
+
+/* line 315, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-camera:before {
+  content: "\f030";
+}
+
+/* line 318, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-font:before {
+  content: "\f031";
+}
+
+/* line 321, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bold:before {
+  content: "\f032";
+}
+
+/* line 324, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-italic:before {
+  content: "\f033";
+}
+
+/* line 327, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-text-height:before {
+  content: "\f034";
+}
+
+/* line 330, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-text-width:before {
+  content: "\f035";
+}
+
+/* line 333, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-align-left:before {
+  content: "\f036";
+}
+
+/* line 336, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-align-center:before {
+  content: "\f037";
+}
+
+/* line 339, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-align-right:before {
+  content: "\f038";
+}
+
+/* line 342, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-align-justify:before {
+  content: "\f039";
+}
+
+/* line 345, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-list:before {
+  content: "\f03a";
+}
+
+/* line 348, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dedent:before,
+.fa-outdent:before {
+  content: "\f03b";
+}
+
+/* line 352, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-indent:before {
+  content: "\f03c";
+}
+
+/* line 355, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-video-camera:before {
+  content: "\f03d";
+}
+
+/* line 358, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-photo:before,
+.fa-image:before,
+.fa-picture-o:before {
+  content: "\f03e";
+}
+
+/* line 363, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pencil:before {
+  content: "\f040";
+}
+
+/* line 366, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-map-marker:before {
+  content: "\f041";
+}
+
+/* line 369, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-adjust:before {
+  content: "\f042";
+}
+
+/* line 372, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tint:before {
+  content: "\f043";
+}
+
+/* line 375, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-edit:before,
+.fa-pencil-square-o:before {
+  content: "\f044";
+}
+
+/* line 379, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-share-square-o:before {
+  content: "\f045";
+}
+
+/* line 382, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-check-square-o:before {
+  content: "\f046";
+}
+
+/* line 385, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrows:before {
+  content: "\f047";
+}
+
+/* line 388, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-step-backward:before {
+  content: "\f048";
+}
+
+/* line 391, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fast-backward:before {
+  content: "\f049";
+}
+
+/* line 394, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-backward:before {
+  content: "\f04a";
+}
+
+/* line 397, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-play:before {
+  content: "\f04b";
+}
+
+/* line 400, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pause:before {
+  content: "\f04c";
+}
+
+/* line 403, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stop:before {
+  content: "\f04d";
+}
+
+/* line 406, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-forward:before {
+  content: "\f04e";
+}
+
+/* line 409, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fast-forward:before {
+  content: "\f050";
+}
+
+/* line 412, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-step-forward:before {
+  content: "\f051";
+}
+
+/* line 415, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-eject:before {
+  content: "\f052";
+}
+
+/* line 418, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-left:before {
+  content: "\f053";
+}
+
+/* line 421, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-right:before {
+  content: "\f054";
+}
+
+/* line 424, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-plus-circle:before {
+  content: "\f055";
+}
+
+/* line 427, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-minus-circle:before {
+  content: "\f056";
+}
+
+/* line 430, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-times-circle:before {
+  content: "\f057";
+}
+
+/* line 433, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-check-circle:before {
+  content: "\f058";
+}
+
+/* line 436, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-question-circle:before {
+  content: "\f059";
+}
+
+/* line 439, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-info-circle:before {
+  content: "\f05a";
+}
+
+/* line 442, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-crosshairs:before {
+  content: "\f05b";
+}
+
+/* line 445, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-times-circle-o:before {
+  content: "\f05c";
+}
+
+/* line 448, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-check-circle-o:before {
+  content: "\f05d";
+}
+
+/* line 451, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ban:before {
+  content: "\f05e";
+}
+
+/* line 454, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-left:before {
+  content: "\f060";
+}
+
+/* line 457, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-right:before {
+  content: "\f061";
+}
+
+/* line 460, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-up:before {
+  content: "\f062";
+}
+
+/* line 463, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-down:before {
+  content: "\f063";
+}
+
+/* line 466, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mail-forward:before,
+.fa-share:before {
+  content: "\f064";
+}
+
+/* line 470, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-expand:before {
+  content: "\f065";
+}
+
+/* line 473, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-compress:before {
+  content: "\f066";
+}
+
+/* line 476, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-plus:before {
+  content: "\f067";
+}
+
+/* line 479, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-minus:before {
+  content: "\f068";
+}
+
+/* line 482, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-asterisk:before {
+  content: "\f069";
+}
+
+/* line 485, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-exclamation-circle:before {
+  content: "\f06a";
+}
+
+/* line 488, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-gift:before {
+  content: "\f06b";
+}
+
+/* line 491, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-leaf:before {
+  content: "\f06c";
+}
+
+/* line 494, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fire:before {
+  content: "\f06d";
+}
+
+/* line 497, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-eye:before {
+  content: "\f06e";
+}
+
+/* line 500, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-eye-slash:before {
+  content: "\f070";
+}
+
+/* line 503, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-warning:before,
+.fa-exclamation-triangle:before {
+  content: "\f071";
+}
+
+/* line 507, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-plane:before {
+  content: "\f072";
+}
+
+/* line 510, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-calendar:before {
+  content: "\f073";
+}
+
+/* line 513, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-random:before {
+  content: "\f074";
+}
+
+/* line 516, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-comment:before {
+  content: "\f075";
+}
+
+/* line 519, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-magnet:before {
+  content: "\f076";
+}
+
+/* line 522, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-up:before {
+  content: "\f077";
+}
+
+/* line 525, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-down:before {
+  content: "\f078";
+}
+
+/* line 528, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-retweet:before {
+  content: "\f079";
+}
+
+/* line 531, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-shopping-cart:before {
+  content: "\f07a";
+}
+
+/* line 534, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-folder:before {
+  content: "\f07b";
+}
+
+/* line 537, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-folder-open:before {
+  content: "\f07c";
+}
+
+/* line 540, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrows-v:before {
+  content: "\f07d";
+}
+
+/* line 543, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrows-h:before {
+  content: "\f07e";
+}
+
+/* line 546, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bar-chart-o:before,
+.fa-bar-chart:before {
+  content: "\f080";
+}
+
+/* line 550, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-twitter-square:before {
+  content: "\f081";
+}
+
+/* line 553, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-facebook-square:before {
+  content: "\f082";
+}
+
+/* line 556, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-camera-retro:before {
+  content: "\f083";
+}
+
+/* line 559, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-key:before {
+  content: "\f084";
+}
+
+/* line 562, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-gears:before,
+.fa-cogs:before {
+  content: "\f085";
+}
+
+/* line 566, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-comments:before {
+  content: "\f086";
+}
+
+/* line 569, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-thumbs-o-up:before {
+  content: "\f087";
+}
+
+/* line 572, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-thumbs-o-down:before {
+  content: "\f088";
+}
+
+/* line 575, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-star-half:before {
+  content: "\f089";
+}
+
+/* line 578, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-heart-o:before {
+  content: "\f08a";
+}
+
+/* line 581, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sign-out:before {
+  content: "\f08b";
+}
+
+/* line 584, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-linkedin-square:before {
+  content: "\f08c";
+}
+
+/* line 587, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-thumb-tack:before {
+  content: "\f08d";
+}
+
+/* line 590, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-external-link:before {
+  content: "\f08e";
+}
+
+/* line 593, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sign-in:before {
+  content: "\f090";
+}
+
+/* line 596, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-trophy:before {
+  content: "\f091";
+}
+
+/* line 599, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-github-square:before {
+  content: "\f092";
+}
+
+/* line 602, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-upload:before {
+  content: "\f093";
+}
+
+/* line 605, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-lemon-o:before {
+  content: "\f094";
+}
+
+/* line 608, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-phone:before {
+  content: "\f095";
+}
+
+/* line 611, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-square-o:before {
+  content: "\f096";
+}
+
+/* line 614, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bookmark-o:before {
+  content: "\f097";
+}
+
+/* line 617, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-phone-square:before {
+  content: "\f098";
+}
+
+/* line 620, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-twitter:before {
+  content: "\f099";
+}
+
+/* line 623, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-facebook-f:before,
+.fa-facebook:before {
+  content: "\f09a";
+}
+
+/* line 627, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-github:before {
+  content: "\f09b";
+}
+
+/* line 630, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-unlock:before {
+  content: "\f09c";
+}
+
+/* line 633, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-credit-card:before {
+  content: "\f09d";
+}
+
+/* line 636, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rss:before {
+  content: "\f09e";
+}
+
+/* line 639, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hdd-o:before {
+  content: "\f0a0";
+}
+
+/* line 642, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bullhorn:before {
+  content: "\f0a1";
+}
+
+/* line 645, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bell:before {
+  content: "\f0f3";
+}
+
+/* line 648, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-certificate:before {
+  content: "\f0a3";
+}
+
+/* line 651, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hand-o-right:before {
+  content: "\f0a4";
+}
+
+/* line 654, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hand-o-left:before {
+  content: "\f0a5";
+}
+
+/* line 657, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hand-o-up:before {
+  content: "\f0a6";
+}
+
+/* line 660, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hand-o-down:before {
+  content: "\f0a7";
+}
+
+/* line 663, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-left:before {
+  content: "\f0a8";
+}
+
+/* line 666, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-right:before {
+  content: "\f0a9";
+}
+
+/* line 669, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-up:before {
+  content: "\f0aa";
+}
+
+/* line 672, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-down:before {
+  content: "\f0ab";
+}
+
+/* line 675, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-globe:before {
+  content: "\f0ac";
+}
+
+/* line 678, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-wrench:before {
+  content: "\f0ad";
+}
+
+/* line 681, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tasks:before {
+  content: "\f0ae";
+}
+
+/* line 684, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-filter:before {
+  content: "\f0b0";
+}
+
+/* line 687, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-briefcase:before {
+  content: "\f0b1";
+}
+
+/* line 690, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrows-alt:before {
+  content: "\f0b2";
+}
+
+/* line 693, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-group:before,
+.fa-users:before {
+  content: "\f0c0";
+}
+
+/* line 697, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chain:before,
+.fa-link:before {
+  content: "\f0c1";
+}
+
+/* line 701, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cloud:before {
+  content: "\f0c2";
+}
+
+/* line 704, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flask:before {
+  content: "\f0c3";
+}
+
+/* line 707, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cut:before,
+.fa-scissors:before {
+  content: "\f0c4";
+}
+
+/* line 711, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-copy:before,
+.fa-files-o:before {
+  content: "\f0c5";
+}
+
+/* line 715, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-paperclip:before {
+  content: "\f0c6";
+}
+
+/* line 718, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-save:before,
+.fa-floppy-o:before {
+  content: "\f0c7";
+}
+
+/* line 722, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-square:before {
+  content: "\f0c8";
+}
+
+/* line 725, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-navicon:before,
+.fa-reorder:before,
+.fa-bars:before {
+  content: "\f0c9";
+}
+
+/* line 730, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-list-ul:before {
+  content: "\f0ca";
+}
+
+/* line 733, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-list-ol:before {
+  content: "\f0cb";
+}
+
+/* line 736, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-strikethrough:before {
+  content: "\f0cc";
+}
+
+/* line 739, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-underline:before {
+  content: "\f0cd";
+}
+
+/* line 742, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-table:before {
+  content: "\f0ce";
+}
+
+/* line 745, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-magic:before {
+  content: "\f0d0";
+}
+
+/* line 748, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-truck:before {
+  content: "\f0d1";
+}
+
+/* line 751, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pinterest:before {
+  content: "\f0d2";
+}
+
+/* line 754, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pinterest-square:before {
+  content: "\f0d3";
+}
+
+/* line 757, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-google-plus-square:before {
+  content: "\f0d4";
+}
+
+/* line 760, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-google-plus:before {
+  content: "\f0d5";
+}
+
+/* line 763, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-money:before {
+  content: "\f0d6";
+}
+
+/* line 766, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-caret-down:before {
+  content: "\f0d7";
+}
+
+/* line 769, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-caret-up:before {
+  content: "\f0d8";
+}
+
+/* line 772, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-caret-left:before {
+  content: "\f0d9";
+}
+
+/* line 775, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-caret-right:before {
+  content: "\f0da";
+}
+
+/* line 778, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-columns:before {
+  content: "\f0db";
+}
+
+/* line 781, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-unsorted:before,
+.fa-sort:before {
+  content: "\f0dc";
+}
+
+/* line 785, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-down:before,
+.fa-sort-desc:before {
+  content: "\f0dd";
+}
+
+/* line 789, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-up:before,
+.fa-sort-asc:before {
+  content: "\f0de";
+}
+
+/* line 793, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-envelope:before {
+  content: "\f0e0";
+}
+
+/* line 796, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-linkedin:before {
+  content: "\f0e1";
+}
+
+/* line 799, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rotate-left:before,
+.fa-undo:before {
+  content: "\f0e2";
+}
+
+/* line 803, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-legal:before,
+.fa-gavel:before {
+  content: "\f0e3";
+}
+
+/* line 807, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dashboard:before,
+.fa-tachometer:before {
+  content: "\f0e4";
+}
+
+/* line 811, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-comment-o:before {
+  content: "\f0e5";
+}
+
+/* line 814, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-comments-o:before {
+  content: "\f0e6";
+}
+
+/* line 817, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flash:before,
+.fa-bolt:before {
+  content: "\f0e7";
+}
+
+/* line 821, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sitemap:before {
+  content: "\f0e8";
+}
+
+/* line 824, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-umbrella:before {
+  content: "\f0e9";
+}
+
+/* line 827, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-paste:before,
+.fa-clipboard:before {
+  content: "\f0ea";
+}
+
+/* line 831, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-lightbulb-o:before {
+  content: "\f0eb";
+}
+
+/* line 834, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-exchange:before {
+  content: "\f0ec";
+}
+
+/* line 837, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cloud-download:before {
+  content: "\f0ed";
+}
+
+/* line 840, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cloud-upload:before {
+  content: "\f0ee";
+}
+
+/* line 843, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-user-md:before {
+  content: "\f0f0";
+}
+
+/* line 846, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stethoscope:before {
+  content: "\f0f1";
+}
+
+/* line 849, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-suitcase:before {
+  content: "\f0f2";
+}
+
+/* line 852, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bell-o:before {
+  content: "\f0a2";
+}
+
+/* line 855, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-coffee:before {
+  content: "\f0f4";
+}
+
+/* line 858, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cutlery:before {
+  content: "\f0f5";
+}
+
+/* line 861, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-text-o:before {
+  content: "\f0f6";
+}
+
+/* line 864, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-building-o:before {
+  content: "\f0f7";
+}
+
+/* line 867, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hospital-o:before {
+  content: "\f0f8";
+}
+
+/* line 870, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ambulance:before {
+  content: "\f0f9";
+}
+
+/* line 873, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-medkit:before {
+  content: "\f0fa";
+}
+
+/* line 876, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fighter-jet:before {
+  content: "\f0fb";
+}
+
+/* line 879, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-beer:before {
+  content: "\f0fc";
+}
+
+/* line 882, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-h-square:before {
+  content: "\f0fd";
+}
+
+/* line 885, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-plus-square:before {
+  content: "\f0fe";
+}
+
+/* line 888, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-double-left:before {
+  content: "\f100";
+}
+
+/* line 891, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-double-right:before {
+  content: "\f101";
+}
+
+/* line 894, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-double-up:before {
+  content: "\f102";
+}
+
+/* line 897, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-double-down:before {
+  content: "\f103";
+}
+
+/* line 900, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-left:before {
+  content: "\f104";
+}
+
+/* line 903, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-right:before {
+  content: "\f105";
+}
+
+/* line 906, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-up:before {
+  content: "\f106";
+}
+
+/* line 909, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angle-down:before {
+  content: "\f107";
+}
+
+/* line 912, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-desktop:before {
+  content: "\f108";
+}
+
+/* line 915, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-laptop:before {
+  content: "\f109";
+}
+
+/* line 918, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tablet:before {
+  content: "\f10a";
+}
+
+/* line 921, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mobile-phone:before,
+.fa-mobile:before {
+  content: "\f10b";
+}
+
+/* line 925, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-circle-o:before {
+  content: "\f10c";
+}
+
+/* line 928, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-quote-left:before {
+  content: "\f10d";
+}
+
+/* line 931, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-quote-right:before {
+  content: "\f10e";
+}
+
+/* line 934, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-spinner:before {
+  content: "\f110";
+}
+
+/* line 937, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-circle:before {
+  content: "\f111";
+}
+
+/* line 940, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mail-reply:before,
+.fa-reply:before {
+  content: "\f112";
+}
+
+/* line 944, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-github-alt:before {
+  content: "\f113";
+}
+
+/* line 947, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-folder-o:before {
+  content: "\f114";
+}
+
+/* line 950, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-folder-open-o:before {
+  content: "\f115";
+}
+
+/* line 953, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-smile-o:before {
+  content: "\f118";
+}
+
+/* line 956, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-frown-o:before {
+  content: "\f119";
+}
+
+/* line 959, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-meh-o:before {
+  content: "\f11a";
+}
+
+/* line 962, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-gamepad:before {
+  content: "\f11b";
+}
+
+/* line 965, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-keyboard-o:before {
+  content: "\f11c";
+}
+
+/* line 968, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flag-o:before {
+  content: "\f11d";
+}
+
+/* line 971, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flag-checkered:before {
+  content: "\f11e";
+}
+
+/* line 974, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-terminal:before {
+  content: "\f120";
+}
+
+/* line 977, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-code:before {
+  content: "\f121";
+}
+
+/* line 980, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mail-reply-all:before,
+.fa-reply-all:before {
+  content: "\f122";
+}
+
+/* line 984, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-star-half-empty:before,
+.fa-star-half-full:before,
+.fa-star-half-o:before {
+  content: "\f123";
+}
+
+/* line 989, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-location-arrow:before {
+  content: "\f124";
+}
+
+/* line 992, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-crop:before {
+  content: "\f125";
+}
+
+/* line 995, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-code-fork:before {
+  content: "\f126";
+}
+
+/* line 998, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-unlink:before,
+.fa-chain-broken:before {
+  content: "\f127";
+}
+
+/* line 1002, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-question:before {
+  content: "\f128";
+}
+
+/* line 1005, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-info:before {
+  content: "\f129";
+}
+
+/* line 1008, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-exclamation:before {
+  content: "\f12a";
+}
+
+/* line 1011, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-superscript:before {
+  content: "\f12b";
+}
+
+/* line 1014, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-subscript:before {
+  content: "\f12c";
+}
+
+/* line 1017, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-eraser:before {
+  content: "\f12d";
+}
+
+/* line 1020, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-puzzle-piece:before {
+  content: "\f12e";
+}
+
+/* line 1023, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-microphone:before {
+  content: "\f130";
+}
+
+/* line 1026, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-microphone-slash:before {
+  content: "\f131";
+}
+
+/* line 1029, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-shield:before {
+  content: "\f132";
+}
+
+/* line 1032, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-calendar-o:before {
+  content: "\f133";
+}
+
+/* line 1035, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fire-extinguisher:before {
+  content: "\f134";
+}
+
+/* line 1038, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rocket:before {
+  content: "\f135";
+}
+
+/* line 1041, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-maxcdn:before {
+  content: "\f136";
+}
+
+/* line 1044, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-circle-left:before {
+  content: "\f137";
+}
+
+/* line 1047, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-circle-right:before {
+  content: "\f138";
+}
+
+/* line 1050, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-circle-up:before {
+  content: "\f139";
+}
+
+/* line 1053, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-chevron-circle-down:before {
+  content: "\f13a";
+}
+
+/* line 1056, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-html5:before {
+  content: "\f13b";
+}
+
+/* line 1059, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-css3:before {
+  content: "\f13c";
+}
+
+/* line 1062, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-anchor:before {
+  content: "\f13d";
+}
+
+/* line 1065, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-unlock-alt:before {
+  content: "\f13e";
+}
+
+/* line 1068, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bullseye:before {
+  content: "\f140";
+}
+
+/* line 1071, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ellipsis-h:before {
+  content: "\f141";
+}
+
+/* line 1074, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ellipsis-v:before {
+  content: "\f142";
+}
+
+/* line 1077, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rss-square:before {
+  content: "\f143";
+}
+
+/* line 1080, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-play-circle:before {
+  content: "\f144";
+}
+
+/* line 1083, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ticket:before {
+  content: "\f145";
+}
+
+/* line 1086, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-minus-square:before {
+  content: "\f146";
+}
+
+/* line 1089, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-minus-square-o:before {
+  content: "\f147";
+}
+
+/* line 1092, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-level-up:before {
+  content: "\f148";
+}
+
+/* line 1095, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-level-down:before {
+  content: "\f149";
+}
+
+/* line 1098, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-check-square:before {
+  content: "\f14a";
+}
+
+/* line 1101, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pencil-square:before {
+  content: "\f14b";
+}
+
+/* line 1104, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-external-link-square:before {
+  content: "\f14c";
+}
+
+/* line 1107, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-share-square:before {
+  content: "\f14d";
+}
+
+/* line 1110, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-compass:before {
+  content: "\f14e";
+}
+
+/* line 1113, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-toggle-down:before,
+.fa-caret-square-o-down:before {
+  content: "\f150";
+}
+
+/* line 1117, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-toggle-up:before,
+.fa-caret-square-o-up:before {
+  content: "\f151";
+}
+
+/* line 1121, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-toggle-right:before,
+.fa-caret-square-o-right:before {
+  content: "\f152";
+}
+
+/* line 1125, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-euro:before,
+.fa-eur:before {
+  content: "\f153";
+}
+
+/* line 1129, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-gbp:before {
+  content: "\f154";
+}
+
+/* line 1132, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dollar:before,
+.fa-usd:before {
+  content: "\f155";
+}
+
+/* line 1136, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-rupee:before,
+.fa-inr:before {
+  content: "\f156";
+}
+
+/* line 1140, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cny:before,
+.fa-rmb:before,
+.fa-yen:before,
+.fa-jpy:before {
+  content: "\f157";
+}
+
+/* line 1146, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ruble:before,
+.fa-rouble:before,
+.fa-rub:before {
+  content: "\f158";
+}
+
+/* line 1151, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-won:before,
+.fa-krw:before {
+  content: "\f159";
+}
+
+/* line 1155, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bitcoin:before,
+.fa-btc:before {
+  content: "\f15a";
+}
+
+/* line 1159, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file:before {
+  content: "\f15b";
+}
+
+/* line 1162, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-text:before {
+  content: "\f15c";
+}
+
+/* line 1165, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-alpha-asc:before {
+  content: "\f15d";
+}
+
+/* line 1168, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-alpha-desc:before {
+  content: "\f15e";
+}
+
+/* line 1171, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-amount-asc:before {
+  content: "\f160";
+}
+
+/* line 1174, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-amount-desc:before {
+  content: "\f161";
+}
+
+/* line 1177, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-numeric-asc:before {
+  content: "\f162";
+}
+
+/* line 1180, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sort-numeric-desc:before {
+  content: "\f163";
+}
+
+/* line 1183, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-thumbs-up:before {
+  content: "\f164";
+}
+
+/* line 1186, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-thumbs-down:before {
+  content: "\f165";
+}
+
+/* line 1189, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-youtube-square:before {
+  content: "\f166";
+}
+
+/* line 1192, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-youtube:before {
+  content: "\f167";
+}
+
+/* line 1195, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-xing:before {
+  content: "\f168";
+}
+
+/* line 1198, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-xing-square:before {
+  content: "\f169";
+}
+
+/* line 1201, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-youtube-play:before {
+  content: "\f16a";
+}
+
+/* line 1204, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dropbox:before {
+  content: "\f16b";
+}
+
+/* line 1207, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stack-overflow:before {
+  content: "\f16c";
+}
+
+/* line 1210, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-instagram:before {
+  content: "\f16d";
+}
+
+/* line 1213, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-flickr:before {
+  content: "\f16e";
+}
+
+/* line 1216, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-adn:before {
+  content: "\f170";
+}
+
+/* line 1219, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bitbucket:before {
+  content: "\f171";
+}
+
+/* line 1222, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bitbucket-square:before {
+  content: "\f172";
+}
+
+/* line 1225, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tumblr:before {
+  content: "\f173";
+}
+
+/* line 1228, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tumblr-square:before {
+  content: "\f174";
+}
+
+/* line 1231, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-long-arrow-down:before {
+  content: "\f175";
+}
+
+/* line 1234, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-long-arrow-up:before {
+  content: "\f176";
+}
+
+/* line 1237, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-long-arrow-left:before {
+  content: "\f177";
+}
+
+/* line 1240, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-long-arrow-right:before {
+  content: "\f178";
+}
+
+/* line 1243, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-apple:before {
+  content: "\f179";
+}
+
+/* line 1246, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-windows:before {
+  content: "\f17a";
+}
+
+/* line 1249, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-android:before {
+  content: "\f17b";
+}
+
+/* line 1252, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-linux:before {
+  content: "\f17c";
+}
+
+/* line 1255, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dribbble:before {
+  content: "\f17d";
+}
+
+/* line 1258, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-skype:before {
+  content: "\f17e";
+}
+
+/* line 1261, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-foursquare:before {
+  content: "\f180";
+}
+
+/* line 1264, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-trello:before {
+  content: "\f181";
+}
+
+/* line 1267, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-female:before {
+  content: "\f182";
+}
+
+/* line 1270, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-male:before {
+  content: "\f183";
+}
+
+/* line 1273, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-gittip:before,
+.fa-gratipay:before {
+  content: "\f184";
+}
+
+/* line 1277, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sun-o:before {
+  content: "\f185";
+}
+
+/* line 1280, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-moon-o:before {
+  content: "\f186";
+}
+
+/* line 1283, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-archive:before {
+  content: "\f187";
+}
+
+/* line 1286, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bug:before {
+  content: "\f188";
+}
+
+/* line 1289, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-vk:before {
+  content: "\f189";
+}
+
+/* line 1292, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-weibo:before {
+  content: "\f18a";
+}
+
+/* line 1295, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-renren:before {
+  content: "\f18b";
+}
+
+/* line 1298, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pagelines:before {
+  content: "\f18c";
+}
+
+/* line 1301, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stack-exchange:before {
+  content: "\f18d";
+}
+
+/* line 1304, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-o-right:before {
+  content: "\f18e";
+}
+
+/* line 1307, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-arrow-circle-o-left:before {
+  content: "\f190";
+}
+
+/* line 1310, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-toggle-left:before,
+.fa-caret-square-o-left:before {
+  content: "\f191";
+}
+
+/* line 1314, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dot-circle-o:before {
+  content: "\f192";
+}
+
+/* line 1317, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-wheelchair:before {
+  content: "\f193";
+}
+
+/* line 1320, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-vimeo-square:before {
+  content: "\f194";
+}
+
+/* line 1323, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-turkish-lira:before,
+.fa-try:before {
+  content: "\f195";
+}
+
+/* line 1327, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-plus-square-o:before {
+  content: "\f196";
+}
+
+/* line 1330, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-space-shuttle:before {
+  content: "\f197";
+}
+
+/* line 1333, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-slack:before {
+  content: "\f198";
+}
+
+/* line 1336, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-envelope-square:before {
+  content: "\f199";
+}
+
+/* line 1339, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-wordpress:before {
+  content: "\f19a";
+}
+
+/* line 1342, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-openid:before {
+  content: "\f19b";
+}
+
+/* line 1345, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-institution:before,
+.fa-bank:before,
+.fa-university:before {
+  content: "\f19c";
+}
+
+/* line 1350, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mortar-board:before,
+.fa-graduation-cap:before {
+  content: "\f19d";
+}
+
+/* line 1354, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-yahoo:before {
+  content: "\f19e";
+}
+
+/* line 1357, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-google:before {
+  content: "\f1a0";
+}
+
+/* line 1360, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-reddit:before {
+  content: "\f1a1";
+}
+
+/* line 1363, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-reddit-square:before {
+  content: "\f1a2";
+}
+
+/* line 1366, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stumbleupon-circle:before {
+  content: "\f1a3";
+}
+
+/* line 1369, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-stumbleupon:before {
+  content: "\f1a4";
+}
+
+/* line 1372, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-delicious:before {
+  content: "\f1a5";
+}
+
+/* line 1375, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-digg:before {
+  content: "\f1a6";
+}
+
+/* line 1378, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pied-piper:before {
+  content: "\f1a7";
+}
+
+/* line 1381, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pied-piper-alt:before {
+  content: "\f1a8";
+}
+
+/* line 1384, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-drupal:before {
+  content: "\f1a9";
+}
+
+/* line 1387, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-joomla:before {
+  content: "\f1aa";
+}
+
+/* line 1390, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-language:before {
+  content: "\f1ab";
+}
+
+/* line 1393, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-fax:before {
+  content: "\f1ac";
+}
+
+/* line 1396, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-building:before {
+  content: "\f1ad";
+}
+
+/* line 1399, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-child:before {
+  content: "\f1ae";
+}
+
+/* line 1402, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-paw:before {
+  content: "\f1b0";
+}
+
+/* line 1405, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-spoon:before {
+  content: "\f1b1";
+}
+
+/* line 1408, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cube:before {
+  content: "\f1b2";
+}
+
+/* line 1411, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cubes:before {
+  content: "\f1b3";
+}
+
+/* line 1414, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-behance:before {
+  content: "\f1b4";
+}
+
+/* line 1417, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-behance-square:before {
+  content: "\f1b5";
+}
+
+/* line 1420, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-steam:before {
+  content: "\f1b6";
+}
+
+/* line 1423, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-steam-square:before {
+  content: "\f1b7";
+}
+
+/* line 1426, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-recycle:before {
+  content: "\f1b8";
+}
+
+/* line 1429, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-automobile:before,
+.fa-car:before {
+  content: "\f1b9";
+}
+
+/* line 1433, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cab:before,
+.fa-taxi:before {
+  content: "\f1ba";
+}
+
+/* line 1437, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tree:before {
+  content: "\f1bb";
+}
+
+/* line 1440, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-spotify:before {
+  content: "\f1bc";
+}
+
+/* line 1443, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-deviantart:before {
+  content: "\f1bd";
+}
+
+/* line 1446, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-soundcloud:before {
+  content: "\f1be";
+}
+
+/* line 1449, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-database:before {
+  content: "\f1c0";
+}
+
+/* line 1452, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-pdf-o:before {
+  content: "\f1c1";
+}
+
+/* line 1455, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-word-o:before {
+  content: "\f1c2";
+}
+
+/* line 1458, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-excel-o:before {
+  content: "\f1c3";
+}
+
+/* line 1461, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-powerpoint-o:before {
+  content: "\f1c4";
+}
+
+/* line 1464, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-photo-o:before,
+.fa-file-picture-o:before,
+.fa-file-image-o:before {
+  content: "\f1c5";
+}
+
+/* line 1469, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-zip-o:before,
+.fa-file-archive-o:before {
+  content: "\f1c6";
+}
+
+/* line 1473, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-sound-o:before,
+.fa-file-audio-o:before {
+  content: "\f1c7";
+}
+
+/* line 1477, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-movie-o:before,
+.fa-file-video-o:before {
+  content: "\f1c8";
+}
+
+/* line 1481, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-file-code-o:before {
+  content: "\f1c9";
+}
+
+/* line 1484, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-vine:before {
+  content: "\f1ca";
+}
+
+/* line 1487, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-codepen:before {
+  content: "\f1cb";
+}
+
+/* line 1490, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-jsfiddle:before {
+  content: "\f1cc";
+}
+
+/* line 1493, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-life-bouy:before,
+.fa-life-buoy:before,
+.fa-life-saver:before,
+.fa-support:before,
+.fa-life-ring:before {
+  content: "\f1cd";
+}
+
+/* line 1500, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-circle-o-notch:before {
+  content: "\f1ce";
+}
+
+/* line 1503, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ra:before,
+.fa-rebel:before {
+  content: "\f1d0";
+}
+
+/* line 1507, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ge:before,
+.fa-empire:before {
+  content: "\f1d1";
+}
+
+/* line 1511, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-git-square:before {
+  content: "\f1d2";
+}
+
+/* line 1514, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-git:before {
+  content: "\f1d3";
+}
+
+/* line 1517, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hacker-news:before {
+  content: "\f1d4";
+}
+
+/* line 1520, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tencent-weibo:before {
+  content: "\f1d5";
+}
+
+/* line 1523, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-qq:before {
+  content: "\f1d6";
+}
+
+/* line 1526, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-wechat:before,
+.fa-weixin:before {
+  content: "\f1d7";
+}
+
+/* line 1530, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-send:before,
+.fa-paper-plane:before {
+  content: "\f1d8";
+}
+
+/* line 1534, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-send-o:before,
+.fa-paper-plane-o:before {
+  content: "\f1d9";
+}
+
+/* line 1538, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-history:before {
+  content: "\f1da";
+}
+
+/* line 1541, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-genderless:before,
+.fa-circle-thin:before {
+  content: "\f1db";
+}
+
+/* line 1545, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-header:before {
+  content: "\f1dc";
+}
+
+/* line 1548, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-paragraph:before {
+  content: "\f1dd";
+}
+
+/* line 1551, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sliders:before {
+  content: "\f1de";
+}
+
+/* line 1554, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-share-alt:before {
+  content: "\f1e0";
+}
+
+/* line 1557, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-share-alt-square:before {
+  content: "\f1e1";
+}
+
+/* line 1560, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bomb:before {
+  content: "\f1e2";
+}
+
+/* line 1563, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-soccer-ball-o:before,
+.fa-futbol-o:before {
+  content: "\f1e3";
+}
+
+/* line 1567, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-tty:before {
+  content: "\f1e4";
+}
+
+/* line 1570, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-binoculars:before {
+  content: "\f1e5";
+}
+
+/* line 1573, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-plug:before {
+  content: "\f1e6";
+}
+
+/* line 1576, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-slideshare:before {
+  content: "\f1e7";
+}
+
+/* line 1579, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-twitch:before {
+  content: "\f1e8";
+}
+
+/* line 1582, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-yelp:before {
+  content: "\f1e9";
+}
+
+/* line 1585, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-newspaper-o:before {
+  content: "\f1ea";
+}
+
+/* line 1588, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-wifi:before {
+  content: "\f1eb";
+}
+
+/* line 1591, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-calculator:before {
+  content: "\f1ec";
+}
+
+/* line 1594, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-paypal:before {
+  content: "\f1ed";
+}
+
+/* line 1597, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-google-wallet:before {
+  content: "\f1ee";
+}
+
+/* line 1600, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc-visa:before {
+  content: "\f1f0";
+}
+
+/* line 1603, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc-mastercard:before {
+  content: "\f1f1";
+}
+
+/* line 1606, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc-discover:before {
+  content: "\f1f2";
+}
+
+/* line 1609, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc-amex:before {
+  content: "\f1f3";
+}
+
+/* line 1612, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc-paypal:before {
+  content: "\f1f4";
+}
+
+/* line 1615, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc-stripe:before {
+  content: "\f1f5";
+}
+
+/* line 1618, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bell-slash:before {
+  content: "\f1f6";
+}
+
+/* line 1621, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bell-slash-o:before {
+  content: "\f1f7";
+}
+
+/* line 1624, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-trash:before {
+  content: "\f1f8";
+}
+
+/* line 1627, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-copyright:before {
+  content: "\f1f9";
+}
+
+/* line 1630, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-at:before {
+  content: "\f1fa";
+}
+
+/* line 1633, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-eyedropper:before {
+  content: "\f1fb";
+}
+
+/* line 1636, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-paint-brush:before {
+  content: "\f1fc";
+}
+
+/* line 1639, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-birthday-cake:before {
+  content: "\f1fd";
+}
+
+/* line 1642, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-area-chart:before {
+  content: "\f1fe";
+}
+
+/* line 1645, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pie-chart:before {
+  content: "\f200";
+}
+
+/* line 1648, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-line-chart:before {
+  content: "\f201";
+}
+
+/* line 1651, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-lastfm:before {
+  content: "\f202";
+}
+
+/* line 1654, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-lastfm-square:before {
+  content: "\f203";
+}
+
+/* line 1657, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-toggle-off:before {
+  content: "\f204";
+}
+
+/* line 1660, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-toggle-on:before {
+  content: "\f205";
+}
+
+/* line 1663, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bicycle:before {
+  content: "\f206";
+}
+
+/* line 1666, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-bus:before {
+  content: "\f207";
+}
+
+/* line 1669, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ioxhost:before {
+  content: "\f208";
+}
+
+/* line 1672, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-angellist:before {
+  content: "\f209";
+}
+
+/* line 1675, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cc:before {
+  content: "\f20a";
+}
+
+/* line 1678, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-shekel:before,
+.fa-sheqel:before,
+.fa-ils:before {
+  content: "\f20b";
+}
+
+/* line 1683, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-meanpath:before {
+  content: "\f20c";
+}
+
+/* line 1686, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-buysellads:before {
+  content: "\f20d";
+}
+
+/* line 1689, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-connectdevelop:before {
+  content: "\f20e";
+}
+
+/* line 1692, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-dashcube:before {
+  content: "\f210";
+}
+
+/* line 1695, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-forumbee:before {
+  content: "\f211";
+}
+
+/* line 1698, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-leanpub:before {
+  content: "\f212";
+}
+
+/* line 1701, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-sellsy:before {
+  content: "\f213";
+}
+
+/* line 1704, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-shirtsinbulk:before {
+  content: "\f214";
+}
+
+/* line 1707, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-simplybuilt:before {
+  content: "\f215";
+}
+
+/* line 1710, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-skyatlas:before {
+  content: "\f216";
+}
+
+/* line 1713, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cart-plus:before {
+  content: "\f217";
+}
+
+/* line 1716, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-cart-arrow-down:before {
+  content: "\f218";
+}
+
+/* line 1719, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-diamond:before {
+  content: "\f219";
+}
+
+/* line 1722, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-ship:before {
+  content: "\f21a";
+}
+
+/* line 1725, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-user-secret:before {
+  content: "\f21b";
+}
+
+/* line 1728, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-motorcycle:before {
+  content: "\f21c";
+}
+
+/* line 1731, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-street-view:before {
+  content: "\f21d";
+}
+
+/* line 1734, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-heartbeat:before {
+  content: "\f21e";
+}
+
+/* line 1737, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-venus:before {
+  content: "\f221";
+}
+
+/* line 1740, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mars:before {
+  content: "\f222";
+}
+
+/* line 1743, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mercury:before {
+  content: "\f223";
+}
+
+/* line 1746, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-transgender:before {
+  content: "\f224";
+}
+
+/* line 1749, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-transgender-alt:before {
+  content: "\f225";
+}
+
+/* line 1752, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-venus-double:before {
+  content: "\f226";
+}
+
+/* line 1755, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mars-double:before {
+  content: "\f227";
+}
+
+/* line 1758, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-venus-mars:before {
+  content: "\f228";
+}
+
+/* line 1761, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mars-stroke:before {
+  content: "\f229";
+}
+
+/* line 1764, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mars-stroke-v:before {
+  content: "\f22a";
+}
+
+/* line 1767, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-mars-stroke-h:before {
+  content: "\f22b";
+}
+
+/* line 1770, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-neuter:before {
+  content: "\f22c";
+}
+
+/* line 1773, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-facebook-official:before {
+  content: "\f230";
+}
+
+/* line 1776, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-pinterest-p:before {
+  content: "\f231";
+}
+
+/* line 1779, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-whatsapp:before {
+  content: "\f232";
+}
+
+/* line 1782, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-server:before {
+  content: "\f233";
+}
+
+/* line 1785, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-user-plus:before {
+  content: "\f234";
+}
+
+/* line 1788, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-user-times:before {
+  content: "\f235";
+}
+
+/* line 1791, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-hotel:before,
+.fa-bed:before {
+  content: "\f236";
+}
+
+/* line 1795, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-viacoin:before {
+  content: "\f237";
+}
+
+/* line 1798, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-train:before {
+  content: "\f238";
+}
+
+/* line 1801, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-subway:before {
+  content: "\f239";
+}
+
+/* line 1804, /Users/adamyarger/.rvm/gems/ruby-2.1.5/gems/font-awesome-rails-4.3.0.0/app/assets/stylesheets/font-awesome.css.erb */
+.fa-medium:before {
+  content: "\f23a";
+}
+
+/************** Backgroundcolor **********/
+/* line 45, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+body {
+  background-color: #F8F9FA;
+}
+
+/* -------------------------------- 
+
+xButtons 
+
+-------------------------------- */
+/* line 54, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.button {
+  display: inline-block;
+  position: relative;
+  height: 38px;
+  padding: 0 16px;
+  outline: 0;
+  color: rgba(0, 0, 0, 0.44);
+  background: transparent;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  vertical-align: bottom;
+  white-space: nowrap;
+  text-rendering: auto;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+  border-radius: 999em;
+  -webkit-transition: 100ms background-color,100ms border-color,100ms color;
+          transition: 100ms background-color,100ms border-color,100ms color;
+  font-family: "jaf-bernino-sans","Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Verdana,sans-serif;
+  letter-spacing: -0.02em;
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-feature-settings: "liga" on;
+}
+
+/* line 87, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.do {
+  color: #1CBCB0;
+  border-color: #1CBCB0;
+}
+
+/* line 92, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.button-circle {
+  padding: 0;
+  width: 38px;
+  text-align: center;
+}
+
+/* line 99, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.btn {
+  border: none;
+  box-shadow: none;
+  border-radius: .25em;
+  font-size: 1rem;
+  color: #fff;
+  padding: .6em 1.2em;
+  cursor: pointer;
+  background: #1CBCB0;
+  font-size: 1rem;
+}
+/* line 111, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.btn:focus {
+  outline: none;
+}
+/* line 115, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.no-touch .btn:hover {
+  background: #1fd2c5;
+}
+/* line 119, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.btn.btn-success {
+  background: #6fce72;
+}
+/* line 122, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.no-touch .btn.btn-success:hover {
+  background: #82d485;
+}
+/* line 127, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.btn.btn-dull {
+  background: #e6e6e6;
+}
+/* line 130, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.no-touch .btn.btn-dull:hover {
+  background: #f3f3f3;
+}
+/* line 135, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.btn.btn-alert {
+  background: #e4655f;
+}
+/* line 138, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.no-touch .btn.btn-alert:hover {
+  background: #e87a75;
+}
+/* line 143, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.btn.btn-outline {
+  color: #1CBCB0;
+  background: transparent;
+  box-shadow: inset 0 0 0 1px #1CBCB0;
+}
+/* line 148, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.no-touch .btn.btn-outline:hover {
+  color: #fff;
+  background: #1CBCB0;
+}
+
+/* line 157, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+.cd-buttons .cd-box:nth-of-type(2) span {
+  /* CSS class name color */
+  color: #1CBCB0;
+}
+
+/* line 162, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+body {
+  padding-top: 50px;
+}
+
+/* -------------------------------- 
+
+xForm 
+
+-------------------------------- */
+/* line 171, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text], input[type=email], input[type=password], select, textarea {
+  border: 1px solid #e0e6ef;
+  border-radius: .25em;
+  background: #ffffff;
+  outline: none;
+}
+
+/* line 178, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+textarea:focus {
+  border: 1px solid #1CBCB0;
+}
+
+/* line 182, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text]:focus, select:focus, input[type=email]:focus, input[type=password]:focus {
+  outline: none;
+}
+
+/* line 186, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text], input[type=email], input[type=password] {
+  padding: .6em 1em;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+/* line 190, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text], input[type=email], input[type=password] {
+  padding: .6em 1em;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+/* line 195, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text], input[type=email], input[type=password] {
+  padding: .6em 1em;
+  box-shadow: inset 1px 1px rgba(0, 0, 0, 0.03);
+}
+
+/* line 200, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text].success {
+  border-color: #6fce72;
+  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+}
+
+/* line 205, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=password].success {
+  border-color: #6fce72;
+  box-shadow: 0 0 6px rgba(111, 206, 114, 0.2);
+}
+
+/* line 210, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text].alert {
+  border-color: #e4655f;
+  box-shadow: 0 0 6px rgba(228, 101, 95, 0.2);
+}
+
+/* line 214, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/variable.scss */
+input[type=text]:focus, input[type=email]:focus, input[type=password]:focus {
+  border-color: #1CBCB0;
+  box-shadow: 0 0 6px rgba(95, 142, 228, 0.2);
+}
+
+/* line 32, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/layout.scss */
+.li {
+  list-style: none;
+}
+
+/* line 36, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/layout.scss */
+.u-pull-right {
+  float: right;
+}
+
+/* line 40, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/layout.scss */
+.u-pull-left {
+  float: left;
+}
+
+/* line 44, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/layout.scss */
+.button--chromeless {
+  border-radius: 0;
+  box-shadow: none;
+  background: transparent;
+  height: auto;
+  line-height: inherit;
+  border-width: 0;
+  padding: 0;
+  vertical-align: baseline;
+  color: rgba(0, 0, 0, 0.3);
+  white-space: normal;
+}
+
+/* line 1, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/post_load.scss */
+.spinner_post {
+  display: block;
+  height: 70px;
+  margin: 70px auto;
+  width: 70px;
+  text-align: center;
+}
+
+/* line 9, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/post_load.scss */
+.spinner_post > div {
+  width: 18px;
+  height: 18px;
+  background-color: #1CBCB0;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 23, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/post_load.scss */
+.spinner_post .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 28, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/post_load.scss */
+.spinner_post .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* line 1, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/page_load.scss */
+.spinner {
+  display: block;
+  height: 70px;
+  margin: 70px auto;
+  width: 70px;
+  text-align: center;
+}
+
+/* line 9, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/page_load.scss */
+.spinner > div {
+  width: 18px;
+  height: 18px;
+  background-color: #1CBCB0;
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: bouncedelay 1.4s infinite ease-in-out;
+  animation: bouncedelay 1.4s infinite ease-in-out;
+  /* Prevent first frame from flickering when animation starts */
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+/* line 23, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/page_load.scss */
+.spinner .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+/* line 28, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/page_load.scss */
+.spinner .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes bouncedelay {
+  0%, 80%, 100% {
+    -webkit-transform: scale(0);
+  }
+  40% {
+    -webkit-transform: scale(1);
+  }
+}
+@keyframes bouncedelay {
+  0%, 80%, 100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  40% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+/* line 1, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/preview-reset.scss */
+.selector {
+  margin: 10px auto;
+  position: relative;
+  min-height: 85px;
+  margin: 13px 3px 16px 46px;
+  text-align: center;
+}
+
+/* line 9, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/preview-reset.scss */
+.selector-wrapper {
+  text-align: center;
+}
+
+/* line 1, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+section.user_info {
+  text-align: center;
+}
+
+/****************************************** flash ******************************************/
+/* line 9, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.alert-error {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: left;
+}
+
+/* line 17, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.alert-alert {
+  background-color: #f2dede;
+  border-color: #eed3d7;
+  color: #b94a48;
+  text-align: center;
+  width: 40%;
+  margin-left: 29%;
+}
+
+/* line 27, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.alert-success {
+  background-color: #FFF;
+  /* border-bottom: 1px solid #68D9D1; */
+  /* border-left: 1px solid #68D9D1; */
+  /* border-right: 1px solid #68D9D1; */
+  /* color: #007D74; */
+  /* text-align: left; */
+  height: 50px;
+  text-align: center;
+  padding-top: 17px;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  margin-bottom: 1px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* line 44, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.alert-notice {
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+  color: #468847;
+  text-align: left;
+}
+
+/* line 52, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.flash {
+  display: none;
+  background-color: #000;
+  color: #fff;
+}
+
+/* line 54, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+#flash-wrapper {
+  margin-top: 2px;
+  height: 100%;
+}
+
+/* line 59, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+#flash-article {
+  /* width: 500px; */
+  min-height: 100%;
+  height: auto;
+  max-width: 798px;
+  /* background-color: #FFF; */
+  margin: auto;
+  margin-top: 2px;
+}
+
+/****************************************** header avatar ******************************************/
+/* line 73, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.round-image-50 img {
+  width: 35px;
+  border-radius: 50%;
+  padding: 1px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 80, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/notifications/custom.css.scss */
+.notification {
+  margin-left: -66px;
+  float: left;
+  border: 1px solid red;
+  padding: 3px;
+  /* padding-top: 0px; */
+  padding-bottom: 1px;
+  border-radius: 4px;
+  font-size: .7em;
+  /* margin-left: -68px; */
+  background: red;
+  color: #fff;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+/********************************************* Profile*************************************/
+/********************************************* Home Page *************************************/
+/* -------------------------------- 
+
+Primary style
+
+-------------------------------- */
+/* line 7, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+html * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* line 12, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+/* line 16, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+body {
+  font-size: 100%;
+  font-family: "Brandon", Helvetica, Arial, sans-serif;
+  color: #31353d;
+  /*background-color: $background;*/
+}
+/* line 24, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+body.overflow-hidden {
+  /* prevent 2 vertical scrollbars on ie and firefox when the cart is visible */
+  overflow: hidden;
+}
+
+/* line 30, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+a {
+  color: #435779;
+  text-decoration: none;
+}
+
+/* line 35, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+img {
+  max-width: 100%;
+}
+
+/* -------------------------------- 
+
+Modules - reusable parts of our design
+
+-------------------------------- */
+/*Use if you want a pic in nav*/
+/*.cd-img-replace { 
+	display: inline-block;
+	overflow: hidden;
+	text-indent: 100%;
+	white-space: nowrap;
+}*/
+/* -------------------------------- 
+
+xheader 
+
+-------------------------------- */
+/* line 62, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 50px;
+  width: 100%;
+  background: #fff;
+  /*text-align: center;*/
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.1);
+  z-index: 4;
+}
+
+/* line 77, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+.nav_avatar {
+  cursor: pointer;
+}
+
+/* line 82, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+.signed-out-nav {
+  position: absolute;
+  height: auto;
+  width: auto;
+  left: auto;
+  right: 8em;
+  padding-top: 0;
+  top: 0;
+  background: transparent;
+  box-shadow: none;
+  line-height: 50px;
+  z-index: 4;
+}
+/* line 95, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+.signed-out-nav li {
+  display: inline-block;
+  margin-left: 1em;
+}
+
+/* line 102, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#right-nav {
+  float: right;
+  margin-right: 20px;
+  margin-top: 6px;
+}
+/* line 107, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#right-nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 111, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#right-nav .button {
+  margin-left: 10px;
+  line-height: 36px;
+}
+
+/* line 117, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#left-nav {
+  float: left;
+  margin-top: 6px;
+  margin-left: 20px;
+}
+/* line 122, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#left-nav #nav-logo {
+  font-size: 2em;
+}
+/* line 126, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#left-nav ul {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+/* line 130, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#left-nav li {
+  margin-right: 20px;
+}
+
+/* line 135, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+.active {
+  opacity: 1;
+}
+
+/*start of left drop down menu*/
+/* line 141, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover {
+  overflow: hidden;
+  position: absolute;
+  z-index: 900;
+  visibility: visible;
+  font-size: 12px;
+  text-align: center;
+  padding: 15px;
+  opacity: 1;
+  pointer-events: auto;
+  margin-left: -17px;
+  display: none;
+  margin-top: -7px;
+}
+/* line 157, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover ul {
+  display: block;
+}
+/* line 161, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .popover-arrow {
+  top: 1px;
+  clip: rect(0 18px 14px -4px);
+  position: absolute;
+  margin-left: 12px;
+}
+/* line 168, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .popover-arrow:after {
+  content: '';
+  display: block;
+  width: 14px;
+  height: 14px;
+  /*background: #fff;*/
+  -webkit-transform: rotate(45deg) translate(6px, 6px);
+  -ms-transform: rotate(45deg) translate(6px, 6px);
+  transform: rotate(45deg) translate(6px, 6px);
+  /*box-shadow: -1px -1px 1px -1px rgba(0,0,0,0.44);*/
+  background: #dddddd;
+}
+/* line 181, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .inner-popover {
+  position: relative;
+  max-width: 280px;
+  padding: 14px;
+  background: #fff;
+  border-radius: 0 0 4px 4px;
+  /*box-shadow: 0 1px 2px rgba(0,0,0,0.25),0 0 1px rgba(0,0,0,0.35);*/
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+/* line 190, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .inner-popover .popover-item:hover .icon {
+  color: rgba(0, 0, 0, 0.7);
+}
+/* line 194, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .inner-popover .popover-item {
+  padding: 0;
+  text-align: left;
+  width: 100%;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+/* line 201, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .inner-popover .popover-item .button--chromeless {
+  color: rgba(0, 0, 0, 0.7);
+}
+/* line 205, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .inner-popover .popover-item .icon {
+  width: 24px;
+  display: inline-block;
+  color: rgba(0, 0, 0, 0.3);
+}
+/* line 211, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/header.scss */
+#popover .inner-popover .popover-item a {
+  font-size: 1.2em;
+  padding: 7px 10px;
+}
+
+/*    main feed
+
+-------------------------------- */
+/* line 5, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+main {
+  position: relative;
+  min-height: 100%;
+  /*background: $background2;*/
+  padding-top: 70px;
+  z-index: 4;
+}
+@media only screen and (min-width: 768px) {
+  /* line 5, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  main {
+    padding-top: 90px;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 5, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  main {
+    padding-top: 120px;
+  }
+}
+
+/* line 23, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+#cd-gallery-items li {
+  margin-bottom: 1.5em;
+}
+@media only screen and (min-width: 768px) {
+  /* line 29, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  #cd-gallery-items li {
+    width: 100%;
+    float: left;
+    margin-bottom: 2em;
+    margin-right: 4%;
+  }
+  /* line 34, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  #cd-gallery-items li:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  /* line 41, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  #cd-gallery-items li {
+    width: 100%;
+    float: left;
+    margin-bottom: 2.5em;
+    margin-right: 3.5%;
+  }
+  /* line 46, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  #cd-gallery-items li:nth-child(2n) {
+    margin-right: 3.5%;
+  }
+  /* line 50, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/feed.scss */
+  #cd-gallery-items li:nth-child(3n) {
+    margin-right: 0;
+  }
+}
+
+/******************* post feed top form ***********************/
+/* line 3, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#feed-form {
+  width: 100%;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+}
+
+/* line 11, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#post-form input#post-body {
+  width: 92%;
+}
+/* line 15, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#post-form .button {
+  margin-left: 4%;
+  margin-top: 14px;
+  margin-bottom: 14px;
+}
+/* line 21, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#post-form #post-body {
+  margin-left: 4%;
+  margin-top: 4%;
+}
+
+/******************* post form ***********************/
+/* line 30, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form textarea {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 10px;
+  padding: 25px;
+  font-size: 1em;
+}
+/* line 37, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form .full-width {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 13px;
+  font-size: 1em;
+}
+/* line 45, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form input.btn-primary {
+  width: 100%;
+}
+
+/* line 51, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#cd-cart h2 {
+  text-align: center;
+}
+
+/********************* edit user form ****************************/
+/* line 58, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#edit-wrapper {
+  padding-top: 1em;
+  height: 100%;
+  background-color: #F8F9FA;
+}
+
+/* line 64, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#edit-main {
+  width: 500px;
+  min-height: 100%;
+  height: auto;
+  max-width: 798px;
+  background-color: #FFF;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #d9e0e2;
+  border-radius: 0.35em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  margin-bottom: 50px;
+}
+/* line 78, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#edit-main h1 {
+  text-align: center;
+}
+/* line 82, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#edit-main input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 89, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#current-password i {
+  font-size: .75em;
+}
+
+@media screen and (max-width: 653px) {
+  /* line 96, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  #edit-main {
+    width: 92%;
+  }
+}
+/* -------------------------------- 
+
+xsigin/signup popup 
+
+-------------------------------- */
+/* line 108, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(52, 54, 66, 0.9);
+  z-index: 3;
+  overflow-y: auto;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: opacity 0.3s 0, visibility 0 0.3s;
+  transition: opacity 0.3s 0, visibility 0 0.3s;
+}
+
+/*this is the blue modal background*/
+/* line 127, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal.is-visible {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s 0, visibility 0 0;
+  transition: opacity 0.3s 0, visibility 0 0;
+}
+
+/* line 134, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal.is-visible .cd-user-modal-container {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/* line 142, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: #FFF;
+  margin: 3em auto 4em;
+  cursor: auto;
+  border-radius: 0.25em;
+  -webkit-transform: translateY(-30px);
+  -ms-transform: translateY(-30px);
+  transform: translateY(-30px);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/* line 162, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container .cd-switcher:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* line 167, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container .cd-switcher li {
+  width: 50%;
+  float: left;
+  text-align: center;
+}
+
+/* line 172, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container .cd-switcher li:first-child a {
+  border-radius: .25em 0 0 0;
+}
+
+/* line 175, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container .cd-switcher li:last-child a {
+  border-radius: 0 .25em 0 0;
+}
+
+/* line 178, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container .cd-switcher a {
+  display: block;
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  background: #d2d8d8;
+  color: #809191;
+}
+
+/* line 186, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-user-modal-container .cd-switcher a.selected {
+  background: #FFF;
+  color: #505260;
+}
+
+@media only screen and (min-width: 600px) {
+  /* line 191, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-user-modal-container {
+    margin: 4em auto;
+  }
+
+  /* line 194, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-user-modal-container .cd-switcher a {
+    height: 70px;
+    line-height: 70px;
+  }
+}
+/* line 200, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form {
+  padding: 1.4em;
+  margin-top: 15%;
+}
+
+/* line 204, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form .fieldset {
+  position: relative;
+  margin: 1.4em 0;
+}
+
+/* line 208, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form .fieldset:first-child {
+  margin-top: 0;
+}
+
+/* line 211, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form .fieldset:last-child {
+  margin-bottom: 0;
+}
+
+/* line 214, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form label {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 218, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form label.image-replace {
+  /* replace text with an icon */
+  display: inline-block;
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  bottom: auto;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+  color: transparent;
+  text-shadow: none;
+  background-repeat: no-repeat;
+  background-position: 50% 0;
+}
+
+/* line 241, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form input {
+  margin: 0;
+  padding: 0;
+  border-radius: 0.25em;
+}
+
+/* line 246, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form input.full-width {
+  width: 100%;
+}
+
+/* line 250, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form input.has-border:focus {
+  border-color: #343642;
+  box-shadow: 0 0 5px rgba(52, 54, 66, 0.1);
+  outline: none;
+}
+
+/* line 256, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form input[type=submit] {
+  padding: 16px 0;
+  cursor: pointer;
+  background: #1CBCB0;
+  color: #FFF;
+  font-weight: bold;
+  border: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+/* line 269, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.no-touch .cd-form input[type=submit]:hover, .no-touch .cd-form input[type=submit]:focus {
+  background: #3599ae;
+  outline: none;
+}
+
+@media only screen and (min-width: 600px) {
+  /* line 278, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-form {
+    padding: 2em;
+  }
+
+  /* line 281, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-form .fieldset {
+    margin: 2em 0;
+  }
+
+  /* line 284, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-form .fieldset:first-child {
+    margin-top: 0;
+  }
+
+  /* line 287, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-form .fieldset:last-child {
+    margin-bottom: 0;
+  }
+
+  /* line 290, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-form input.has-padding {
+    padding: 16px 20px 16px 50px;
+  }
+
+  /* line 293, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-form input[type=submit] {
+    padding: 16px 0;
+  }
+}
+/* line 300, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form-bottom-message {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -30px;
+  text-align: center;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 309, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-form-bottom-message a {
+  color: #FFF;
+  text-decoration: underline;
+}
+
+/* line 314, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+.cd-close-form {
+  /* form X button on top right */
+  display: block;
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  right: 0;
+  top: -40px;
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1170px) {
+  /* line 328, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+  .cd-close-form {
+    display: none;
+  }
+}
+/* line 333, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#cd-login, #cd-signup, #cd-reset-password {
+  display: none;
+}
+
+/* line 337, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/header/forms.css.scss */
+#cd-login.is-selected, #cd-signup.is-selected, #cd-reset-password.is-selected {
+  display: block;
+}
+
+/* line 2, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+#main-user-wrapper #user-main {
+  margin-bottom: 10px;
+}
+
+/* line 8, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+#user-main .round-image-50 img {
+  margin-top: 8px;
+}
+
+/* line 15, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.panel-footer {
+  /*background-color: #f8fafb;*/
+  border-top: 1px solid #d9e0e2;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+/* line 22, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+#star {
+  margin-top: 19px;
+}
+
+/* line 26, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.post_show {
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  margin-top: 20px;
+  /*becuase of bop fm*/
+  border-radius: 6px;
+  background: #fff;
+  margin-bottom: 0px;
+}
+
+/* line 36, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.post-body {
+  width: 100%;
+  padding: 0px 25px 0px 25px;
+  margin-bottom: 15px;
+}
+
+/* line 42, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.post_name {
+  margin-top: 19px;
+  font-weight: 600;
+}
+
+/* line 47, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+div.star_group.u-pull-right {
+  margin-top: 3px;
+}
+
+/* line 52, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.star_group #delete-post {
+  cursor: pointer;
+}
+
+/* line 57, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.post_media {
+  margin-top: 0px;
+  padding-bottom: 10px;
+  line-height: 25px;
+}
+
+/* line 63, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.user_avatar {
+  padding-right: 20px;
+}
+
+/* line 68, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.panel-footer {
+  padding: 0px 25px;
+  height: 55px;
+}
+/* line 70, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.panel-footer p {
+  margin: 0;
+}
+/* line 73, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.panel-footer .user {
+  padding-top: 8px;
+}
+
+/* line 80, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.fa-heart {
+  color: #1CBCB0;
+}
+
+/* line 84, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/posts.scss */
+.fa-heart-o {
+  color: #1CBCB0;
+}
+
+/*************** Profile top container **************/
+/* line 3, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.profile-foreground {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 30px;
+  padding-top: 27px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.22);
+}
+
+/* line 11, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container {
+  text-align: center;
+}
+/* line 14, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container h1 {
+  font-size: 2.5em;
+}
+/* line 18, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container .menu-item {
+  display: inline-block;
+}
+/* line 22, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container #medium-avatar {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  padding: 0px;
+  background-color: #fff;
+  border: 3px solid #fff;
+  position: relative;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+}
+/* line 36, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container .button--chromeless {
+  padding: 10px 20px 5px;
+  color: rgba(0, 0, 0, 0.8);
+  font-size: 24px;
+}
+/* line 42, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container .before {
+  border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+/* line 46, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container .menu-label {
+  color: rgba(0, 0, 0, 0.6);
+  text-transform: uppercase;
+  display: block;
+  font-size: 11px;
+  letter-spacing: 2px;
+  padding-bottom: 4px;
+}
+/* line 55, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container .follow {
+  margin-top: 10px;
+  line-height: 2.5;
+  width: 125px;
+}
+/* line 61, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container #unfollow {
+  border-color: #1CBCB0;
+  background: #1CBCB0;
+  color: #fff;
+}
+/* line 67, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile-container #follow {
+  border-color: #1CBCB0;
+  color: #1CBCB0;
+}
+
+/*************** Profile Post **************/
+/* line 77, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#main-user-wrapper {
+  padding-top: 1em;
+  height: 100%;
+  /*background-color:#F8F9FA;*/
+}
+
+/* line 83, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#user-main {
+  width: 500px;
+  min-height: 100%;
+  height: auto;
+  /*border-right: 1px solid #d9e0e2;
+  border-left: 1px solid #d9e0e2;
+  border-top: 1px solid #d9e0e2;;*/
+  max-width: 798px;
+  /*background-color:#FFF;*/
+  margin: auto;
+}
+
+/************* Profile Box ******************/
+/* line 97, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+#profile_name {
+  background: rgba(0, 0, 0, 0.25);
+}
+
+/* line 102, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.unfollow {
+  color: #1E90FF;
+  background-color: transparent;
+  border-color: #1E90FF;
+  font-weight: 200;
+}
+
+/* line 109, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.stylish-panel {
+  margin-bottom: 1.25em;
+  position: fixed;
+  padding: 0 0 .75em 0;
+  font-weight: 400;
+  float: left;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid #d9e0e2;
+  height: 322px;
+  width: 250px;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 65px;
+  margin-left: 65px;
+  text-align: center;
+  border-radius: 4px;
+}
+/* line 126, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.stylish-panel h2 {
+  font-size: 1.4em;
+  padding: 5px;
+}
+/* line 131, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.stylish-panel .btn {
+  width: 100%;
+  margin-top: 6px;
+}
+
+/* line 137, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.stylish-panel img {
+  width: 100%;
+  height: 100%;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+}
+
+/* line 144, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+.stats {
+  padding: 5px;
+}
+
+/****************** queries **********************/
+@media screen and (max-width: 849px) {
+  /* line 153, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+  .stylish-panel {
+    display: none;
+  }
+}
+@media screen and (max-width: 653px) {
+  /* line 161, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+  #main-article-wrapper {
+    width: 100%;
+    border-right: none;
+    border-left: none;
+    margin: 0;
+  }
+
+  /* line 169, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/profile.scss */
+  #main-article {
+    width: 95%;
+  }
+}
+/*********  Main Feed ********/
+/* line 4, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/home_page.scss */
+#main-article-wrapper {
+  padding-top: 1em;
+  height: 100%;
+  /*background-color:#F8F9FA;*/
+}
+/* line 9, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/home_page.scss */
+#main-article-wrapper .round-image-50 img {
+  margin-top: 9px;
+}
+
+/* line 14, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/home_page.scss */
+#main-article {
+  width: 500px;
+  min-height: 100%;
+  height: auto;
+  max-width: 798px;
+  /*background-color:#FFF;*/
+  margin: auto;
+}
+
+/* line 4, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+#finduser--wrapper {
+  padding-top: 1em;
+  height: 100%;
+  background-color: #F8F9FA;
+}
+
+/* line 10, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+#find-user-main {
+  width: 500px;
+  min-height: 100%;
+  height: auto;
+  max-width: 798px;
+  background-color: #FFF;
+  margin: auto;
+  padding: 25px;
+  border: 1px solid #d9e0e2;
+  border-radius: 0.35em;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  margin-bottom: 50px;
+}
+/* line 24, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+#find-user-main h1 {
+  text-align: center;
+}
+/* line 28, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+#find-user-main input {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+/* line 35, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+.users {
+  /*width: 300px;
+  overflow: hidden;
+  color: white;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  background: #fff;*/
+  margin-bottom: 20px;
+}
+
+/* line 46, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+.user-item {
+  position: relative;
+  line-height: 20px;
+  padding: 10px 80px 10px 15px;
+  font-weight: bold;
+  height: 60px;
+  border-bottom: 1px solid #dddddd;
+  font-size: 1.4em;
+}
+/* line 55, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+.user-item .round-image-50 img {
+  width: 35px;
+  margin-top: 4px;
+  border-radius: 50%;
+}
+
+/* line 61, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+.user-item:first-child {
+  margin-top: -1px;
+  padding-top: 11px;
+}
+
+/* line 66, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+.user-item-pic {
+  position: relative;
+  float: left;
+  margin: -2px 12px 0 -7px;
+}
+
+/* line 73, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+.user-item-desc {
+  display: block;
+  font-weight: normal;
+  color: #b8c6cc;
+  font-size: .8em;
+  margin-top: 11px;
+}
+
+/* line 81, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/body/find_user.scss */
+span.user-item-delete {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  margin-top: -10px;
+  color: #eee;
+  margin-left: 10px;
+}
+
+/* line 1, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#cd-cart {
+  /*float: right;*/
+}
+
+/* line 5, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#stream {
+  margin-bottom: 1.25em;
+  position: fixed;
+  padding: 0 0 .75em 0;
+  font-weight: 400;
+  /*float: left;*/
+  z-index: 2;
+  background: #fff;
+  height: 100%;
+  width: 325px;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 2px;
+  overflow: scroll;
+  right: 0px;
+  display: none;
+}
+
+/* line 23, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#stream-list {
+  width: auto;
+  height: 100%;
+  overflow: scroll;
+  padding-bottom: 82px;
+  padding-top: 15px;
+  /*text-align: center;*/
+}
+
+/* line 33, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#stream-item:last-child {
+  margin-bottom: 3.5em;
+}
+
+/* line 40, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+.follow-list li {
+  border-bottom: 1px solid #e0e6ef;
+  width: 100%;
+  height: 65px;
+  padding: 14px 0 0px 9px;
+  margin-top: -16px;
+}
+/* line 48, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+.follow-list li:hover {
+  background-color: #F8F9FA;
+}
+/* line 53, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+.follow-list span.list-user {
+  margin-bottom: 1px;
+}
+/* line 56, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+.follow-list input[type="checkbox"], .follow-list input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+  margin-left: 0px;
+  float: right;
+  margin-right: 22px;
+  /* line-height: 5; */
+  margin-top: 8px;
+}
+
+/* line 70, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#stream-footer {
+  background-color: #fff;
+  border-top: 1px solid #d9e0e2;
+  bottom: 0;
+  box-shadow: 0 -2px 0 rgba(217, 224, 226, 0.2);
+  font-size: .875em;
+  right: 0;
+  padding: .75em 0 1em;
+  position: fixed;
+  text-align: center;
+  width: 324px;
+  color: #ff3c1f;
+  font-family: "Brandon", Helvetica, Arial, sans-serif;
+}
+/* line 84, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#stream-footer .btn {
+  width: 95%;
+}
+
+/* line 92, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+textarea.message_body {
+  width: 94%;
+  margin-top: 13px;
+  height: 36px;
+  margin-left: 3%;
+  height: 80px;
+  border: 1px solid #1CBCB0;
+}
+
+/* line 103, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+span.list-group-item {
+  float: left;
+  padding: 9px;
+}
+
+/* line 109, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/sidebar/message_form.scss */
+#stream .round-image-50 img {
+  float: left;
+}
+
+/******************* checkbox **********************/
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  list-style: none;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, main {
+  display: block;
+}
+
+/* line 32, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+body {
+  line-height: 1;
+  padding-top: 50px;
+}
+
+/* line 37, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+ol, ul {
+  list-style: none;
+}
+
+/* line 40, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 43, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 48, /Users/adamyarger/curate/curate_3/app/assets/stylesheets/core/reset.css */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}

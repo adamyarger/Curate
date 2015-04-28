@@ -1,8 +1,8 @@
 window.Curate = {
 	Models: {},
 	Collections: {},
-	Routers: {},
 	Views: {},
+	Routers: {},
 
 	init: function(){
 		var rightNav = new Curate.Views.RightNav();
