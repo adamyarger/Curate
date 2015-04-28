@@ -1,4 +1,4 @@
-window.Curate.Views.PostsNew = Backbone.View.extend({
+window.Curate.Views.PostsNew = Backbone.CompositeView.extend({
 
 	template: JST['posts/new'],
 
@@ -13,7 +13,7 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		$('.loading').show();
 		$('.selector-wrapper').html('<div class="spinner_post"><div class="bounce1"></div><div class="bounce2"></div><div class="bounce3"></div></div>');
 
-	});
+		});
 	}, 
 
 	initialize: function(options){
@@ -37,7 +37,7 @@ window.Curate.Views.PostsNew = Backbone.View.extend({
 		newPost.save({}, {
 			success: function(){
 				console.log('success');
-				view.post.posts().add(newPost);
+				view.post.posts().unshift(newPost);
 				
 				view.render();
 

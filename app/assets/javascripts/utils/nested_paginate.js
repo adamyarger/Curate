@@ -7,7 +7,7 @@ Curate.NestedPaginate = {
       if (collection.page < collection.total_pages) {
         collection.fetch({
           data: { page: parseInt(collection.page) + 1 },
-          remove: false,
+          remove: true,
           wait: true
         });
       } else {
