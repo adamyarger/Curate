@@ -1,37 +1,30 @@
-== README
+##Overview
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Live At: https://fathomless-harbor-6451.herokuapp.com/
 
-Things you may want to cover:
+I built Curate as a way to easily share music with my friends in a microbloging fashion. Give it a test drive
+with this demo user info:
 
-* Ruby version
+email: 		example@example.com
+password: 	example123
 
-* System dependencies
+##Features
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-COLORS:
-#3d525e --> link color
-#1FDA9A --> button color --> its green so they want to click it
-#0FA0CE --> hover over link
-#f8fafb --> background color --> ie: navbar
+custom scss design
+single page front end thanks to backbone
+one to many user messaging... snapchat style 
+AWS stored images
+custom feed
+infinite scroll
+favorites system
+iframe preview
+iframe embeds via API's from just about any online music service you can think of
+(i.e. you must be a spotify member to use their embeds)
+try bop.fm
 
 
-Website Urls for music provider
+You can test music website with these urls
+just copy and paste a url into the text area and watch the magic happen
 
 https://www.youtube.com/watch?v=C_TBChxsOKE
 https://soundcloud.com/lidogotsongs/slow
@@ -41,34 +34,17 @@ https://bop.fm/s/major-lazor-feat.-amber-coffman/get-free
 https://play.spotify.com/track/1LeItUMezKA1HdCHxYICed
 https://vimeo.com/6540668
 
+##Todos 
+
+(Theres a lot of these left)
+* add iframes to messages
+* add comments onto posts
+* notification system
+* add faye thin server for realtime notifications and messages
+* (the mother load) turn iframes into continous stream
+	i.e. when an iframe is done playing the next in the collection starts playing 
+	pretty much turning it into a streaming app
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
 
 
-
-<% posts.each(function(post){ %>
-	<li class="post_show">
-	      <div class="panel-heading post_media">
-	        <%= post.get("content")%>
-	      </div>
-	      <div class="post-body">
-	        <%= post.escape('body') %>
-	      </div>
-	      <div class="panel-footer">
-
-	          <div class="name_avatar u-pull-left">
-	          	<span class="round-image-50 user_avatar u-pull-left">
-	          		<img class="avatar" src="<%= post.user().escape("thumb_avatar") %>" />          		
-	          	</span>
-	            <span class="user_name post_name u-pull-left">
-		            <a href='#/users/<%= post.user().escape("id") %>'>
-		              <%= post.user().escape('name') %>
-		            </a>
-	            </span>
-	          </div>
-	       
-	      </div>
-	</li>
-<% }) %>
