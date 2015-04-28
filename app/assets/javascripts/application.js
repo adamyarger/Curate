@@ -32,6 +32,21 @@
 //= require_tree ./views
 //= require_tree .
 
+$(document).ready(function(){
+	$('.nav_avatar').click( function(event){
+    $('#popover').slideToggle(50);
+	});
+});
+
+
+
+
+$(function() {
+   $('.alert').delay(500).slideDown('normal', function() {
+      $(this).delay(2500).slideUp();
+   });
+});
+
 
 
 
