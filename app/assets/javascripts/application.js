@@ -13,22 +13,22 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.visible
+//= require underscore
+//= require backbone
 //= require jquery.noty
 //= require default
 //= require top
 //= require jquery.serializejson
+//= require_tree ../templates
 //= require jquery.embedly
 //= require jquery.preview
-//= require underscore
-//= require backbone
-//= require curate.js
+//= require curate
 //= require ./utils/composite_view
 //= require ./utils/paginated_view
 //= require ./utils/nested_paginate
 //= require ./utils/flash_message
 //= require_tree ./models
 //= require_tree ./collections
-//= require_tree ../templates
 //= require_tree ./views
 //= require_tree .
 
