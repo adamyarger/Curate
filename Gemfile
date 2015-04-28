@@ -19,6 +19,7 @@ gem 'embedly', '~> 1.9.1'
 gem 'ejs'
 gem "font-awesome-rails"
 gem 'faker',                '1.4.2'
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'byebug'
